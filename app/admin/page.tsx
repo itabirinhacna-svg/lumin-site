@@ -1,4 +1,4 @@
-import { SiteFooter } from "@/components/site-footer";
+﻿import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { requireUser } from "@/lib/access";
 import { getAdminSnapshot } from "@/lib/db";
@@ -17,7 +17,7 @@ export default async function AdminPage() {
           <div style={{ marginBottom: 24 }}>
             <div className="kicker">Admin</div>
             <h1 style={{ fontSize: "clamp(2.4rem, 5vw, 4.4rem)" }}>Painel operacional do produto educacional.</h1>
-            <p>Este painel já consome dados persistidos de usuários e compras para facilitar a evolução do backoffice.</p>
+            <p>Este painel jÃ¡ consome dados persistidos de usuÃ¡rios e compras para facilitar a evoluÃ§Ã£o do backoffice.</p>
           </div>
 
           <div className="admin-grid" style={{ marginBottom: 24 }}>
@@ -35,13 +35,13 @@ export default async function AdminPage() {
             </article>
             <article className="metric-card">
               <strong className="metric-value">{snapshot.totalUsers}</strong>
-              <p>Usuários totais</p>
+              <p>UsuÃ¡rios totais</p>
             </article>
           </div>
 
           <div className="admin-grid">
             <article className="table-card">
-              <div className="kicker">Últimas compras</div>
+              <div className="kicker">Ãšltimas compras</div>
               <h3>Fluxo comercial persistido</h3>
               <table>
                 <thead>
@@ -74,7 +74,7 @@ export default async function AdminPage() {
             </article>
 
             <article className="glass-card">
-              <div className="kicker">Checklist de produção</div>
+              <div className="kicker">Checklist de produÃ§Ã£o</div>
               <ul className="list-clean">
                 {warnings.map((warning) => (
                   <li key={warning}>{warning}</li>
@@ -91,3 +91,4 @@ export default async function AdminPage() {
     </>
   );
 }
+

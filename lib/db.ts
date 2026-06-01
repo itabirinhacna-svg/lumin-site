@@ -1,4 +1,4 @@
-import { randomUUID } from "node:crypto";
+﻿import { randomUUID } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { env } from "@/lib/env";
@@ -70,7 +70,7 @@ export async function ensureSeedData() {
 
   db.users.push({
     id: randomUUID(),
-    name: "Administrador Atlas",
+    name: "Administrador BenThec",
     email: env.adminEmail.toLowerCase(),
     document: "00000000000",
     passwordHash: hashPassword(env.adminPassword),
@@ -214,3 +214,4 @@ export async function getHealthSnapshot() {
     provider: env.paymentProvider
   };
 }
+

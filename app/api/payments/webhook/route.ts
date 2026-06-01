@@ -1,9 +1,9 @@
-import { markPurchasePaid } from "@/lib/db";
+﻿import { markPurchasePaid } from "@/lib/db";
 import { verifyWebhookSignature } from "@/lib/payments";
 
 export async function POST(request: Request) {
   const rawBody = await request.text();
-  const signature = request.headers.get("x-atlas-signature");
+  const signature = request.headers.get("x-BenThec-signature");
 
   if (!verifyWebhookSignature(rawBody, signature)) {
     return Response.json({ ok: false, error: "invalid signature" }, { status: 401 });
@@ -27,3 +27,4 @@ export async function POST(request: Request) {
 
   return Response.json({ ok: true, purchaseId: purchase.id, status: purchase.status });
 }
+

@@ -1,4 +1,4 @@
-import { randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
+﻿import { randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
 
 const KEY_LENGTH = 64;
 
@@ -25,3 +25,4 @@ export function verifyPassword(password: string, storedHash: string) {
 
   return timingSafeEqual(expectedBuffer, actualBuffer);
 }
+

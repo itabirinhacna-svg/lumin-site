@@ -1,4 +1,4 @@
-import { createHmac, randomUUID, timingSafeEqual } from "node:crypto";
+﻿import { createHmac, randomUUID, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import { env, isProduction } from "@/lib/env";
@@ -11,7 +11,7 @@ type SessionPayload = {
   expiresAt: number;
 };
 
-export const SESSION_COOKIE_NAME = "atlas_session";
+export const SESSION_COOKIE_NAME = "BenThec_session";
 const SESSION_DURATION_SECONDS = 60 * 60 * 24 * 7;
 
 function sign(encodedPayload: string) {
@@ -98,3 +98,4 @@ export function clearSessionCookie(response: NextResponse) {
     maxAge: 0
   });
 }
+

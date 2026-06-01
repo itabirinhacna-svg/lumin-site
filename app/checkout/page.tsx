@@ -1,4 +1,4 @@
-import { SiteFooter } from "@/components/site-footer";
+﻿import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getConfigWarnings } from "@/lib/env";
 import { plans } from "@/lib/data";
@@ -9,13 +9,13 @@ export default function CheckoutPage() {
 
   return (
     <>
-      <SiteHeader ctaLabel="Entrar na área do aluno" ctaHref="/aluno" />
+      <SiteHeader ctaLabel="Entrar na Ã¡rea do aluno" ctaHref="/aluno" />
       <main className="section">
         <div className="page-shell">
           <div className="checkout-grid">
             <section className="plan-card featured">
               <span className="plan-badge">Plano em destaque</span>
-              <div className="kicker">Checkout com criação de conta</div>
+              <div className="kicker">Checkout com criaÃ§Ã£o de conta</div>
               <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 4rem)" }}>{featured.name}</h1>
               <p>{featured.description}</p>
               <div className="price">
@@ -28,8 +28,8 @@ export default function CheckoutPage() {
                 ))}
               </ul>
               <div className="tag-row" style={{ marginTop: 18 }}>
-                <span className="pill">Cria conta e matrícula</span>
-                <span className="pill">Sessão segura em cookie httpOnly</span>
+                <span className="pill">Cria conta e matrÃ­cula</span>
+                <span className="pill">SessÃ£o segura em cookie httpOnly</span>
                 <span className="pill">Pronto para webhook de pagamento</span>
               </div>
             </section>
@@ -43,7 +43,7 @@ export default function CheckoutPage() {
                   <select id="planId" name="planId" defaultValue={featured.id} required>
                     {plans.map((plan) => (
                       <option key={plan.id} value={plan.id}>
-                        {plan.name} • {plan.price}
+                        {plan.name} â€¢ {plan.price}
                       </option>
                     ))}
                   </select>
@@ -75,7 +75,7 @@ export default function CheckoutPage() {
                   <label htmlFor="paymentMethod">Forma de pagamento</label>
                   <select id="paymentMethod" name="paymentMethod" defaultValue="pix" required>
                     <option value="pix">PIX</option>
-                    <option value="card">Cartão de crédito</option>
+                    <option value="card">CartÃ£o de crÃ©dito</option>
                     <option value="boleto">Boleto</option>
                   </select>
                 </div>
@@ -87,14 +87,14 @@ export default function CheckoutPage() {
                 <div className="glass-card" style={{ padding: 18, marginBottom: 18 }}>
                   <strong>Fluxo atual</strong>
                   <p style={{ marginTop: 8 }}>
-                    No ambiente local, o provedor padrão é mock e a compra aprova na hora para validar o acesso do aluno.
-                    Em produção, basta ligar o gateway e o webhook.
+                    No ambiente local, o provedor padrÃ£o Ã© mock e a compra aprova na hora para validar o acesso do aluno.
+                    Em produÃ§Ã£o, basta ligar o gateway e o webhook.
                   </p>
                 </div>
 
                 {warnings.length > 0 ? (
                   <div className="glass-card" style={{ padding: 18, marginBottom: 18 }}>
-                    <strong>Pendências de produção</strong>
+                    <strong>PendÃªncias de produÃ§Ã£o</strong>
                     <ul className="list-clean" style={{ marginTop: 10 }}>
                       {warnings.map((warning) => (
                         <li key={warning}>{warning}</li>
@@ -117,3 +117,4 @@ export default function CheckoutPage() {
     </>
   );
 }
+

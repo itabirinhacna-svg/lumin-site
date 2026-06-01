@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { getCurrentUser } from "@/lib/access";
 
 type SiteHeaderProps = {
@@ -7,7 +7,7 @@ type SiteHeaderProps = {
 };
 
 export async function SiteHeader({
-  ctaLabel = "Começar agora",
+  ctaLabel = "ComeÃ§ar agora",
   ctaHref = "/checkout"
 }: SiteHeaderProps) {
   const currentUser = await getCurrentUser();
@@ -17,20 +17,20 @@ export async function SiteHeader({
       <div className="page-shell nav-row">
         <Link href="/" className="brand">
           <span className="brand-mark">A+</span>
-          <span>Atlas Aprova Premium</span>
+          <span>BENTHEC</span>
         </Link>
         <nav className="nav-links">
           <Link href="/#pacotes">Pacotes</Link>
-          <Link href="/#metodo">Método</Link>
-          <Link href="/#seguranca">Segurança</Link>
-          <Link href="/aluno">Área do aluno</Link>
+          <Link href="/#metodo">MÃ©todo</Link>
+          <Link href="/#seguranca">SeguranÃ§a</Link>
+          <Link href="/aluno">Ãrea do aluno</Link>
           <Link href="/admin">Admin</Link>
         </nav>
         <div className="actions">
           {currentUser ? (
             <>
               <Link href={currentUser.role === "admin" ? "/admin" : "/aluno"} className="btn-ghost">
-                {currentUser.role === "admin" ? "Painel admin" : "Minha área"}
+                {currentUser.role === "admin" ? "Painel admin" : "Minha Ã¡rea"}
               </Link>
               <form action="/api/auth/logout" method="post">
                 <button type="submit" className="btn-secondary">
@@ -51,3 +51,4 @@ export async function SiteHeader({
     </header>
   );
 }
+

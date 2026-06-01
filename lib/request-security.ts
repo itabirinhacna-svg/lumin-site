@@ -1,4 +1,4 @@
-export function isSameOriginRequest(request: Request) {
+﻿export function isSameOriginRequest(request: Request) {
   const origin = request.headers.get("origin");
 
   if (!origin) {
@@ -7,3 +7,4 @@ export function isSameOriginRequest(request: Request) {
 
   return origin === new URL(request.url).origin;
 }
+

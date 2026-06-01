@@ -1,4 +1,4 @@
-type SectionTitleProps = {
+﻿type SectionTitleProps = {
   kicker: string;
   title: string;
   description: string;
@@ -13,3 +13,4 @@ export function SectionTitle({ kicker, title, description }: SectionTitleProps) 
     </div>
   );
 }
+

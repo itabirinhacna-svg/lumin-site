@@ -1,4 +1,4 @@
-export type Plan = {
+﻿export type Plan = {
   id: string;
   name: string;
   price: string;
@@ -15,12 +15,12 @@ export const plans: Plan[] = [
     name: "Pacote Base ENEM",
     price: "R$ 297",
     installment: "ou 12x de R$ 29,70",
-    description: "Entrada premium para quem precisa de rotina, revisão e direção clara.",
+    description: "Entrada premium para quem precisa de rotina, revisÃ£o e direÃ§Ã£o clara.",
     audience: "Ideal para ENEM e vestibulares concorridos",
     features: [
-      "Plano semanal de estudos com revisão espaçada",
+      "Plano semanal de estudos com revisÃ£o espaÃ§ada",
       "Videoaulas essenciais e apostilas digitais",
-      "Simulados mensais com correção comentada",
+      "Simulados mensais com correÃ§Ã£o comentada",
       "Acompanhamento de progresso por disciplina"
     ]
   },
@@ -34,23 +34,23 @@ export const plans: Plan[] = [
     featured: true,
     features: [
       "Mapeamento por edital e cronograma adaptativo",
-      "Banco de questões com filtros estratégicos",
-      "Mentorias de reta final e plano de revisão",
+      "Banco de questÃµes com filtros estratÃ©gicos",
+      "Mentorias de reta final e plano de revisÃ£o",
       "Biblioteca de PDFs, mapas mentais e resumos"
     ]
   },
   {
     id: "residencia-aprovacao",
-    name: "Residência Aprovação",
+    name: "ResidÃªncia AprovaÃ§Ã£o",
     price: "R$ 1.497",
     installment: "ou 12x de R$ 149,70",
-    description: "Experiência completa com acompanhamento intensivo e foco em alta performance.",
-    audience: "Para alunos que querem operar em nível profissional",
+    description: "ExperiÃªncia completa com acompanhamento intensivo e foco em alta performance.",
+    audience: "Para alunos que querem operar em nÃ­vel profissional",
     features: [
       "Tudo do plano Elite",
-      "Sala estratégica com cronograma individual",
-      "Correção orientada de redação e discursivas",
-      "Suporte prioritário e encontros de performance"
+      "Sala estratÃ©gica com cronograma individual",
+      "CorreÃ§Ã£o orientada de redaÃ§Ã£o e discursivas",
+      "Suporte prioritÃ¡rio e encontros de performance"
     ]
   }
 ];
@@ -63,42 +63,43 @@ export const stats = [
   { label: "Alunos ativos", value: "+12 mil" },
   { label: "Horas assistidas", value: "420 mil" },
   { label: "Taxa de retomada", value: "87%" },
-  { label: "Satisfação pós-compra", value: "4.9/5" }
+  { label: "SatisfaÃ§Ã£o pÃ³s-compra", value: "4.9/5" }
 ];
 
 export const disciplines = [
-  "Matemática e Raciocínio Lógico",
-  "Português e Redação",
+  "MatemÃ¡tica e RaciocÃ­nio LÃ³gico",
+  "PortuguÃªs e RedaÃ§Ã£o",
   "Direito Constitucional",
   "Direito Administrativo",
-  "Informática",
-  "Atualidades e Estratégia de Prova"
+  "InformÃ¡tica",
+  "Atualidades e EstratÃ©gia de Prova"
 ];
 
 export const timeline = [
-  { week: "Semana 1", focus: "Fundamentos, diagnóstico e montagem da rotina", status: "Concluído" },
-  { week: "Semana 2", focus: "Questões guiadas e revisão 24h/7d", status: "Em andamento" },
-  { week: "Semana 3", focus: "Simulado parcial e reforço de lacunas", status: "Próxima" },
-  { week: "Semana 4", focus: "Sprint de conteúdo de maior incidência", status: "Próxima" }
+  { week: "Semana 1", focus: "Fundamentos, diagnÃ³stico e montagem da rotina", status: "ConcluÃ­do" },
+  { week: "Semana 2", focus: "QuestÃµes guiadas e revisÃ£o 24h/7d", status: "Em andamento" },
+  { week: "Semana 3", focus: "Simulado parcial e reforÃ§o de lacunas", status: "PrÃ³xima" },
+  { week: "Semana 4", focus: "Sprint de conteÃºdo de maior incidÃªncia", status: "PrÃ³xima" }
 ];
 
 export const lessons = [
   {
-    title: "Como montar ciclo de estudos de alta retenção",
-    meta: "46 min • Estratégia"
+    title: "Como montar ciclo de estudos de alta retenÃ§Ã£o",
+    meta: "46 min â€¢ EstratÃ©gia"
   },
   {
-    title: "Questões inteligentes para concursos policiais",
-    meta: "62 min • Questões comentadas"
+    title: "QuestÃµes inteligentes para concursos policiais",
+    meta: "62 min â€¢ QuestÃµes comentadas"
   },
   {
-    title: "Redação ENEM: repertório, estrutura e nota alta",
-    meta: "58 min • Redação"
+    title: "RedaÃ§Ã£o ENEM: repertÃ³rio, estrutura e nota alta",
+    meta: "58 min â€¢ RedaÃ§Ã£o"
   }
 ];
 
 export const securityPillars = [
-  "Autenticação com sessões seguras e controle de acesso por compra",
-  "Validação server-side para checkout, matrícula e progresso",
+  "AutenticaÃ§Ã£o com sessÃµes seguras e controle de acesso por compra",
+  "ValidaÃ§Ã£o server-side para checkout, matrÃ­cula e progresso",
   "Camada pronta para logs, rate limiting e auditoria"
 ];
+

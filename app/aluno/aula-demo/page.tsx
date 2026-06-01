@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { requireStudentAccess } from "@/lib/access";
@@ -13,10 +13,10 @@ export default async function LessonDemoPage() {
         <div className="page-shell dashboard-grid">
           <section className="hero-card">
             <div className="kicker">Aula demonstrativa</div>
-            <h1 style={{ fontSize: "clamp(2.1rem, 5vw, 3.8rem)" }}>Ciclo de estudos de alta retenção</h1>
+            <h1 style={{ fontSize: "clamp(2.1rem, 5vw, 3.8rem)" }}>Ciclo de estudos de alta retenÃ§Ã£o</h1>
             <p>
-              Aqui entra o player de vídeo, o material complementar e o controle de progresso. A estrutura já separa bem
-              consumo de conteúdo, download e CTA de próxima aula.
+              Aqui entra o player de vÃ­deo, o material complementar e o controle de progresso. A estrutura jÃ¡ separa bem
+              consumo de conteÃºdo, download e CTA de prÃ³xima aula.
             </p>
             <div
               className="glass-card"
@@ -35,9 +35,9 @@ export default async function LessonDemoPage() {
             <div className="kicker">Materiais</div>
             <ul className="list-clean">
               <li>Resumo em PDF</li>
-              <li>Mapa mental em uma página</li>
-              <li>Lista de exercícios aplicada</li>
-              <li>Próxima revisão agendada</li>
+              <li>Mapa mental em uma pÃ¡gina</li>
+              <li>Lista de exercÃ­cios aplicada</li>
+              <li>PrÃ³xima revisÃ£o agendada</li>
             </ul>
             <div className="actions" style={{ marginTop: 20 }}>
               <Link href="/aluno" className="btn">
@@ -51,3 +51,4 @@ export default async function LessonDemoPage() {
     </>
   );
 }
+

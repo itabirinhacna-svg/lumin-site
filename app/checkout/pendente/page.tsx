@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
@@ -9,9 +9,9 @@ export default function CheckoutPendingPage() {
       <main className="section">
         <div className="page-shell glass-card">
           <div className="kicker">Pagamento pendente</div>
-          <h1 style={{ fontSize: "clamp(2.3rem, 5vw, 4rem)" }}>Seu pedido foi criado e está aguardando confirmação.</h1>
+          <h1 style={{ fontSize: "clamp(2.3rem, 5vw, 4rem)" }}>Seu pedido foi criado e estÃ¡ aguardando confirmaÃ§Ã£o.</h1>
           <p>
-            Quando o gateway confirmar o pagamento via webhook, o acesso ao conteúdo será liberado automaticamente.
+            Quando o gateway confirmar o pagamento via webhook, o acesso ao conteÃºdo serÃ¡ liberado automaticamente.
           </p>
           <div className="actions">
             <Link href="/login" className="btn">
@@ -27,3 +27,4 @@ export default function CheckoutPendingPage() {
     </>
   );
 }
+

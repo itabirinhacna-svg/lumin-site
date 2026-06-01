@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+﻿import { redirect } from "next/navigation";
 import { getActivePurchaseForUser, getUserById, type UserRecord, type UserRole } from "@/lib/db";
 import { getSession } from "@/lib/session";
 
@@ -36,3 +36,4 @@ export async function requireStudentAccess() {
 
   return { user, purchase };
 }
+

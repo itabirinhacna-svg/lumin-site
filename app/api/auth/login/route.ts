@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import { authenticateUser } from "@/lib/db";
 import { isSameOriginRequest } from "@/lib/request-security";
 import { applySessionCookie } from "@/lib/session";
@@ -27,3 +27,4 @@ export async function POST(request: Request) {
   applySessionCookie(response, user.id, user.role);
   return response;
 }
+

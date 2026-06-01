@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+﻿import { redirect } from "next/navigation";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getCurrentUser } from "@/lib/access";
@@ -20,7 +20,7 @@ export default async function LoginPage() {
             <div className="kicker">Acesso do aluno</div>
             <h1 style={{ fontSize: "clamp(2.3rem, 5vw, 4rem)" }}>Entre para continuar seus estudos.</h1>
             <p>
-              Este login já usa conta persistida e prepara a sessão segura do usuário. O redirecionamento respeita o
+              Este login jÃ¡ usa conta persistida e prepara a sessÃ£o segura do usuÃ¡rio. O redirecionamento respeita o
               perfil do acesso.
             </p>
             <form action="/api/auth/login" method="post">
@@ -48,7 +48,7 @@ export default async function LoginPage() {
           </section>
           <section className="glass-card">
             <div className="kicker">Bootstrap local</div>
-            <h3>Admin inicial para validação</h3>
+            <h3>Admin inicial para validaÃ§Ã£o</h3>
             <ul className="list-clean">
               <li>E-mail inicial: {env.adminEmail}</li>
               <li>Senha inicial: definida em ADMIN_PASSWORD</li>
@@ -62,3 +62,4 @@ export default async function LoginPage() {
     </>
   );
 }
+

@@ -1,4 +1,4 @@
-import { createHmac, timingSafeEqual } from "node:crypto";
+﻿import { createHmac, timingSafeEqual } from "node:crypto";
 import { env } from "@/lib/env";
 
 export function isMockProvider() {
@@ -20,3 +20,4 @@ export function verifyWebhookSignature(rawBody: string, signature: string | null
 
   return timingSafeEqual(expectedBuffer, receivedBuffer);
 }
+
