@@ -1,8 +1,30 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { lessons, timeline } from "@/lib/data";
 import { requireStudentAccess } from "@/lib/access";
+
+const trilha = [
+  { etapa: "Entenda", status: "Concluído" },
+  { etapa: "Assista", status: "Concluído" },
+  { etapa: "Leia", status: "Concluído" },
+  { etapa: "Pratique", status: "Agora" },
+  { etapa: "Revise", status: "Próximo" },
+  { etapa: "Conclua", status: "Pendente" },
+];
+
+const modulos = [
+  "Português",
+  "Matemática",
+  "Conhecimentos Específicos",
+  "Simulados",
+];
+
+const revisoes = [
+  "Português: interpretação de texto",
+  "Matemática: operações fundamentais",
+  "Específicos: conteúdo do cargo",
+  "Revisão final da semana",
+];
 
 export default async function StudentAreaPage() {
   const { user, purchase } = await requireStudentAccess();
@@ -10,36 +32,39 @@ export default async function StudentAreaPage() {
   return (
     <>
       <SiteHeader ctaLabel="Meu plano" ctaHref="/checkout" />
+
       <main>
         <section className="dashboard-hero">
           <div className="page-shell">
             <div className="dashboard-grid">
               <article className="hero-card">
-                <div className="eyebrow">Área do aluno</div>
-                <h1 style={{ fontSize: "clamp(2.4rem, 5vw, 4.5rem)" }}>Bem-vindo de volta, {user.name}.</h1>
+                <div className="eyebrow">Área do aluno BenThec</div>
+                <h1 style={{ fontSize: "clamp(2.4rem, 5vw, 4.5rem)" }}>
+                  Continue sua trilha, {user.name}.
+                </h1>
                 <p className="hero-copy">
-                  Seu plano <strong>{purchase.planName}</strong> está ativo. Hoje o foco é revisão de Constitucional,
-                  treino de questões e redação curta de manutenção.
+                  Seu plano <strong>{purchase.planName}</strong> está ativo. A preparação agora segue por etapas:
+                  conteúdo, aula, material, questões, revisão e simulado.
                 </p>
                 <div className="tag-row">
-                  <span className="pill">Plano ativo</span>
-                  <span className="pill">Pagamento: {purchase.paymentMethod.toUpperCase()}</span>
-                  <span className="pill">Compra confirmada</span>
+                  <span className="pill">Aprova Água Doce</span>
+                  <span className="pill">Trilha guiada</span>
+                  <span className="pill">Acompanhamento ativo</span>
                 </div>
               </article>
+
               <article className="glass-card">
-                <div className="kicker">Próxima meta</div>
-                <h3>Fechar a semana sem acumular revisão</h3>
+                <div className="kicker">Próxima missão</div>
+                <h3>Português · Etapa 4 de 6</h3>
                 <p>
-                  Você está bem posicionada. Priorize 25 questões comentadas e depois avance para a aula de Direito
-                  Administrativo.
+                  Agora o foco é praticar questões do conteúdo estudado e registrar os pontos de dúvida para revisão.
                 </p>
                 <div className="actions">
-                  <Link href="#biblioteca" className="btn">
-                    Continuar estudos
+                  <Link href="#trilha" className="btn">
+                    Continuar trilha
                   </Link>
-                  <Link href="/checkout" className="btn-ghost">
-                    Upgrade de plano
+                  <Link href="#atendimento" className="btn-ghost">
+                    Falar com a equipe
                   </Link>
                 </div>
               </article>
@@ -51,59 +76,59 @@ export default async function StudentAreaPage() {
           <div className="page-shell">
             <div className="stats-grid">
               <article className="metric-card">
-                <strong className="metric-value">82%</strong>
-                <p>Aproveitamento em simulados recentes</p>
+                <strong className="metric-value">42%</strong>
+                <p>Progresso da trilha atual</p>
               </article>
               <article className="metric-card">
-                <strong className="metric-value">126h</strong>
-                <p>Tempo estudado no mês</p>
+                <strong className="metric-value">3/6</strong>
+                <p>Etapas concluídas</p>
               </article>
               <article className="metric-card">
-                <strong className="metric-value">312</strong>
-                <p>Questões resolvidas na semana</p>
+                <strong className="metric-value">4</strong>
+                <p>Módulos principais</p>
               </article>
               <article className="metric-card">
-                <strong className="metric-value">9.1</strong>
-                <p>Score de consistência</p>
+                <strong className="metric-value">1</strong>
+                <p>Simulado recomendado</p>
               </article>
             </div>
           </div>
         </section>
 
-        <section className="section">
+        <section className="section" id="trilha">
           <div className="page-shell library-grid">
             <article className="table-card">
               <div className="kicker">Trilha atual</div>
-              <h2 style={{ fontSize: "2.1rem" }}>Plano de execução das próximas semanas</h2>
+              <h2 style={{ fontSize: "2.1rem" }}>Aprova Água Doce · Plano de estudos</h2>
               <table>
                 <thead>
                   <tr>
-                    <th>Período</th>
-                    <th>Foco</th>
+                    <th>Etapa</th>
                     <th>Status</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {timeline.map((item) => (
-                    <tr key={item.week}>
-                      <td>{item.week}</td>
-                      <td>{item.focus}</td>
+                  {trilha.map((item) => (
+                    <tr key={item.etapa}>
+                      <td>{item.etapa}</td>
                       <td>
-                        <span className={item.status === "Concluído" ? "status-ok" : "status-warn"}>{item.status}</span>
+                        <span className={item.status === "Concluído" ? "status-ok" : "status-warn"}>
+                          {item.status}
+                        </span>
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </article>
+
             <article className="glass-card">
               <div className="kicker">Próximas revisões</div>
-              <h3>Agenda inteligente de retenção</h3>
+              <h3>Agenda de retenção</h3>
               <ul className="list-clean">
-                <li>Hoje, 19h: Constitucional, princípios fundamentais</li>
-                <li>Amanhã, 7h: 20 questões de Informática</li>
-                <li>Sexta, 20h: revisão 7 dias de Português</li>
-                <li>Domingo, 8h: simulado parcial com análise</li>
+                {revisoes.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </article>
           </div>
@@ -112,25 +137,52 @@ export default async function StudentAreaPage() {
         <section className="section" id="biblioteca">
           <div className="page-shell">
             <div style={{ marginBottom: 24 }}>
-              <div className="kicker">Biblioteca</div>
-              <h2>Continue exatamente de onde você parou.</h2>
-              <p>Essa área mostra o que mais importa para o aluno retornar com clareza e sem dispersão.</p>
+              <div className="kicker">Minhas trilhas</div>
+              <h2>Estude por módulos, não por aulas soltas.</h2>
+              <p>
+                Cada módulo reúne orientação, videoaula curada, material de apoio, questões e revisão.
+              </p>
             </div>
+
             <div className="section-grid">
-              {lessons.map((lesson) => (
-                <article className="lesson-card" key={lesson.title}>
-                  <div className="kicker">{lesson.meta}</div>
-                  <h3>{lesson.title}</h3>
-                  <p>Aula priorizada pelo seu plano atual e pelo desempenho das últimas baterias de questões.</p>
+              {modulos.map((modulo) => (
+                <article className="lesson-card" key={modulo}>
+                  <div className="kicker">Aprova Água Doce</div>
+                  <h3>{modulo}</h3>
+                  <p>
+                    Módulo organizado para avançar com clareza, sem excesso de conteúdo e com foco no edital.
+                  </p>
                   <Link href="/aluno/aula-demo" className="btn-secondary">
-                    Assistir aula
+                    Abrir módulo
                   </Link>
                 </article>
               ))}
             </div>
           </div>
         </section>
+
+        <section className="section" id="atendimento">
+          <div className="page-shell">
+            <article className="glass-card">
+              <div className="kicker">Atendimento</div>
+              <h3>Precisa de orientação?</h3>
+              <p>
+                Use o suporte da BenThec para tirar dúvidas sobre a trilha, organização dos estudos e próximos passos.
+              </p>
+              <div className="actions">
+                <Link
+                  href="https://wa.me/5527999850434?text=Olá,%20quero%20suporte%20na%20minha%20trilha%20BenThec."
+                  className="btn"
+                  target="_blank"
+                >
+                  Falar no WhatsApp
+                </Link>
+              </div>
+            </article>
+          </div>
+        </section>
       </main>
+
       <SiteFooter />
     </>
   );
