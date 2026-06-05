@@ -1,29 +1,41 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { requireStudentAccess } from "@/lib/access";
+import { lessons, timeline } from "@/lib/data";
 
 const trilha = [
-  { etapa: "Entenda", status: "Concluído" },
-  { etapa: "Assista", status: "Concluído" },
-  { etapa: "Leia", status: "Concluído" },
+  { etapa: "Entenda", status: "Concluido" },
+  { etapa: "Assista", status: "Concluido" },
+  { etapa: "Leia", status: "Concluido" },
   { etapa: "Pratique", status: "Agora" },
-  { etapa: "Revise", status: "Próximo" },
-  { etapa: "Conclua", status: "Pendente" },
+  { etapa: "Revise", status: "Proximo" },
+  { etapa: "Conclua", status: "Pendente" }
 ];
 
 const modulos = [
-  "Português",
-  "Matemática",
-  "Conhecimentos Específicos",
-  "Simulados",
+  {
+    name: "Portugues e interpretacao",
+    description: "Aulas, material resumido, questoes guiadas e revisao 24h/7d."
+  },
+  {
+    name: "Matematica e raciocinio logico",
+    description: "Base de fixacao para ganhar velocidade e reduzir erro bobo."
+  },
+  {
+    name: "Conhecimentos especificos",
+    description: "Blocos por edital, com foco no que mais cai para o seu cargo."
+  },
+  {
+    name: "Simulados e reta final",
+    description: "Treinos de prova, ajuste de estrategia e revisao orientada."
+  }
 ];
 
-const revisoes = [
-  "Português: interpretação de texto",
-  "Matemática: operações fundamentais",
-  "Específicos: conteúdo do cargo",
-  "Revisão final da semana",
+const supportItems = [
+  "Duvdas sobre o modulo atual",
+  "Orientacao sobre ritmo e revisao",
+  "Ajuste de trilha para edital"
 ];
 
 export default async function StudentAreaPage() {
@@ -38,33 +50,33 @@ export default async function StudentAreaPage() {
           <div className="page-shell">
             <div className="dashboard-grid">
               <article className="hero-card">
-                <div className="eyebrow">Área do aluno BenThec</div>
-                <h1 style={{ fontSize: "clamp(2.4rem, 5vw, 4.5rem)" }}>
-                  Continue sua trilha, {user.name}.
-                </h1>
+                <div className="eyebrow">Area do aluno BENTHEC</div>
+                <h1 style={{ fontSize: "clamp(2.4rem, 5vw, 4.5rem)" }}>Continue sua trilha, {user.name}.</h1>
                 <p className="hero-copy">
-                  Seu plano <strong>{purchase.planName}</strong> está ativo. A preparação agora segue por etapas:
-                  conteúdo, aula, material, questões, revisão e simulado.
+                  Seu plano <strong>{purchase.planName}</strong> esta ativo. A plataforma organiza seu estudo em
+                  conteudo, aula, material, questoes, revisao e simulado.
                 </p>
                 <div className="tag-row">
-                  <span className="pill">Aprova Água Doce</span>
+                  <span className="pill">Compra confirmada</span>
                   <span className="pill">Trilha guiada</span>
                   <span className="pill">Acompanhamento ativo</span>
                 </div>
               </article>
 
               <article className="glass-card">
-                <div className="kicker">Próxima missão</div>
-                <h3>Português · Etapa 4 de 6</h3>
-                <p>
-                  Agora o foco é praticar questões do conteúdo estudado e registrar os pontos de dúvida para revisão.
-                </p>
-                <div className="actions">
+                <div className="kicker">Painel rapido</div>
+                <h3>Seu proximo passo esta claro</h3>
+                <ul className="lesson-list">
+                  <li>Plano ativo: {purchase.planName}</li>
+                  <li>Status da matricula: liberada para estudo</li>
+                  <li>Missao atual: pratica com questoes de Portugues</li>
+                </ul>
+                <div className="actions" style={{ marginTop: 18 }}>
                   <Link href="#trilha" className="btn">
                     Continuar trilha
                   </Link>
                   <Link href="#atendimento" className="btn-ghost">
-                    Falar com a equipe
+                    Pedir suporte
                   </Link>
                 </div>
               </article>
@@ -81,11 +93,11 @@ export default async function StudentAreaPage() {
               </article>
               <article className="metric-card">
                 <strong className="metric-value">3/6</strong>
-                <p>Etapas concluídas</p>
+                <p>Etapas concluidas</p>
               </article>
               <article className="metric-card">
                 <strong className="metric-value">4</strong>
-                <p>Módulos principais</p>
+                <p>Modulos principais</p>
               </article>
               <article className="metric-card">
                 <strong className="metric-value">1</strong>
@@ -99,7 +111,7 @@ export default async function StudentAreaPage() {
           <div className="page-shell library-grid">
             <article className="table-card">
               <div className="kicker">Trilha atual</div>
-              <h2 style={{ fontSize: "2.1rem" }}>Aprova Água Doce · Plano de estudos</h2>
+              <h2 style={{ fontSize: "2.1rem" }}>Plano de estudos com sequencia operacional</h2>
               <table>
                 <thead>
                   <tr>
@@ -112,9 +124,7 @@ export default async function StudentAreaPage() {
                     <tr key={item.etapa}>
                       <td>{item.etapa}</td>
                       <td>
-                        <span className={item.status === "Concluído" ? "status-ok" : "status-warn"}>
-                          {item.status}
-                        </span>
+                        <span className={item.status === "Concluido" ? "status-ok" : "status-warn"}>{item.status}</span>
                       </td>
                     </tr>
                   ))}
@@ -123,11 +133,13 @@ export default async function StudentAreaPage() {
             </article>
 
             <article className="glass-card">
-              <div className="kicker">Próximas revisões</div>
-              <h3>Agenda de retenção</h3>
-              <ul className="list-clean">
-                {revisoes.map((item) => (
-                  <li key={item}>{item}</li>
+              <div className="kicker">Agenda recomendada</div>
+              <h3>Proximas semanas</h3>
+              <ul className="lesson-list">
+                {timeline.map((item) => (
+                  <li key={item.week}>
+                    <strong>{item.week}</strong>: {item.focus}
+                  </li>
                 ))}
               </ul>
             </article>
@@ -137,23 +149,21 @@ export default async function StudentAreaPage() {
         <section className="section" id="biblioteca">
           <div className="page-shell">
             <div style={{ marginBottom: 24 }}>
-              <div className="kicker">Minhas trilhas</div>
-              <h2>Estude por módulos, não por aulas soltas.</h2>
+              <div className="kicker">Minha biblioteca</div>
+              <h2>Estude por modulos, nao por acumulacao.</h2>
               <p>
-                Cada módulo reúne orientação, videoaula curada, material de apoio, questões e revisão.
+                Cada modulo combina aula, material de apoio, pratica e revisao para manter ritmo e consistencia.
               </p>
             </div>
 
             <div className="section-grid">
               {modulos.map((modulo) => (
-                <article className="lesson-card" key={modulo}>
-                  <div className="kicker">Aprova Água Doce</div>
-                  <h3>{modulo}</h3>
-                  <p>
-                    Módulo organizado para avançar com clareza, sem excesso de conteúdo e com foco no edital.
-                  </p>
+                <article className="lesson-card" key={modulo.name}>
+                  <div className="kicker">{purchase.planName}</div>
+                  <h3>{modulo.name}</h3>
+                  <p>{modulo.description}</p>
                   <Link href="/aluno/aula-demo" className="btn-secondary">
-                    Abrir módulo
+                    Abrir modulo
                   </Link>
                 </article>
               ))}
@@ -161,17 +171,33 @@ export default async function StudentAreaPage() {
           </div>
         </section>
 
-        <section className="section" id="atendimento">
-          <div className="page-shell">
+        <section className="section">
+          <div className="page-shell library-grid">
             <article className="glass-card">
+              <div className="kicker">Aulas para continuar</div>
+              <h3>Fila de estudo</h3>
+              <ul className="lesson-list">
+                {lessons.map((lesson) => (
+                  <li key={lesson.title}>
+                    <strong>{lesson.title}</strong>
+                    <br />
+                    {lesson.meta}
+                  </li>
+                ))}
+              </ul>
+            </article>
+
+            <article className="glass-card" id="atendimento">
               <div className="kicker">Atendimento</div>
-              <h3>Precisa de orientação?</h3>
-              <p>
-                Use o suporte da BenThec para tirar dúvidas sobre a trilha, organização dos estudos e próximos passos.
-              </p>
-              <div className="actions">
+              <h3>Suporte academico e operacional</h3>
+              <ul className="lesson-list">
+                {supportItems.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <div className="actions" style={{ marginTop: 18 }}>
                 <Link
-                  href="https://wa.me/5527999850434?text=Olá,%20quero%20suporte%20na%20minha%20trilha%20BenThec."
+                  href="https://wa.me/5527999850434?text=Ola,%20quero%20suporte%20na%20minha%20trilha%20BENTHEC."
                   className="btn"
                   target="_blank"
                 >
@@ -187,4 +213,3 @@ export default async function StudentAreaPage() {
     </>
   );
 }
-

@@ -3,26 +3,47 @@ import { createEnrollment } from "@/lib/db";
 import { getPlanById } from "@/lib/data";
 import { env } from "@/lib/env";
 import { isMockProvider } from "@/lib/payments";
-import { isSameOriginRequest } from "@/lib/request-security";
+import { consumeRateLimit, getClientKey, isSameOriginRequest } from "@/lib/request-security";
 import { applySessionCookie } from "@/lib/session";
+import { normalizeDocument, normalizeEmail, sanitizeText, validateCheckoutPayload } from "@/lib/validators";
 
 export async function POST(request: Request) {
   if (!isSameOriginRequest(request)) {
     return NextResponse.json({ ok: false, error: "forbidden" }, { status: 403 });
   }
 
+  const rateLimit = consumeRateLimit(`checkout:${getClientKey(request)}`, 6, 15 * 60 * 1000);
+
+  if (!rateLimit.ok) {
+    return NextResponse.json(
+      { ok: false, error: "too_many_requests", retryAfter: rateLimit.retryAfterSeconds },
+      { status: 429 }
+    );
+  }
+
   const formData = await request.formData();
   const planId = String(formData.get("planId") ?? "");
-  const name = String(formData.get("name") ?? "");
-  const email = String(formData.get("email") ?? "");
-  const document = String(formData.get("document") ?? "");
+  const name = sanitizeText(String(formData.get("name") ?? ""));
+  const email = normalizeEmail(String(formData.get("email") ?? ""));
+  const document = normalizeDocument(String(formData.get("document") ?? ""));
   const password = String(formData.get("password") ?? "");
   const paymentMethod = String(formData.get("paymentMethod") ?? "");
-  const coupon = String(formData.get("coupon") ?? "");
+  const coupon = sanitizeText(String(formData.get("coupon") ?? ""));
+  const acceptTerms = String(formData.get("acceptTerms") ?? "") === "on";
 
   const plan = getPlanById(planId);
+  const errors = validateCheckoutPayload({
+    planId,
+    name,
+    email,
+    document,
+    password,
+    paymentMethod,
+    coupon,
+    acceptTerms
+  });
 
-  if (!plan || !name || !email || !document || password.length < 8 || !paymentMethod) {
+  if (!plan || errors.length > 0) {
     return NextResponse.redirect(new URL("/checkout", request.url), 303);
   }
 
