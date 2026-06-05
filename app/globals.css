@@ -2,12 +2,12 @@
   --bg: #f6efe5;
   --surface: rgba(255, 255, 255, 0.78);
   --surface-strong: #fffaf4;
-  --text: #23160c;
-  --muted: #715846;
+  --text: #0F172A;
+  --muted: #475569;
   --line: rgba(61, 35, 9, 0.12);
-  --brand: #c66a28;
-  --brand-deep: #7f3f13;
-  --accent: #144c45;
+  --brand: #C58B00;
+  --brand-deep: #0F172A;
+  --accent: #15803D;
   --accent-soft: #dff3ef;
   --danger: #a33232;
   --shadow: 0 24px 70px rgba(82, 40, 12, 0.12);
@@ -86,21 +86,64 @@ select {
   display: inline-flex;
   gap: 12px;
   align-items: center;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-size: 0.9rem;
+  min-width: 0;
 }
 
-.brand-mark {
-  width: 42px;
-  height: 42px;
+.brand-signature {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.brand-signature.compact {
+  gap: 12px;
+}
+
+.brand-symbol {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 14px 24px rgba(15, 23, 42, 0.16));
+}
+
+.brand-signature.compact .brand-symbol {
+  width: 46px;
+  height: 46px;
+}
+
+.brand-symbol svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.brand-copy {
   display: grid;
-  place-items: center;
-  border-radius: 14px;
-  color: white;
-  background: linear-gradient(135deg, var(--brand), var(--brand-deep));
-  box-shadow: 0 16px 26px rgba(127, 63, 19, 0.25);
+  min-width: 0;
+}
+
+.brand-name {
+  color: var(--brand-deep);
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.brand-signature.compact .brand-name {
+  font-size: 1.02rem;
+}
+
+.brand-tagline {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .nav-links {
@@ -382,6 +425,12 @@ li {
   align-items: center;
   border-top: 1px solid rgba(61, 35, 9, 0.08);
   padding-top: 20px;
+}
+
+.footer-brand {
+  display: grid;
+  gap: 14px;
+  max-width: 520px;
 }
 
 .dashboard-hero {

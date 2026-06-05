@@ -1,12 +1,13 @@
-﻿import Link from "next/link";
+import Link from "next/link";
+import { BrandMark } from "@/components/brand-mark";
 
 export function SiteFooter() {
   return (
     <footer className="footer">
       <div className="page-shell footer-row">
-        <div>
-          <strong>BENTHEC</strong>
-          <p>Plataforma digital para concursos e ENEM com foco em conversÃ£o, retenÃ§Ã£o e recorrÃªncia.</p>
+        <div className="footer-brand">
+          <BrandMark />
+          <p>Plataforma digital para concursos e ENEM com foco em conversao, retencao e recorrencia.</p>
         </div>
         <div className="tag-row">
           <Link href="/termos" className="pill">
@@ -20,4 +21,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-
