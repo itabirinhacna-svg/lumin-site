@@ -1,6 +1,7 @@
 const VALID_PAYMENT_METHODS = new Set(["pix", "card", "boleto"]);
 const DEMO_EMAIL = "demo@benthec.com";
 const DEMO_PASSWORD = "123456";
+const DEMO_PASSWORD_ALT = "12345678";
 
 export type CheckoutPayload = {
   planId: string;
@@ -95,7 +96,7 @@ export function validateCheckoutPayload(input: CheckoutPayload) {
 export function validateLoginPayload(email: string, password: string) {
   const errors: string[] = [];
 
-  if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {
+  if (email === DEMO_EMAIL && (password === DEMO_PASSWORD || password === DEMO_PASSWORD_ALT)) {
     return errors;
   }
 

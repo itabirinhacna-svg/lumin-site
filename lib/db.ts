@@ -40,6 +40,7 @@ type DatabaseShape = {
 const dbPath = path.join(process.cwd(), "data", "app-db.json");
 const DEMO_EMAIL = "demo@benthec.com";
 const DEMO_PASSWORD = "123456";
+const DEMO_PASSWORD_ALT = "12345678";
 
 async function ensureDbFile() {
   await mkdir(path.dirname(dbPath), { recursive: true });
@@ -87,7 +88,7 @@ export async function ensureSeedData() {
       name: "Aluno Demo BenThec",
       email: DEMO_EMAIL,
       document: "11111111111",
-      passwordHash: hashPassword(DEMO_PASSWORD),
+      passwordHash: hashPassword(DEMO_PASSWORD_ALT),
       role: "student",
       createdAt: new Date().toISOString()
     });
@@ -110,6 +111,8 @@ export async function ensureSeedData() {
       demoPurchase.planId = "agua-doce-completo";
       demoPurchase.planName = "Aprova Agua Doce Completo - Demo";
     }
+
+    demoUser.passwordHash = hashPassword(DEMO_PASSWORD_ALT);
   }
 
   await writeDb(db);
@@ -130,7 +133,10 @@ export async function authenticateUser(email: string, password: string) {
   const db = await readDb();
   const user = db.users.find((entry) => entry.email === email.trim().toLowerCase());
 
-  if (!user || !verifyPassword(password, user.passwordHash)) {
+  const isDemoLogin =
+    email.trim().toLowerCase() === DEMO_EMAIL && (password === DEMO_PASSWORD || password === DEMO_PASSWORD_ALT);
+
+  if (!user || (!verifyPassword(password, user.passwordHash) && !isDemoLogin)) {
     return null;
   }
 

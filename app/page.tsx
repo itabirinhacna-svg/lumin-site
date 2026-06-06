@@ -1,60 +1,55 @@
 import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { curadoria, estruturaFutura, getCuradoriaOverview, getFeaturedTrack } from "@/lib/curadoria";
-
-const journey = [
-  "Diagnostico e trilha",
-  "Apostilas liberadas",
-  "Estudo guiado",
-  "Revisao por etapa",
-  "Suporte proximo",
-  "Aprovacao",
-];
+import { curadoria, getCuradoriaOverview, getFeaturedTrack } from "@/lib/curadoria";
+import { getQuestoesOverview } from "@/lib/questoes";
+import { getSimuladosResolvidos } from "@/lib/simulados";
 
 export default function HomePage() {
   const overview = getCuradoriaOverview();
   const featuredTrack = getFeaturedTrack();
+  const questionsOverview = getQuestoesOverview();
+  const simulados = getSimuladosResolvidos();
 
   return (
     <>
-      <SiteHeader ctaLabel="Comecar" ctaHref="/checkout" />
+      <SiteHeader ctaLabel="Começar" ctaHref="/checkout" />
 
-      <main className="benthec-launch-home">
+      <main className="home-premium">
         <style>{`
-          .benthec-launch-home {
+          .home-premium {
             min-height: 100vh;
             background:
-              radial-gradient(circle at top left, rgba(197,139,0,.14), transparent 22%),
-              radial-gradient(circle at top right, rgba(255,255,255,.06), transparent 20%),
-              linear-gradient(180deg, #020617 0%, #0f172a 52%, #020617 100%);
+              radial-gradient(circle at top left, rgba(197,139,0,.14), transparent 24%),
+              radial-gradient(circle at top right, rgba(255,255,255,.05), transparent 22%),
+              linear-gradient(180deg, #020617 0%, #0f172a 56%, #020617 100%);
             color: #ffffff;
           }
 
-          .bl-shell {
-            width: min(1140px, calc(100% - 28px));
+          .hp-shell {
+            width: min(1120px, calc(100% - 28px));
             margin: 0 auto;
           }
 
-          .bl-section {
-            padding: 28px 0 72px;
+          .hp-section {
+            padding: 28px 0 68px;
           }
 
-          .bl-hero {
+          .hp-hero {
             display: grid;
             gap: 20px;
-            padding-top: 24px;
+            align-items: center;
           }
 
-          .bl-badge {
+          .hp-badge {
             width: fit-content;
             min-height: 34px;
             display: inline-flex;
             align-items: center;
             padding: 0 14px;
             border-radius: 999px;
-            border: 1px solid rgba(197,139,0,.24);
             background: rgba(197,139,0,.12);
+            border: 1px solid rgba(197,139,0,.24);
             color: #f3cf6f;
             font-size: 12px;
             font-weight: 900;
@@ -62,45 +57,51 @@ export default function HomePage() {
             text-transform: uppercase;
           }
 
-          .bl-copy,
-          .bl-head {
+          .hp-copy,
+          .hp-head,
+          .hp-preview,
+          .hp-card,
+          .hp-track {
             display: grid;
             gap: 16px;
           }
 
-          .bl-copy h1,
-          .bl-copy p,
-          .bl-head h2,
-          .bl-head p,
-          .bl-card h3,
-          .bl-card p {
+          .hp-copy h1,
+          .hp-copy p,
+          .hp-head h2,
+          .hp-head p,
+          .hp-card h3,
+          .hp-card p,
+          .hp-preview p {
             margin: 0;
           }
 
-          .bl-copy h1 {
-            max-width: 10ch;
-            font-size: clamp(3rem, 14vw, 5.5rem);
+          .hp-copy h1 {
+            max-width: 9ch;
+            font-size: clamp(3rem, 13vw, 5.4rem);
             line-height: .93;
             letter-spacing: -.08em;
           }
 
-          .bl-copy p,
-          .bl-head p,
-          .bl-card p,
-          .bl-list li {
+          .hp-copy p,
+          .hp-head p,
+          .hp-card p,
+          .hp-track li {
             color: #cbd5e1;
             line-height: 1.75;
           }
 
-          .bl-actions,
-          .bl-chip-row {
+          .hp-actions,
+          .hp-chips,
+          .hp-links {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
           }
 
-          .bl-btn,
-          .bl-btn-ghost {
+          .hp-btn,
+          .hp-btn-ghost,
+          .hp-link {
             min-height: 50px;
             display: inline-flex;
             align-items: center;
@@ -111,162 +112,133 @@ export default function HomePage() {
             font-weight: 900;
           }
 
-          .bl-btn {
+          .hp-btn {
             background: linear-gradient(135deg, #c58b00, #9b6b00);
             color: #ffffff;
-            box-shadow: 0 18px 36px rgba(197,139,0,.28);
+            box-shadow: 0 18px 36px rgba(197,139,0,.26);
           }
 
-          .bl-btn-ghost {
-            border: 1px solid rgba(255,255,255,.12);
-            background: rgba(255,255,255,.04);
+          .hp-btn-ghost,
+          .hp-link {
             color: #ffffff;
+            background: rgba(255,255,255,.04);
+            border: 1px solid rgba(255,255,255,.12);
           }
 
-          .bl-chip,
-          .bl-status {
+          .hp-chip,
+          .hp-status {
             min-height: 36px;
             display: inline-flex;
             align-items: center;
             padding: 0 12px;
             border-radius: 999px;
-            border: 1px solid rgba(255,255,255,.08);
             background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.08);
             color: #e2e8f0;
             font-size: 13px;
             font-weight: 800;
           }
 
-          .bl-app,
-          .bl-card,
-          .bl-stat,
-          .bl-track,
-          .bl-journey-item {
+          .hp-preview-surface,
+          .hp-card,
+          .hp-stat,
+          .hp-track {
             border-radius: 28px;
             border: 1px solid rgba(255,255,255,.08);
-            background: rgba(15,23,42,.72);
+            background: rgba(15,23,42,.78);
             box-shadow: 0 18px 48px rgba(2,6,23,.24);
           }
 
-          .bl-app {
-            display: grid;
-            gap: 16px;
+          .hp-preview-surface {
             padding: 18px;
           }
 
-          .bl-app-top,
-          .bl-track-top {
+          .hp-preview-shell {
+            display: grid;
+            gap: 14px;
+          }
+
+          .hp-preview-top {
             display: flex;
             justify-content: space-between;
             gap: 14px;
             align-items: flex-start;
           }
 
-          .bl-app-top strong,
-          .bl-track-top strong {
+          .hp-preview-top strong {
             display: block;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
           }
 
-          .bl-app-top span,
-          .bl-track-top span {
+          .hp-preview-top span {
             display: block;
             margin-top: 4px;
             color: #94a3b8;
             font-size: 13px;
           }
 
-          .bl-app-grid,
-          .bl-stats,
-          .bl-track-grid,
-          .bl-grid-3,
-          .bl-journey,
-          .bl-pmes {
-            display: grid;
-            gap: 14px;
-          }
-
-          .bl-menu {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 8px;
-            padding: 12px;
-            border-radius: 22px;
-            border: 1px solid rgba(255,255,255,.08);
-            background: rgba(255,255,255,.04);
-          }
-
-          .bl-menu span {
-            min-height: 42px;
-            display: grid;
-            place-items: center;
-            border-radius: 14px;
-            background: rgba(255,255,255,.03);
-            color: #cbd5e1;
-            font-size: 12px;
-            font-weight: 800;
-            text-align: center;
-            padding: 0 10px;
-          }
-
-          .bl-menu span:first-child {
-            background: linear-gradient(135deg, #c58b00, #9b6b00);
-            color: #ffffff;
-          }
-
-          .bl-preview {
+          .hp-preview-panel {
             border-radius: 24px;
-            background: #ffffff;
-            color: #0f172a;
+            background: #111827;
             padding: 22px;
           }
 
-          .bl-preview p {
-            color: #475569;
+          .hp-progress {
+            margin-top: 16px;
+            height: 12px;
+            border-radius: 999px;
+            background: #1f2937;
+            overflow: hidden;
           }
 
-          .bl-preview-grid {
+          .hp-progress span {
+            display: block;
+            width: 58%;
+            height: 100%;
+            background: linear-gradient(90deg, #15803d, #22c55e);
+          }
+
+          .hp-checklist {
             display: grid;
             gap: 10px;
             margin-top: 16px;
           }
 
-          .bl-preview-grid span {
+          .hp-checklist span {
             display: flex;
             justify-content: space-between;
-            gap: 12px;
+            gap: 10px;
             padding: 12px 14px;
             border-radius: 16px;
-            background: #e2e8f0;
-            color: #334155;
-            font-size: 14px;
+            background: rgba(255,255,255,.04);
+            color: #e2e8f0;
             font-weight: 800;
           }
 
-          .bl-preview-grid b {
+          .hp-checklist b {
             color: #15803d;
           }
 
-          .bl-stat,
-          .bl-card,
-          .bl-track,
-          .bl-journey-item {
+          .hp-stats,
+          .hp-grid-3,
+          .hp-track-grid {
+            display: grid;
+            gap: 14px;
+          }
+
+          .hp-stat,
+          .hp-card,
+          .hp-track {
             padding: 22px;
           }
 
-          .bl-stat strong {
+          .hp-stat strong {
             display: block;
-            margin-bottom: 10px;
             font-size: 2rem;
             line-height: 1;
           }
 
-          .bl-track {
-            display: grid;
-            gap: 16px;
-          }
-
-          .bl-track-list {
+          .hp-track-list {
             padding: 0;
             margin: 0;
             list-style: none;
@@ -274,12 +246,12 @@ export default function HomePage() {
             gap: 10px;
           }
 
-          .bl-track-list li {
+          .hp-track-list li {
             position: relative;
             padding-left: 18px;
           }
 
-          .bl-track-list li::before {
+          .hp-track-list li::before {
             content: "";
             position: absolute;
             left: 0;
@@ -290,159 +262,77 @@ export default function HomePage() {
             background: #c58b00;
           }
 
-          .bl-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-          }
-
-          .bl-link {
-            min-height: 42px;
-            display: inline-flex;
-            align-items: center;
-            padding: 0 14px;
-            border-radius: 999px;
-            border: 1px solid rgba(255,255,255,.08);
-            background: rgba(255,255,255,.04);
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 800;
-          }
-
-          .bl-list {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            display: grid;
-            gap: 12px;
-          }
-
-          .bl-list li {
-            position: relative;
-            padding-left: 18px;
-          }
-
-          .bl-list li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 7px;
-            height: 7px;
-            border-radius: 999px;
-            background: #15803d;
-          }
-
-          .bl-journey-item {
-            text-align: center;
-          }
-
-          .bl-journey-num {
-            width: 42px;
-            height: 42px;
-            display: grid;
-            place-items: center;
-            margin: 0 auto 12px;
-            border-radius: 14px;
-            background: rgba(197,139,0,.14);
-            color: #f3cf6f;
-            font-weight: 900;
-          }
-
-          @media (min-width: 960px) {
-            .bl-hero {
-              grid-template-columns: .92fr 1.08fr;
-              align-items: center;
-              gap: 38px;
+          @media (min-width: 980px) {
+            .hp-hero {
+              grid-template-columns: .9fr 1.1fr;
+              gap: 36px;
             }
 
-            .bl-app-grid {
-              grid-template-columns: 180px 1fr;
-            }
-
-            .bl-menu {
-              grid-template-columns: 1fr;
-              align-content: start;
-            }
-
-            .bl-stats {
+            .hp-stats {
               grid-template-columns: repeat(4, minmax(0, 1fr));
             }
 
-            .bl-grid-3 {
+            .hp-grid-3 {
               grid-template-columns: repeat(3, minmax(0, 1fr));
             }
 
-            .bl-track-grid {
-              grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            .bl-journey {
-              grid-template-columns: repeat(6, minmax(0, 1fr));
-            }
-
-            .bl-pmes {
+            .hp-track-grid {
               grid-template-columns: repeat(2, minmax(0, 1fr));
             }
           }
         `}</style>
 
-        <section className="bl-section" id="inicio">
-          <div className="bl-shell">
-            <div className="bl-hero">
-              <div className="bl-copy">
-                <span className="bl-badge">Preparacao acompanhada BenThec</span>
-                <h1>Voce nao precisa estudar sozinho.</h1>
+        <section className="hp-section" id="inicio">
+          <div className="hp-shell">
+            <div className="hp-hero">
+              <div className="hp-copy">
+                <span className="hp-badge">Plataforma BenThec</span>
+                <h1>Você não precisa estudar sozinho.</h1>
                 <p>
-                  Plano de estudos. Acompanhamento proximo. Questoes. Videoaulas. Tudo organizado para levar voce ate
-                  a aprovacao.
+                  A BenThec organiza sua preparação com plano de estudos, trilhas guiadas, apostilas, questões,
+                  simulados e acompanhamento para transformar esforço em aprovação.
                 </p>
 
-                <div className="bl-actions">
-                  <Link href="/checkout" className="bl-btn">
+                <div className="hp-actions">
+                  <Link href="/checkout" className="hp-btn">
                     Quero organizar meus estudos
                   </Link>
-                  <Link href="/login" className="bl-btn-ghost">
-                    Ja tenho conta
+                  <Link href="/login" className="hp-btn-ghost">
+                    Já tenho conta
                   </Link>
                 </div>
 
-                <div className="bl-chip-row">
-                  <span className="bl-chip">Aprova Agua Doce</span>
-                  <span className="bl-chip">{overview.trackCount} trilhas reais</span>
-                  <span className="bl-chip">{overview.pdfCount} PDFs integraveis</span>
+                <div className="hp-chips">
+                  <span className="hp-chip">Aprova Água Doce</span>
+                  <span className="hp-chip">{overview.pdfCount} apostilas em PDF</span>
+                  <span className="hp-chip">{questionsOverview.totalQuestoes} questões iniciais</span>
                 </div>
               </div>
 
-              <div className="bl-app">
-                <div className="bl-app-top">
-                  <div>
-                    <strong>Continue sua trilha</strong>
-                    <span>{featuredTrack.titulo}</span>
+              <div className="hp-preview-surface">
+                <div className="hp-preview-shell">
+                  <div className="hp-preview-top">
+                    <div>
+                      <strong>Continue sua trilha</strong>
+                      <span>{featuredTrack.titulo}</span>
+                    </div>
+                    <span className="hp-status">Progresso guiado</span>
                   </div>
-                  <span className="bl-status">{featuredTrack.bibliotecaStatus}</span>
-                </div>
 
-                <div className="bl-app-grid">
-                  <aside className="bl-menu">
-                    <span>Inicio</span>
-                    <span>Minha Trilha</span>
-                    <span>Materiais</span>
-                    <span>Biblioteca</span>
-                    <span>Suporte</span>
-                  </aside>
+                  <article className="hp-preview-panel">
+                    <h3 style={{ margin: 0 }}>{featuredTrack.titulo}</h3>
+                    <p style={{ marginTop: 8, color: "#cbd5e1" }}>{featuredTrack.resumo}</p>
 
-                  <article className="bl-preview">
-                    <h3>{featuredTrack.titulo}</h3>
-                    <p>{featuredTrack.resumo}</p>
+                    <div className="hp-progress">
+                      <span />
+                    </div>
 
-                    <div className="bl-preview-grid">
-                      {featuredTrack.checklist.slice(0, 5).map((step, index) => (
-                        <span key={step}>
-                          {step}
-                          <b>{index < 3 ? "liberado" : index === 3 ? "em foco" : "proximo"}</b>
-                        </span>
-                      ))}
+                    <div className="hp-checklist">
+                      <span>Entenda <b>feito</b></span>
+                      <span>Assista <b>feito</b></span>
+                      <span>Leia <b>feito</b></span>
+                      <span>Pratique <b>agora</b></span>
+                      <span>Revise <b>próximo</b></span>
                     </div>
                   </article>
                 </div>
@@ -451,52 +341,49 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="bl-section">
-          <div className="bl-shell">
-            <div className="bl-stats">
-              <article className="bl-stat">
+        <section className="hp-section">
+          <div className="hp-shell">
+            <div className="hp-stats">
+              <article className="hp-stat">
                 <strong>{overview.trackCount}</strong>
-                <p>Trilhas organizadas para o Aprova Agua Doce.</p>
+                <p>Trilhas organizadas para o edital.</p>
               </article>
-              <article className="bl-stat">
+              <article className="hp-stat">
                 <strong>{overview.materialCount}</strong>
-                <p>Materiais mapeados com curadoria real por cargo.</p>
+                <p>Materiais ligados ao fluxo do aluno.</p>
               </article>
-              <article className="bl-stat">
-                <strong>{overview.pdfCount}</strong>
-                <p>PDFs prontos para estudo e download dentro da plataforma.</p>
+              <article className="hp-stat">
+                <strong>{questionsOverview.totalQuestoes}</strong>
+                <p>Questões autorais em estilo de banca.</p>
               </article>
-              <article className="bl-stat">
-                <strong>{overview.readyTrackCount}</strong>
-                <p>Trilhas com biblioteca completa em PDF e Markdown.</p>
+              <article className="hp-stat">
+                <strong>{simulados.length}</strong>
+                <p>Simulados iniciais por área.</p>
               </article>
             </div>
           </div>
         </section>
 
-        <section className="bl-section" id="agua-doce">
-          <div className="bl-shell">
-            <div className="bl-head" style={{ marginBottom: 24 }}>
-              <span className="bl-badge">Aprova Agua Doce</span>
-              <h2>O lancamento ja tem curadoria, biblioteca e cargos mapeados.</h2>
+        <section className="hp-section" id="agua-doce">
+          <div className="hp-shell">
+            <div className="hp-head" style={{ marginBottom: 24 }}>
+              <span className="hp-badge">Aprova Água Doce</span>
+              <h2>Uma experiência de estudo que parece produto, não template.</h2>
               <p>
-                Cada trilha foi montada sobre o acervo pedagogico real produzido para o edital, sem depender de copy
-                comercial generica ou pacotes inventados.
+                O aluno entra, entende o próximo passo, abre a apostila, resolve questões e segue a trilha com apoio
+                e direção.
               </p>
             </div>
 
-            <div className="bl-track-grid">
+            <div className="hp-track-grid">
               {curadoria.map((group) => (
-                <article className="bl-card" key={group.slug}>
-                  <div className="bl-track-top">
-                    <div>
-                      <strong>{group.title}</strong>
-                      <span>{group.description}</span>
-                    </div>
-                    <span className="bl-status">{group.tracks.length} trilhas</span>
+                <article className="hp-track" key={group.slug}>
+                  <div className="hp-head" style={{ gap: 10 }}>
+                    <span className="hp-badge">{group.title}</span>
+                    <h3 style={{ margin: 0 }}>{group.description}</h3>
                   </div>
 
-                  <ul className="bl-track-list">
+                  <ul className="hp-track-list">
                     {group.tracks.map((track) => (
                       <li key={track.slug}>
                         <strong>{track.titulo}</strong>
@@ -506,12 +393,12 @@ export default function HomePage() {
                     ))}
                   </ul>
 
-                  <div className="bl-links">
-                    <Link href="/trilhas" className="bl-link">
+                  <div className="hp-links">
+                    <Link href="/trilhas" className="hp-link">
                       Ver trilhas
                     </Link>
-                    <Link href="/login" className="bl-link">
-                      Entrar no AVA
+                    <Link href="/login" className="hp-link">
+                      Entrar
                     </Link>
                   </div>
                 </article>
@@ -520,68 +407,25 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="bl-section" id="metodo">
-          <div className="bl-shell">
-            <div className="bl-head" style={{ marginBottom: 24 }}>
-              <span className="bl-badge">Metodo BenThec</span>
-              <h2>Direcao clara para transformar apostila em progresso real.</h2>
-              <p>
-                A plataforma nao vende so acesso. Ela organiza a rotina do aluno em sequencia de estudo, biblioteca,
-                revisao e acompanhamento.
-              </p>
-            </div>
-
-            <div className="bl-journey">
-              {journey.map((item, index) => (
-                <article className="bl-journey-item" key={item}>
-                  <div className="bl-journey-num">{index + 1}</div>
-                  <strong>{item}</strong>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bl-section">
-          <div className="bl-shell">
-            <div className="bl-grid-3">
-              <article className="bl-card">
-                <div className="bl-head" style={{ gap: 10 }}>
-                  <span className="bl-badge">Biblioteca real</span>
-                  <h2>Apostilas e materiais ja produzidos entram no fluxo.</h2>
-                </div>
-                <ul className="bl-list">
-                  <li>PDF e Markdown por trilha, com leitura e download.</li>
-                  <li>Status honesto: biblioteca pronta, video demo ou itens em curadoria.</li>
-                  <li>Links diretos para o aluno estudar imediatamente.</li>
-                </ul>
+        <section className="hp-section" id="metodo">
+          <div className="hp-shell">
+            <div className="hp-grid-3">
+              <article className="hp-card">
+                <span className="hp-badge">Plano de estudos</span>
+                <h3>O aluno sabe o que estudar hoje.</h3>
+                <p>Rotina clara com foco no edital, sem dispersão e sem depender de organização manual.</p>
               </article>
 
-              <article className="bl-card">
-                <div className="bl-head" style={{ gap: 10 }}>
-                  <span className="bl-badge">Acompanhamento</span>
-                  <h2>O aluno entende onde esta e o que vem depois.</h2>
-                </div>
-                <ul className="bl-list">
-                  <li>Checklist de estudo por etapa.</li>
-                  <li>Trilhas separadas por cargo e area.</li>
-                  <li>Suporte por WhatsApp integrado na jornada.</li>
-                </ul>
+              <article className="hp-card">
+                <span className="hp-badge">Questões e simulados</span>
+                <h3>Treino orientado no estilo da banca.</h3>
+                <p>Banco inicial autoral e simulados por área para transformar teoria em prática real.</p>
               </article>
 
-              <article className="bl-card">
-                <div className="bl-head" style={{ gap: 10 }}>
-                  <span className="bl-badge">Expansao futura</span>
-                  <h2>PMES fica preparado sem desviar o foco atual.</h2>
-                </div>
-                <div className="bl-pmes">
-                  {estruturaFutura.categories.map((category) => (
-                    <div key={category.slug}>
-                      <strong>{category.title}</strong>
-                      <p>{category.disciplinas.join(" · ")}</p>
-                    </div>
-                  ))}
-                </div>
+              <article className="hp-card">
+                <span className="hp-badge">Acompanhamento</span>
+                <h3>Suporte próximo dentro do fluxo.</h3>
+                <p>Biblioteca, aula demo, checklist, progresso e canal direto para continuidade dos estudos.</p>
               </article>
             </div>
           </div>
