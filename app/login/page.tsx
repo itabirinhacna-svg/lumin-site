@@ -13,14 +13,14 @@ export default async function LoginPage() {
 
   return (
     <>
-      <SiteHeader ctaLabel="Ver pacotes" ctaHref="/#pacotes" />
+      <SiteHeader ctaLabel="Comecar" ctaHref="/checkout" />
       <main className="section">
         <div className="page-shell auth-grid">
           <section className="auth-card">
             <div className="kicker">Acesso do aluno</div>
             <h1 style={{ fontSize: "clamp(2.3rem, 5vw, 4rem)" }}>Entre para continuar seus estudos.</h1>
             <p>
-              Este login jÃ¡ usa conta persistida e prepara a sessÃ£o segura do usuÃ¡rio. O redirecionamento respeita o
+              Este login já usa conta persistida e prepara a sessão segura do usuário. O redirecionamento respeita o
               perfil do acesso.
             </p>
             <form action="/api/auth/login" method="post">
@@ -35,7 +35,7 @@ export default async function LoginPage() {
                   name="password"
                   type="password"
                   placeholder="Sua senha"
-                  minLength={8}
+                  minLength={6}
                   required
                 />
               </div>
@@ -47,13 +47,13 @@ export default async function LoginPage() {
             </form>
           </section>
           <section className="glass-card">
-            <div className="kicker">Bootstrap local</div>
-            <h3>Admin inicial para validaÃ§Ã£o</h3>
+            <div className="kicker">Acesso demo</div>
+            <h3>Entrar na plataforma sem cadastro</h3>
             <ul className="list-clean">
-              <li>E-mail inicial: {env.adminEmail}</li>
-              <li>Senha inicial: definida em ADMIN_PASSWORD</li>
-              <li>Troque os valores de .env antes de publicar</li>
-              <li>Compras liberam acesso do aluno automaticamente no modo mock</li>
+              <li>E-mail demo: demo@benthec.com</li>
+              <li>Senha demo: 123456</li>
+              <li>Ao entrar, o fluxo leva direto para /area</li>
+              <li>Admin local continua disponivel em {env.adminEmail}</li>
             </ul>
           </section>
         </div>

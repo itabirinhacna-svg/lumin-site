@@ -1,0 +1,3321 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Apostila Premium - Informatica</title><style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm 18mm 16mm;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #15202b;
+    background: #f4f7f8;
+    margin: 0;
+    padding: 0;
+    line-height: 1.52;
+    font-size: 11pt;
+  }
+
+  main {
+    background: #ffffff;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .cover {
+    border-bottom: 4px solid #0f766e;
+    padding-bottom: 14px;
+    margin-bottom: 22px;
+  }
+
+  .eyebrow {
+    color: #0f766e;
+    text-transform: uppercase;
+    font-size: 8.5pt;
+    letter-spacing: .08em;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  h1 {
+    color: #0f2742;
+    font-size: 24pt;
+    line-height: 1.15;
+    margin: 0 0 10px;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    color: #0f2742;
+    border-left: 5px solid #0f766e;
+    padding-left: 10px;
+    margin: 26px 0 10px;
+    font-size: 17pt;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    color: #164e63;
+    margin: 20px 0 8px;
+    font-size: 13.5pt;
+    page-break-after: avoid;
+  }
+
+  h4 {
+    color: #24515e;
+    margin: 16px 0 6px;
+    font-size: 12pt;
+    page-break-after: avoid;
+  }
+
+  p { margin: 7px 0; }
+  ul, ol { margin: 8px 0 12px 23px; padding: 0; }
+  li { margin: 3px 0; }
+
+  blockquote {
+    border-left: 4px solid #94a3b8;
+    background: #f8fafc;
+    margin: 12px 0;
+    padding: 8px 12px;
+    color: #334155;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 16px;
+    page-break-inside: avoid;
+    font-size: 10.2pt;
+  }
+
+  th {
+    background: #0f2742;
+    color: #ffffff;
+    text-align: left;
+    padding: 7px;
+  }
+
+  td {
+    border: 1px solid #d8e0e5;
+    padding: 7px;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) td { background: #f8fbfb; }
+
+  code {
+    font-family: "Cascadia Mono", Consolas, monospace;
+    background: #eef6f5;
+    padding: 1px 4px;
+    border-radius: 3px;
+    color: #0f766e;
+  }
+
+  pre {
+    background: #0f2742;
+    color: #f8fafc;
+    padding: 12px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #dbe5ea;
+    margin: 18px 0;
+  }
+
+  strong { color: #0f2742; }
+  a { color: #0f766e; text-decoration: none; }
+
+  .meta {
+    background: #eef8f7;
+    border: 1px solid #c7e5e1;
+    border-radius: 8px;
+    color: #164e63;
+    padding: 10px 12px;
+    margin: 12px 0 18px;
+    font-size: 10pt;
+  }
+
+  .footer-note {
+    margin-top: 26px;
+    padding-top: 10px;
+    border-top: 1px solid #dbe5ea;
+    color: #64748b;
+    font-size: 9pt;
+  }
+</style></head><body><main><section class="cover"><div class="eyebrow">Apostila Premium | Agua Doce do Norte/ES</div><h1>Apostila Premium - Informatica</h1><div class="meta">Arquivo-fonte: apostilas/magisterio/informatica.md</div></section><h1>Apostila Premium - Informatica</h1>
+<p>Concurso: Prefeitura Municipal de Agua Doce do Norte/ES<br>Edital: 001/2026, atualizado pelas retificacoes 001/2026 e 002/2026<br>Bloco: Magisterio<br>Versao: revisada e ampliada para estudo preparatorio</p>
+<h2>Como usar esta apostila</h2>
+<p>Esta apostila foi feita para estudo direto de Informatica em concursos. O foco e entender os recursos cobrados e reconhecer comandos, conceitos e situacoes praticas. A banca costuma cobrar nomes de ferramentas, finalidade dos recursos, seguranca da informacao, internet, e-mail e videoconferencia.</p>
+<h2>Conteudo programatico trabalhado</h2>
+<p>Microsoft Word 2019. Microsoft Excel 2019. Microsoft PowerPoint 2019. Seguranca da informacao: virus, antivirus e cuidados basicos. Internet, navegacao, sites, links, busca e impressao de paginas. Navegadores Google Chrome, Mozilla Firefox e Microsoft Edge. Correio eletronico: envio, recebimento, anexos e organizacao de mensagens. Ferramentas de comunicacao e videoconferencia: Microsoft Teams, Zoom e Google Meet.</p>
+<h1>Bloco 1 - Fundamentos e reconhecimento inicial</h1>
+<h2>1. Matriz de cobertura do edital</h2>
+<p>Esta matriz permite conferir o conteudo item a item. Os capitulos posteriores retomam os mesmos temas com procedimentos, exemplos, pegadinhas e questoes comentadas.</p>
+<table>
+<thead>
+<tr>
+<th>Item previsto</th>
+<th>Onde estudar</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Microsoft Word 2019</td>
+<td>capitulos 2, 17, 24, 31, 38, 46, 52, 61 e 70</td>
+</tr>
+<tr>
+<td>Microsoft Excel 2019</td>
+<td>capitulos 3, 18, 25, 32, 39, 47, 53, 62 e 71</td>
+</tr>
+<tr>
+<td>Microsoft PowerPoint 2019</td>
+<td>capitulos 4, 19, 26, 33, 40, 48, 54, 63 e 72</td>
+</tr>
+<tr>
+<td>virus, antivirus e cuidados basicos</td>
+<td>capitulos 8, 21, 42, 49, 57, 66 e 74</td>
+</tr>
+<tr>
+<td>internet, navegacao, sites, links, busca e impressao de paginas</td>
+<td>capitulos 5, 6, 20, 28, 34, 41, 55, 64 e 73</td>
+</tr>
+<tr>
+<td>Chrome, Firefox e Edge</td>
+<td>capitulos 5, 20, 55, 64 e 73</td>
+</tr>
+<tr>
+<td>correio eletronico, anexos e organizacao de mensagens</td>
+<td>capitulos 7, 27, 34, 41, 49, 56, 65 e 73</td>
+</tr>
+<tr>
+<td>Teams, Zoom e Google Meet</td>
+<td>capitulos 9, 35, 58, 67 e 73</td>
+</tr>
+<tr>
+<td>atalhos e uso situacional</td>
+<td>capitulos 45 e 69</td>
+</tr>
+<tr>
+<td>questoes e simulados</td>
+<td>capitulos 13, 14, 22, 29, 36, 43, 46 a 50, 59 e 75</td>
+</tr>
+</tbody></table>
+<h2>2. Microsoft Word 2019</h2>
+<p>O Word e um editor de textos. Serve para criar, editar, formatar, revisar, salvar e imprimir documentos.</p>
+<h3>2.1 Elementos principais</h3>
+<ul>
+<li>pagina;</li>
+<li>paragrafo;</li>
+<li>fonte;</li>
+<li>margens;</li>
+<li>cabecalho;</li>
+<li>rodape;</li>
+<li>tabela;</li>
+<li>imagem;</li>
+<li>estilos;</li>
+<li>revisao ortografica.</li>
+</ul>
+<h3>2.2 Formatacao de fonte</h3>
+<p>Recursos comuns:</p>
+<ul>
+<li>tipo de fonte;</li>
+<li>tamanho;</li>
+<li>negrito;</li>
+<li>italico;</li>
+<li>sublinhado;</li>
+<li>cor;</li>
+<li>realce;</li>
+<li>maiusculas/minusculas.</li>
+</ul>
+<h3>2.3 Formatacao de paragrafo</h3>
+<p>Inclui:</p>
+<ul>
+<li>alinhamento a esquerda;</li>
+<li>centralizado;</li>
+<li>alinhamento a direita;</li>
+<li>justificado;</li>
+<li>recuo;</li>
+<li>espacamento entre linhas;</li>
+<li>marcadores;</li>
+<li>numeracao.</li>
+</ul>
+<h3>2.4 Margens e orientacao</h3>
+<p>Margens definem o espaco entre o texto e a borda da pagina. Orientacao pode ser retrato ou paisagem.</p>
+<h3>2.5 Cabecalho e rodape</h3>
+<p>Cabecalho aparece na parte superior da pagina. Rodape aparece na parte inferior. Podem conter numero de pagina, data, nome da escola, titulo do documento ou observacoes.</p>
+<h3>2.6 Tabelas</h3>
+<p>Tabelas organizam informacoes em linhas e colunas.</p>
+<p>Exemplo de uso docente:</p>
+<ul>
+<li>quadro de horarios;</li>
+<li>lista de estudantes;</li>
+<li>planejamento semanal;</li>
+<li>registro de atividades.</li>
+</ul>
+<h3>2.7 Revisao</h3>
+<p>O Word possui ferramentas para:</p>
+<ul>
+<li>verificar ortografia;</li>
+<li>controlar alteracoes;</li>
+<li>inserir comentarios;</li>
+<li>comparar documentos;</li>
+<li>contar palavras.</li>
+</ul>
+<h3>Dica de prova</h3>
+<p>Controle de alteracoes e comentarios costumam aparecer em questoes sobre revisao colaborativa de documentos.</p>
+<h2>3. Microsoft Excel 2019</h2>
+<p>O Excel e um programa de planilhas. Ele organiza dados, faz calculos e gera graficos.</p>
+<h3>3.1 Conceitos essenciais</h3>
+<p>Pasta de trabalho: arquivo do Excel.<br>Planilha: aba dentro da pasta de trabalho.<br>Celula: encontro de uma linha com uma coluna.<br>Linha: identificada por numeros.<br>Coluna: identificada por letras.<br>Intervalo: conjunto de celulas.</p>
+<p>Exemplo: A1 e a celula na coluna A, linha 1.</p>
+<h3>3.2 Formula</h3>
+<p>Formula no Excel comeca com sinal de igual.</p>
+<p>Exemplos:</p>
+<ul>
+<li>=A1+B1</li>
+<li>=C2*D2</li>
+<li>=A10/2</li>
+</ul>
+<h3>3.3 Funcoes basicas</h3>
+<table>
+<thead>
+<tr>
+<th>Funcao</th>
+<th>Finalidade</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SOMA</td>
+<td>soma valores</td>
+<td>=SOMA(A1:A10)</td>
+</tr>
+<tr>
+<td>MEDIA</td>
+<td>calcula media</td>
+<td>=MEDIA(B1:B5)</td>
+</tr>
+<tr>
+<td>MAXIMO</td>
+<td>maior valor</td>
+<td>=MAXIMO(C1:C10)</td>
+</tr>
+<tr>
+<td>MINIMO</td>
+<td>menor valor</td>
+<td>=MINIMO(C1:C10)</td>
+</tr>
+<tr>
+<td>CONT.SE</td>
+<td>conta por criterio</td>
+<td>=CONT.SE(A1:A10;&quot;Presente&quot;)</td>
+</tr>
+</tbody></table>
+<h3>3.4 Referencias</h3>
+<p>Referencia relativa muda ao copiar a formula.<br>Referencia absoluta usa cifroes para fixar linha/coluna.</p>
+<p>Exemplo:</p>
+<ul>
+<li>A1: referencia relativa;</li>
+<li>$A$1: referencia absoluta.</li>
+</ul>
+<h3>3.5 Graficos</h3>
+<p>Graficos representam dados visualmente.</p>
+<p>Tipos comuns:</p>
+<ul>
+<li>colunas;</li>
+<li>barras;</li>
+<li>linhas;</li>
+<li>pizza;</li>
+<li>area.</li>
+</ul>
+<h3>Aplicacao na escola</h3>
+<p>O Excel pode ser usado para:</p>
+<ul>
+<li>frequencia;</li>
+<li>notas;</li>
+<li>acompanhamento de atividades;</li>
+<li>levantamento de resultados;</li>
+<li>graficos de desempenho;</li>
+<li>planejamento de recursos.</li>
+</ul>
+<h3>Dica de prova</h3>
+<p>Se a formula nao comeca com &quot;=&quot;, ela nao sera calculada como formula. Pode ser tratada como texto.</p>
+<h2>4. Microsoft PowerPoint 2019</h2>
+<p>O PowerPoint cria apresentacoes em slides.</p>
+<h3>4.1 Elementos</h3>
+<ul>
+<li>slide;</li>
+<li>layout;</li>
+<li>tema;</li>
+<li>caixa de texto;</li>
+<li>imagem;</li>
+<li>grafico;</li>
+<li>tabela;</li>
+<li>transicao;</li>
+<li>animacao;</li>
+<li>modo de apresentacao.</li>
+</ul>
+<h3>4.2 Transicao x animacao</h3>
+<p>Transicao: efeito entre um slide e outro.<br>Animacao: efeito aplicado a objeto dentro do slide.</p>
+<p>Exemplo:</p>
+<ul>
+<li>slide 1 passando para slide 2 com efeito: transicao;</li>
+<li>titulo surgindo aos poucos: animacao.</li>
+</ul>
+<h3>4.3 Boas praticas de apresentacao</h3>
+<ul>
+<li>pouco texto por slide;</li>
+<li>fonte legivel;</li>
+<li>contraste adequado;</li>
+<li>imagens com finalidade;</li>
+<li>sequencia logica;</li>
+<li>cuidado com excesso de animacoes.</li>
+</ul>
+<h3>Aplicacao docente</h3>
+<p>Pode ser usado para:</p>
+<ul>
+<li>aula expositiva dialogada;</li>
+<li>seminario;</li>
+<li>reuniao pedagogica;</li>
+<li>apresentacao de projeto;</li>
+<li>material visual para estudantes.</li>
+</ul>
+<h2>5. Internet</h2>
+<p>Internet e uma rede mundial de computadores. Ela permite acesso a sites, e-mail, sistemas, pesquisas, videos, arquivos e ferramentas de comunicacao.</p>
+<h3>Termos essenciais</h3>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>URL</td>
+<td>endereco de uma pagina</td>
+</tr>
+<tr>
+<td>Site</td>
+<td>conjunto de paginas</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>elemento clicavel</td>
+</tr>
+<tr>
+<td>Download</td>
+<td>baixar arquivo</td>
+</tr>
+<tr>
+<td>Upload</td>
+<td>enviar arquivo</td>
+</tr>
+<tr>
+<td>Navegador</td>
+<td>programa para acessar paginas</td>
+</tr>
+<tr>
+<td>Busca</td>
+<td>pesquisa por palavras-chave</td>
+</tr>
+</tbody></table>
+<h3>Navegadores</h3>
+<p>Principais navegadores cobrados:</p>
+<ul>
+<li>Google Chrome;</li>
+<li>Mozilla Firefox;</li>
+<li>Microsoft Edge.</li>
+</ul>
+<h3>Recursos comuns</h3>
+<ul>
+<li>abas;</li>
+<li>favoritos;</li>
+<li>historico;</li>
+<li>downloads;</li>
+<li>extensoes;</li>
+<li>janela anonima ou privativa;</li>
+<li>impressao de pagina;</li>
+<li>limpar cache e cookies.</li>
+</ul>
+<h3>Impressao de paginas</h3>
+<p>Antes de imprimir uma pagina, confira:</p>
+<ul>
+<li>destino da impressora;</li>
+<li>orientacao;</li>
+<li>escala;</li>
+<li>paginas selecionadas;</li>
+<li>visualizacao previa;</li>
+<li>se ha necessidade de salvar em PDF.</li>
+</ul>
+<h2>6. Pesquisa na internet</h2>
+<p>Pesquisar bem exige escolher palavras-chave e avaliar fontes.</p>
+<h3>Boas praticas</h3>
+<ul>
+<li>use termos especificos;</li>
+<li>confira data;</li>
+<li>confira autoria;</li>
+<li>prefira fontes oficiais;</li>
+<li>compare informacoes;</li>
+<li>desconfie de titulos alarmistas.</li>
+</ul>
+<h3>Comentario ao leitor</h3>
+<p>Em concurso, seguranca e confiabilidade sao temas recorrentes. A resposta correta geralmente orienta verificar fonte, evitar links suspeitos e nao compartilhar dados sem necessidade.</p>
+<h2>7. Correio eletronico</h2>
+<p>E-mail e ferramenta de envio e recebimento de mensagens.</p>
+<h3>Campos do e-mail</h3>
+<p>Para: destinatario principal.<br>Cc: copia visivel.<br>Cco: copia oculta.<br>Assunto: tema da mensagem.<br>Corpo: texto principal.<br>Anexo: arquivo enviado junto.</p>
+<h3>Boas praticas</h3>
+<ul>
+<li>preencher assunto claro;</li>
+<li>conferir destinatario;</li>
+<li>evitar anexos desnecessarios;</li>
+<li>nao abrir anexos suspeitos;</li>
+<li>usar linguagem profissional;</li>
+<li>organizar mensagens em pastas;</li>
+<li>excluir spam com cuidado;</li>
+<li>nao divulgar dados sensiveis.</li>
+</ul>
+<h3>Anexos</h3>
+<p>Anexo pode ser documento, planilha, imagem, PDF ou outro arquivo.</p>
+<p>Riscos:</p>
+<ul>
+<li>virus;</li>
+<li>phishing;</li>
+<li>arquivo falso;</li>
+<li>extensao enganosa.</li>
+</ul>
+<h3>Dica de prova</h3>
+<p>Cco e usado quando voce nao quer que os demais destinatarios vejam quem recebeu copia.</p>
+<h2>8. Seguranca da informacao</h2>
+<p>Seguranca da informacao protege dados, sistemas, dispositivos e usuarios.</p>
+<h3>Principios basicos</h3>
+<p>Confidencialidade: acesso apenas por pessoas autorizadas.<br>Integridade: informacao correta e nao alterada indevidamente.<br>Disponibilidade: informacao acessivel quando necessaria.</p>
+<h3>Ameacas</h3>
+<p>Virus: programa malicioso que infecta arquivos ou sistemas.<br>Malware: termo geral para software malicioso.<br>Spyware: espiona dados.<br>Ransomware: sequestra dados e exige resgate.<br>Phishing: golpe que tenta obter dados por mensagens falsas.<br>Spam: mensagem indesejada em massa.</p>
+<h3>Antivirus</h3>
+<p>Ajuda a detectar, bloquear e remover ameacas. Deve estar atualizado.</p>
+<h3>Senhas seguras</h3>
+<p>Uma senha forte:</p>
+<ul>
+<li>tem tamanho adequado;</li>
+<li>mistura letras, numeros e simbolos;</li>
+<li>evita datas obvias;</li>
+<li>nao usa nome proprio facil;</li>
+<li>nao deve ser compartilhada;</li>
+<li>deve ser diferente em servicos importantes.</li>
+</ul>
+<h3>Backup</h3>
+<p>Backup e copia de seguranca. Pode estar em nuvem, HD externo ou servidor institucional.</p>
+<h3>Cuidados em escola</h3>
+<ul>
+<li>nao expor dados de estudantes;</li>
+<li>bloquear computador ao sair;</li>
+<li>evitar pendrive desconhecido;</li>
+<li>nao salvar senha em computador compartilhado;</li>
+<li>conferir permissao antes de compartilhar arquivo;</li>
+<li>usar canais oficiais.</li>
+</ul>
+<h2>9. Videoconferencia</h2>
+<p>Ferramentas cobradas:</p>
+<ul>
+<li>Microsoft Teams;</li>
+<li>Zoom;</li>
+<li>Google Meet.</li>
+</ul>
+<h3>Recursos comuns</h3>
+<ul>
+<li>entrar em reuniao;</li>
+<li>ativar/desativar microfone;</li>
+<li>ativar/desativar camera;</li>
+<li>compartilhar tela;</li>
+<li>usar chat;</li>
+<li>gravar, quando autorizado;</li>
+<li>alterar nome de exibicao;</li>
+<li>controlar participantes, quando anfitriao;</li>
+<li>enviar link de convite.</li>
+</ul>
+<h3>Etiqueta digital</h3>
+<ul>
+<li>entrar no horario;</li>
+<li>manter microfone fechado quando nao estiver falando;</li>
+<li>usar camera conforme orientacao;</li>
+<li>evitar exposicao de dados sensiveis;</li>
+<li>cuidar do ambiente ao fundo;</li>
+<li>respeitar a vez de fala.</li>
+</ul>
+<h2>10. Questao de tecnologia e pratica docente</h2>
+<p>A tecnologia deve estar a servico da aprendizagem. Usar computador ou projetor nao torna a aula automaticamente melhor. E preciso intencionalidade pedagogica.</p>
+<h3>Exemplos de uso adequado</h3>
+<ul>
+<li>planilha para acompanhar desenvolvimento;</li>
+<li>apresentacao visual para apoiar explicacao;</li>
+<li>documento compartilhado para planejamento;</li>
+<li>videoconferencia para reuniao;</li>
+<li>pesquisa orientada em fontes confiaveis;</li>
+<li>e-mail institucional para comunicacao formal.</li>
+</ul>
+<h3>Erro comum</h3>
+<p>Confundir recurso tecnologico com metodologia. A tecnologia e meio; o objetivo pedagogico vem antes.</p>
+<h2>11. Quadros-resumo</h2>
+<h3>Programas</h3>
+<table>
+<thead>
+<tr>
+<th>Programa</th>
+<th>Finalidade principal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Word</td>
+<td>textos e documentos</td>
+</tr>
+<tr>
+<td>Excel</td>
+<td>planilhas, calculos e graficos</td>
+</tr>
+<tr>
+<td>PowerPoint</td>
+<td>apresentacoes</td>
+</tr>
+<tr>
+<td>Chrome/Firefox/Edge</td>
+<td>navegacao na internet</td>
+</tr>
+<tr>
+<td>Teams/Zoom/Meet</td>
+<td>reunioes online</td>
+</tr>
+</tbody></table>
+<h3>Segurança</h3>
+<table>
+<thead>
+<tr>
+<th>Risco</th>
+<th>Cuidado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Phishing</td>
+<td>verificar remetente e link</td>
+</tr>
+<tr>
+<td>Virus</td>
+<td>usar antivirus atualizado</td>
+</tr>
+<tr>
+<td>Senha fraca</td>
+<td>criar senha forte</td>
+</tr>
+<tr>
+<td>Perda de arquivo</td>
+<td>fazer backup</td>
+</tr>
+<tr>
+<td>Dado sensivel exposto</td>
+<td>controlar compartilhamento</td>
+</tr>
+</tbody></table>
+<h2>12. Dicas de prova</h2>
+<ul>
+<li>Formula do Excel comeca com &quot;=&quot;.</li>
+<li>Celula e encontro de linha e coluna.</li>
+<li>PowerPoint usa slides.</li>
+<li>Transicao e entre slides; animacao e dentro do slide.</li>
+<li>Cco oculta destinatarios.</li>
+<li>Phishing tenta enganar para roubar dados.</li>
+<li>Antivirus precisa estar atualizado.</li>
+<li>Backup e copia de seguranca.</li>
+<li>URL e endereco de pagina.</li>
+<li>Download baixa; upload envia.</li>
+</ul>
+<h2>13. Questoes comentadas</h2>
+<h3>Questao 1</h3>
+<p>No Excel, a formula correta para somar o intervalo de A1 a A10 e:</p>
+<p>A) SOMA(A1:A10)<br>B) =SOMA(A1:A10)<br>C) =SOMAR[A1:A10]<br>D) A1+A10 sem sinal</p>
+<p>Resposta: B.</p>
+<p>Comentario: Formulas no Excel iniciam com &quot;=&quot;. A funcao SOMA usa parenteses e intervalo com dois-pontos.</p>
+<h3>Questao 2</h3>
+<p>No PowerPoint, o efeito aplicado na passagem de um slide para outro chama-se:</p>
+<p>A) formula.<br>B) transicao.<br>C) anexo.<br>D) celula.</p>
+<p>Resposta: B.</p>
+<p>Comentario: Transicao ocorre entre slides. Animacao ocorre em objetos dentro do slide.</p>
+<h3>Questao 3</h3>
+<p>O campo Cco em e-mail serve para:</p>
+<p>A) enviar copia oculta.<br>B) apagar a mensagem.<br>C) anexar arquivo automaticamente.<br>D) criar planilha.</p>
+<p>Resposta: A.</p>
+<p>Comentario: Cco significa copia oculta; os demais destinatarios nao veem quem recebeu por esse campo.</p>
+<h3>Questao 4</h3>
+<p>Phishing e:</p>
+<p>A) golpe que tenta obter dados por mensagem falsa.<br>B) programa de apresentacao.<br>C) tipo de impressora.<br>D) recurso de formatacao de texto.</p>
+<p>Resposta: A.</p>
+<p>Comentario: Phishing usa links, paginas ou mensagens falsas para enganar o usuario.</p>
+<h3>Questao 5</h3>
+<p>No Word, cabecalho e:</p>
+<p>A) area superior da pagina.<br>B) formula de soma.<br>C) grafico de pizza.<br>D) janela anonima.</p>
+<p>Resposta: A.</p>
+<p>Comentario: Cabecalho fica na parte superior; rodape fica na parte inferior.</p>
+<h3>Questao 6</h3>
+<p>Backup significa:</p>
+<p>A) copia de seguranca.<br>B) virus de computador.<br>C) apagar arquivo sem recuperacao.<br>D) abrir varias abas.</p>
+<p>Resposta: A.</p>
+<p>Comentario: Backup protege contra perda de dados.</p>
+<h3>Questao 7</h3>
+<p>Qual alternativa apresenta apenas navegadores?</p>
+<p>A) Word, Excel e PowerPoint.<br>B) Chrome, Firefox e Edge.<br>C) Teams, Zoom e Meet.<br>D) PDF, JPG e PNG.</p>
+<p>Resposta: B.</p>
+<p>Comentario: Chrome, Firefox e Edge sao navegadores de internet.</p>
+<h3>Questao 8</h3>
+<p>Em uma planilha, a celula B3 esta localizada:</p>
+<p>A) na coluna B e linha 3.<br>B) na linha B e coluna 3.<br>C) no slide 3.<br>D) no rodape da pagina.</p>
+<p>Resposta: A.</p>
+<p>Comentario: No Excel, colunas sao letras e linhas sao numeros.</p>
+<h2>14. Simulado rapido</h2>
+<ol>
+<li>O Word e usado principalmente para:</li>
+</ol>
+<p>A) editar textos.<br>B) criar planilhas.<br>C) navegar na internet.<br>D) fazer videoconferencias.</p>
+<ol start="2">
+<li>A funcao MEDIA no Excel serve para:</li>
+</ol>
+<p>A) calcular media dos valores.<br>B) enviar e-mail.<br>C) criar transicao.<br>D) compactar arquivos.</p>
+<ol start="3">
+<li>Download significa:</li>
+</ol>
+<p>A) enviar arquivo para a internet.<br>B) baixar arquivo para o dispositivo.<br>C) apagar historico.<br>D) criar senha.</p>
+<ol start="4">
+<li>Ransomware e:</li>
+</ol>
+<p>A) ameaça que sequestra dados e exige resgate.<br>B) tipo de tabela.<br>C) ferramenta de desenho.<br>D) campo de e-mail.</p>
+<ol start="5">
+<li>Teams, Zoom e Google Meet sao ferramentas de:</li>
+</ol>
+<p>A) videoconferencia.<br>B) calculo de media.<br>C) formatacao de margens.<br>D) antivirus.</p>
+<h3>Gabarito</h3>
+<p>1-A, 2-A, 3-B, 4-A, 5-A.</p>
+<h2>15. Revisao final de vespera</h2>
+<ul>
+<li>Word edita textos.</li>
+<li>Excel trabalha com celulas, formulas, funcoes e graficos.</li>
+<li>PowerPoint cria slides.</li>
+<li>Formula no Excel sempre comeca com &quot;=&quot;.</li>
+<li>URL e endereco de pagina.</li>
+<li>Link e elemento clicavel.</li>
+<li>Download baixa; upload envia.</li>
+<li>E-mail tem destinatario, assunto, corpo e anexo.</li>
+<li>Cco envia copia oculta.</li>
+<li>Phishing e golpe para roubar dados.</li>
+<li>Antivirus precisa estar atualizado.</li>
+<li>Backup e copia de seguranca.</li>
+<li>Teams, Zoom e Meet fazem reunioes online.</li>
+</ul>
+<h2>16. Checklist de dominio</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Sei extensoes comuns de arquivos.</li>
+<li><input disabled="" type="checkbox"> Reconheco recursos do Word.</li>
+<li><input disabled="" type="checkbox"> Entendo celula, linha, coluna e intervalo no Excel.</li>
+<li><input disabled="" type="checkbox"> Sei usar SOMA, MEDIA, MAXIMO e MINIMO.</li>
+<li><input disabled="" type="checkbox"> Diferencio referencia relativa e absoluta.</li>
+<li><input disabled="" type="checkbox"> Diferencio transicao e animacao no PowerPoint.</li>
+<li><input disabled="" type="checkbox"> Sei conceitos de URL, link, download e upload.</li>
+<li><input disabled="" type="checkbox"> Entendo campos de e-mail, Cc e Cco.</li>
+<li><input disabled="" type="checkbox"> Reconheco virus, malware, phishing e ransomware.</li>
+<li><input disabled="" type="checkbox"> Sei cuidados com senhas, antivirus e backup.</li>
+<li><input disabled="" type="checkbox"> Reconheco recursos de Teams, Zoom e Google Meet.</li>
+</ul>
+<h1>Bloco 2 - Recursos essenciais e comportamento seguro</h1>
+<h2>17. Word 2019: edicao eficiente e documentos consistentes</h2>
+<h3>Introducao</h3>
+<p>O Word e usado para criar documentos com organizacao visual e textual. Em prova, os recursos aparecem em situacoes: padronizar titulo, mover trecho, corrigir palavra repetida, inserir tabela ou preparar impressao.</p>
+<h3>Edicao basica</h3>
+<p>Selecionar e o primeiro passo para alterar trecho existente. Depois, o usuario pode:</p>
+<ul>
+<li>apagar;</li>
+<li>copiar;</li>
+<li>recortar;</li>
+<li>formatar;</li>
+<li>substituir.</li>
+</ul>
+<p>Copiar preserva origem. Recortar move. Colar insere o conteudo armazenado temporariamente.</p>
+<h3>Desfazer e refazer</h3>
+<p>Desfazer retorna ao estado anterior. Refazer recupera uma acao desfeita. Esses comandos ajudam quando uma alteracao foi aplicada indevidamente.</p>
+<h3>Paragrafos</h3>
+<p>Um paragrafo pode apresentar:</p>
+<ul>
+<li>alinhamento a esquerda;</li>
+<li>centralizacao;</li>
+<li>alinhamento a direita;</li>
+<li>justificacao;</li>
+<li>recuo;</li>
+<li>espacamento entre linhas;</li>
+<li>espacamento antes ou depois.</li>
+</ul>
+<p>Exemplo:</p>
+<p>Um titulo geralmente pode ser centralizado. Um corpo textual longo costuma usar alinhamento coerente e espacamento que favoreca leitura.</p>
+<h3>Tabelas</h3>
+<p>Tabelas organizam informacao em linhas e colunas. No Word, servem para quadros, cronogramas e listas estruturadas.</p>
+<p>Operacoes:</p>
+<ul>
+<li>inserir tabela;</li>
+<li>adicionar linhas;</li>
+<li>adicionar colunas;</li>
+<li>mesclar celulas;</li>
+<li>ajustar largura;</li>
+<li>alinhar conteudo.</li>
+</ul>
+<h3>Erros comuns</h3>
+<ul>
+<li>usar espacos repetidos para alinhar;</li>
+<li>usar Enters repetidos para trocar pagina;</li>
+<li>confundir recortar e copiar;</li>
+<li>centralizar com espacos;</li>
+<li>imprimir sem pre-visualizar.</li>
+</ul>
+<h3>O que mais cai</h3>
+<ul>
+<li>atalhos;</li>
+<li>copiar x recortar;</li>
+<li>fonte x paragrafo;</li>
+<li>quebra de pagina;</li>
+<li>cabecalho e rodape;</li>
+<li>impressao.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 17.</strong> Para duplicar um paragrafo sem remover o original:</p>
+<p>A) recortar e colar.<br>B) copiar e colar.<br>C) imprimir e salvar.<br>D) localizar e fechar.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>Resumo</h3>
+<p>Word exige dominio de selecao, edicao, formatacao, organizacao e impressao.</p>
+<h2>18. Excel 2019: referencias, funcoes e analise de planilhas</h2>
+<h3>Introducao</h3>
+<p>Planilha bem estruturada transforma dados em informacao. A banca pode pedir leitura de celula, intervalo, formula ou funcao.</p>
+<h3>Referencias</h3>
+<table>
+<thead>
+<tr>
+<th>Referencia</th>
+<th>Comportamento</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A1</td>
+<td>relativa</td>
+</tr>
+<tr>
+<td>$A$1</td>
+<td>coluna e linha fixas</td>
+</tr>
+<tr>
+<td>$A1</td>
+<td>coluna fixa</td>
+</tr>
+<tr>
+<td>A$1</td>
+<td>linha fixa</td>
+</tr>
+</tbody></table>
+<p>Ao copiar formulas, referencias mistas permitem fixar apenas parte.</p>
+<h3>Funcoes de maior utilidade</h3>
+<table>
+<thead>
+<tr>
+<th>Funcao</th>
+<th>Exemplo</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SOMA</td>
+<td>=SOMA(B2:B8)</td>
+<td>total</td>
+</tr>
+<tr>
+<td>MEDIA</td>
+<td>=MEDIA(B2:B8)</td>
+<td>media</td>
+</tr>
+<tr>
+<td>MAXIMO</td>
+<td>=MAXIMO(B2:B8)</td>
+<td>maior valor</td>
+</tr>
+<tr>
+<td>MINIMO</td>
+<td>=MINIMO(B2:B8)</td>
+<td>menor valor</td>
+</tr>
+<tr>
+<td>SE</td>
+<td>=SE(B2&gt;=60;&quot;Aprovado&quot;;&quot;Revisar&quot;)</td>
+<td>condicao</td>
+</tr>
+</tbody></table>
+<h3>Formatos</h3>
+<p>O mesmo valor pode ser exibido em formatos diferentes:</p>
+<ul>
+<li>numero;</li>
+<li>percentual;</li>
+<li>moeda;</li>
+<li>data.</li>
+</ul>
+<p>Formatar nao significa necessariamente alterar o valor armazenado.</p>
+<h3>Ordenacao e filtro</h3>
+<p>Classificar altera ordem de exibicao. Filtrar restringe registros exibidos conforme criterio. Em ambos os casos, cuidado para manter coerencia das linhas.</p>
+<h3>Exemplo aplicado</h3>
+<p>Uma planilha registra notas em B2:B6:</p>
+<pre><code class="language-text">=MEDIA(B2:B6)
+</code></pre>
+<p>A funcao calcula a media dos cinco valores do intervalo.</p>
+<h3>Erros comuns</h3>
+<ul>
+<li>esquecer igualdade;</li>
+<li>confundir dois-pontos com ponto e virgula;</li>
+<li>aplicar formula a celula errada;</li>
+<li>achar que formatar percentual muda automaticamente logica;</li>
+<li>apagar dados quando pretendia apenas filtrar.</li>
+</ul>
+<h3>O que mais cai</h3>
+<ul>
+<li>referencia relativa e absoluta;</li>
+<li>intervalos;</li>
+<li>operadores;</li>
+<li>MEDIA e SOMA;</li>
+<li>funcao SE;</li>
+<li>filtro;</li>
+<li>graficos.</li>
+</ul>
+<h3>Questoes comentadas</h3>
+<p><strong>Questao 18.</strong> Em <code>$A1</code>, esta fixa:</p>
+<p>A) apenas a coluna A.<br>B) apenas a linha 1.<br>C) coluna e linha.<br>D) nenhuma parte.</p>
+<p><strong>Resposta:</strong> A.</p>
+<p><strong>Questao 19.</strong> A funcao adequada para obter maior valor e:</p>
+<p>A) MEDIA.<br>B) MAXIMO.<br>C) SOMA.<br>D) SE.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>Resumo</h3>
+<p>Excel exige leitura precisa de endereco, intervalo, funcao e efeito da copia.</p>
+<h2>19. PowerPoint 2019: planejamento da apresentacao</h2>
+<h3>Introducao</h3>
+<p>PowerPoint e ferramenta de apresentacao. Criar slides nao significa copiar um texto longo para a tela. O recurso deve favorecer comunicacao.</p>
+<h3>Estrutura</h3>
+<p>Uma apresentacao coerente pode conter:</p>
+<ol>
+<li>abertura;</li>
+<li>objetivo;</li>
+<li>desenvolvimento;</li>
+<li>exemplos;</li>
+<li>sintese.</li>
+</ol>
+<h3>Recursos</h3>
+<ul>
+<li>novo slide;</li>
+<li>layout;</li>
+<li>tema;</li>
+<li>caixa de texto;</li>
+<li>imagem;</li>
+<li>tabela;</li>
+<li>grafico;</li>
+<li>transicao;</li>
+<li>animacao;</li>
+<li>modo de apresentacao.</li>
+</ul>
+<h3>Aplicacao pratica</h3>
+<p>Para explicar resultados de frequencia, um grafico pode ser inserido. Para padronizar visual, utilize tema. Para definir distribuicao de titulo e conteudo, selecione layout.</p>
+<h3>Erros comuns</h3>
+<ul>
+<li>excesso de texto;</li>
+<li>contraste insuficiente;</li>
+<li>fonte pequena;</li>
+<li>animacoes excessivas;</li>
+<li>confundir animacao e transicao.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 20.</strong> Recurso usado para padronizar cores e fontes:</p>
+<p>A) tema.<br>B) filtro.<br>C) formula.<br>D) Cco.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>No PowerPoint, associe recurso a funcao: layout distribui, tema padroniza, transicao muda slide, animacao atua em elemento.</p>
+<h2>20. Navegadores e pesquisa confiavel</h2>
+<h3>Introducao</h3>
+<p>Chrome, Firefox e Edge sao navegadores. Eles permitem acessar enderecos, abrir abas, voltar, avancar, atualizar, usar historico e realizar downloads.</p>
+<h3>Pesquisa</h3>
+<p>Pesquisa eficiente utiliza termos claros e avalia fonte.</p>
+<p>Perguntas:</p>
+<ul>
+<li>quem publicou?</li>
+<li>quando?</li>
+<li>qual dominio?</li>
+<li>ha autoria?</li>
+<li>e fonte oficial?</li>
+<li>outras fontes confirmam?</li>
+</ul>
+<h3>Abas e historico</h3>
+<p>Aba mantem pagina aberta no navegador. Historico registra paginas visitadas, conforme configuracao.</p>
+<h3>Download e upload</h3>
+<ul>
+<li>download: receber arquivo;</li>
+<li>upload: enviar arquivo.</li>
+</ul>
+<h3>Erros comuns</h3>
+<ul>
+<li>confundir buscador e navegador;</li>
+<li>baixar de origem duvidosa;</li>
+<li>clicar sem verificar endereco;</li>
+<li>confundir download e upload;</li>
+<li>assumir que todo primeiro resultado e confiavel.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 21.</strong> Firefox e:</p>
+<p>A) navegador.<br>B) antivirus.<br>C) anexo.<br>D) planilha.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>Navegar com seguranca exige compreender ferramentas e avaliar origem.</p>
+<h2>21. Seguranca da informacao: conceitos e comportamento</h2>
+<h3>Introducao</h3>
+<p>O edital destaca virus, antivirus e cuidados basicos. Seguranca nao depende de um unico programa: depende de camadas de protecao.</p>
+<h3>Conceitos</h3>
+<table>
+<thead>
+<tr>
+<th>Termo</th>
+<th>Explicacao</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>virus</td>
+<td>codigo malicioso capaz de infectar</td>
+</tr>
+<tr>
+<td>malware</td>
+<td>termo amplo para software malicioso</td>
+</tr>
+<tr>
+<td>phishing</td>
+<td>tentativa de enganar para obter dados</td>
+</tr>
+<tr>
+<td>ransomware</td>
+<td>malware que pode bloquear dados e exigir pagamento</td>
+</tr>
+<tr>
+<td>antivirus</td>
+<td>ferramenta de deteccao e protecao</td>
+</tr>
+<tr>
+<td>backup</td>
+<td>copia de seguranca</td>
+</tr>
+</tbody></table>
+<h3>Comportamento seguro</h3>
+<ul>
+<li>atualizar programas;</li>
+<li>desconfiar de links;</li>
+<li>verificar remetente;</li>
+<li>evitar senha repetida;</li>
+<li>ativar verificacao adicional;</li>
+<li>manter backup;</li>
+<li>nao compartilhar credenciais.</li>
+</ul>
+<h3>Caso pratico</h3>
+<p>Mensagem afirma que a conta sera encerrada imediatamente e pede login por link. A urgencia e o link inesperado indicam risco. O usuario deve acessar o servico por canal confiavel e confirmar a informacao.</p>
+<h3>Erros comuns</h3>
+<ul>
+<li>confiar apenas no antivirus;</li>
+<li>abrir anexo por curiosidade;</li>
+<li>compartilhar senha;</li>
+<li>ignorar atualizacao;</li>
+<li>manter unica copia de arquivo importante.</li>
+</ul>
+<h3>O que mais cai</h3>
+<ul>
+<li>phishing;</li>
+<li>antivirus atualizado;</li>
+<li>backup;</li>
+<li>senha segura;</li>
+<li>anexo suspeito.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 22.</strong> Backup:</p>
+<p>A) substitui toda seguranca.<br>B) e copia de seguranca.<br>C) e tipo de navegador.<br>D) e campo de e-mail.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>Resumo</h3>
+<p>Seguranca combina ferramentas, atualizacao, cautela e copia de dados.</p>
+<h2>22. Questoes integradoras de Informatica</h2>
+<h3>Questao 23</h3>
+<p>No Excel, <code>B2:B5</code> representa:</p>
+<p>A) apenas B2 e B5.<br>B) intervalo de B2 ate B5.<br>C) referencia absoluta.<br>D) slide.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>Questao 24</h3>
+<p>No Word, Ctrl+P abre:</p>
+<p>A) impressao.<br>B) recorte.<br>C) colagem.<br>D) pesquisa web.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 25</h3>
+<p>Em e-mail, um anexo inesperado deve:</p>
+<p>A) ser aberto rapidamente.<br>B) ser verificado antes da abertura.<br>C) ser encaminhado automaticamente.<br>D) receber senha.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h2>23. Resumo do bloco</h2>
+<ul>
+<li>Word organiza edicao, formatacao e impressao;</li>
+<li>Excel exige referencias, intervalos e funcoes;</li>
+<li>PowerPoint apresenta conteudo com recursos visuais;</li>
+<li>navegador nao e buscador;</li>
+<li>seguranca combina ferramentas e comportamento.</li>
+</ul>
+<h1>Bloco 3 - Insercao, formatacao e comunicacao digital</h1>
+<h2>24. Word 2019: imagens, objetos e configuracao de pagina</h2>
+<h3>Introducao</h3>
+<p>O edital inclui insercao e manipulacao de imagens e objetos. Esses recursos ajudam a produzir documentos com quadros, ilustracoes e elementos visuais.</p>
+<h3>Insercao</h3>
+<p>Procedimento geral:</p>
+<ol>
+<li>posicione cursor;</li>
+<li>acesse guia de insercao;</li>
+<li>selecione imagem ou objeto;</li>
+<li>escolha arquivo ou recurso;</li>
+<li>ajuste tamanho e posicao;</li>
+<li>revise layout.</li>
+</ol>
+<h3>Redimensionamento</h3>
+<p>Ao redimensionar imagem, preserve proporcao para evitar distorcao. Alcas de canto costumam ajudar a manter equilibrio visual.</p>
+<h3>Disposicao do texto</h3>
+<p>A imagem pode ficar:</p>
+<ul>
+<li>alinhada ao texto;</li>
+<li>com quebra ao redor;</li>
+<li>atras ou a frente, conforme configuracao.</li>
+</ul>
+<p>O efeito altera forma como texto ocupa pagina.</p>
+<h3>Margens e orientacao</h3>
+<p>Margens definem area util. Orientacao:</p>
+<ul>
+<li>retrato: pagina vertical;</li>
+<li>paisagem: pagina horizontal.</li>
+</ul>
+<p>Paisagem pode favorecer tabela larga.</p>
+<h3>Objetos</h3>
+<p>Objetos incluem formas, caixas de texto e outros elementos inseridos. Devem ser usados com finalidade.</p>
+<h3>Erros comuns</h3>
+<ul>
+<li>distorcer imagem;</li>
+<li>cobrir texto;</li>
+<li>usar objeto sem alinhamento;</li>
+<li>imprimir sem conferir quebra;</li>
+<li>confundir inserir e copiar arquivo.</li>
+</ul>
+<h3>O que mais cai</h3>
+<ul>
+<li>inserir imagem;</li>
+<li>ajustar tamanho;</li>
+<li>quebra de texto;</li>
+<li>margens;</li>
+<li>retrato x paisagem;</li>
+<li>cabecalho e rodape.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 26.</strong> Para imprimir tabela larga, uma configuracao util e:</p>
+<p>A) paisagem.<br>B) Cco.<br>C) filtro.<br>D) animacao.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>No Word, imagem e objeto precisam dialogar com layout, margens e impressao.</p>
+<h2>25. Excel 2019: formatacao de celulas e graficos</h2>
+<h3>Introducao</h3>
+<p>O edital inclui formatacao de celulas e graficos. Formatar organiza leitura; grafico representa dados visualmente.</p>
+<h3>Celulas</h3>
+<p>Formatacoes:</p>
+<ul>
+<li>numero;</li>
+<li>moeda;</li>
+<li>percentual;</li>
+<li>data;</li>
+<li>fonte;</li>
+<li>cor;</li>
+<li>borda;</li>
+<li>alinhamento;</li>
+<li>preenchimento.</li>
+</ul>
+<h3>Valor e exibicao</h3>
+<p>Formatacao pode alterar exibicao sem mudar valor armazenado.</p>
+<p>Exemplo:</p>
+<p>Valor <code>0,75</code> formatado como percentual aparece como <code>75%</code>.</p>
+<h3>Bordas e preenchimento</h3>
+<p>Bordas delimitam. Preenchimento destaca. Excesso prejudica leitura.</p>
+<h3>Graficos</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Uso frequente</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>colunas</td>
+<td>comparar categorias</td>
+</tr>
+<tr>
+<td>linhas</td>
+<td>acompanhar evolucao</td>
+</tr>
+<tr>
+<td>setores</td>
+<td>observar participacao relativa</td>
+</tr>
+</tbody></table>
+<h3>Passo a passo</h3>
+<ol>
+<li>organize dados;</li>
+<li>selecione intervalo;</li>
+<li>insira grafico;</li>
+<li>escolha tipo;</li>
+<li>confira titulo e legenda;</li>
+<li>valide se representacao faz sentido.</li>
+</ol>
+<h3>Exemplo</h3>
+<p>Frequencia mensal pode ser representada por linha para observar evolucao.</p>
+<h3>Erros comuns</h3>
+<ul>
+<li>selecionar intervalo inadequado;</li>
+<li>escolher grafico incompatível;</li>
+<li>confundir formato e valor;</li>
+<li>usar cores sem legibilidade;</li>
+<li>interpretar grafico sem escala.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 27.</strong> Para acompanhar evolucao ao longo de meses, e adequado usar:</p>
+<p>A) grafico de linhas.<br>B) Cco.<br>C) rodape.<br>D) quebra de pagina.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>Formatacao melhora leitura; grafico precisa representar corretamente os dados.</p>
+<h2>26. PowerPoint 2019: audio, video e multimidia</h2>
+<h3>Introducao</h3>
+<p>O edital inclui recursos de audio, video e multimidia. Uma apresentacao pode integrar diferentes linguagens.</p>
+<h3>Audio e video</h3>
+<p>Recursos multimidia podem:</p>
+<ul>
+<li>ilustrar;</li>
+<li>demonstrar;</li>
+<li>apresentar depoimento;</li>
+<li>apoiar explicacao;</li>
+<li>ampliar acessibilidade quando usados adequadamente.</li>
+</ul>
+<h3>Insercao</h3>
+<p>Procedimento geral:</p>
+<ol>
+<li>selecione slide;</li>
+<li>acesse insercao;</li>
+<li>escolha recurso;</li>
+<li>selecione arquivo ou opcao;</li>
+<li>ajuste posicao;</li>
+<li>teste reproducao.</li>
+</ol>
+<h3>Teste</h3>
+<p>Antes da apresentacao:</p>
+<ul>
+<li>confira audio;</li>
+<li>verifique video;</li>
+<li>teste equipamento;</li>
+<li>observe volume;</li>
+<li>confirme compatibilidade;</li>
+<li>tenha alternativa caso haja falha.</li>
+</ul>
+<h3>Cuidados</h3>
+<ul>
+<li>nao sobrecarregar;</li>
+<li>respeitar objetivo;</li>
+<li>verificar direitos de uso;</li>
+<li>garantir legibilidade;</li>
+<li>evitar recurso sem funcao.</li>
+</ul>
+<h3>Pegadinha</h3>
+<p>Transicao nao e multimidia. Animacao nao e video. Cada recurso possui finalidade.</p>
+<h3>Questao comentada</h3>
+<p><strong>Questao 28.</strong> Antes de apresentar slide com video, e adequado:</p>
+<p>A) testar reproducao.<br>B) apagar arquivo.<br>C) aplicar filtro de Excel.<br>D) usar Cco.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>Multimidia precisa ser inserida, testada e usada com objetivo comunicativo.</p>
+<h2>27. Organizacao de mensagens eletronicas</h2>
+<h3>Introducao</h3>
+<p>O edital inclui envio, recebimento, anexos e organizacao. Organizar mensagens facilita localizar informacao e responder adequadamente.</p>
+<h3>Caixa de entrada</h3>
+<p>Praticas:</p>
+<ul>
+<li>ler assunto;</li>
+<li>verificar remetente;</li>
+<li>identificar prioridade;</li>
+<li>arquivar quando pertinente;</li>
+<li>excluir spam;</li>
+<li>pesquisar mensagem;</li>
+<li>organizar pastas ou marcadores conforme ferramenta.</li>
+</ul>
+<h3>Anexos</h3>
+<p>Antes de enviar:</p>
+<ul>
+<li>confira arquivo;</li>
+<li>abra para validar;</li>
+<li>verifique versao;</li>
+<li>confirme destinatario;</li>
+<li>observe tamanho.</li>
+</ul>
+<p>Antes de abrir anexo recebido:</p>
+<ul>
+<li>confirme origem;</li>
+<li>analise contexto;</li>
+<li>evite arquivo inesperado;</li>
+<li>mantenha protecao atualizada.</li>
+</ul>
+<h3>Spam</h3>
+<p>Spam e mensagem indesejada. Pode conter publicidade ou risco. Evite responder ou clicar sem verificacao.</p>
+<h3>Questao comentada</h3>
+<p><strong>Questao 29.</strong> Ao receber anexo inesperado:</p>
+<p>A) abrir imediatamente.<br>B) confirmar origem antes de abrir.<br>C) encaminhar a todos.<br>D) informar senha.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>Resumo</h3>
+<p>Organizacao de e-mail combina produtividade e seguranca.</p>
+<h2>28. Impressao segura de paginas da internet</h2>
+<h3>Introducao</h3>
+<p>O edital inclui impressao de paginas. Antes de imprimir, use pre-visualizacao.</p>
+<h3>Passos</h3>
+<ol>
+<li>abra pagina;</li>
+<li>acesse impressao;</li>
+<li>confira destino;</li>
+<li>selecione paginas;</li>
+<li>ajuste orientacao;</li>
+<li>observe escala;</li>
+<li>confirme.</li>
+</ol>
+<h3>PDF</h3>
+<p>Quando disponivel, salvar como PDF permite gerar arquivo para consulta ou impressao posterior.</p>
+<h3>Erros comuns</h3>
+<ul>
+<li>imprimir paginas desnecessarias;</li>
+<li>nao verificar orientacao;</li>
+<li>ignorar escala;</li>
+<li>escolher destino incorreto;</li>
+<li>nao conferir dados sensiveis.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 30.</strong> Antes de imprimir pagina web, recomenda-se:</p>
+<p>A) conferir visualizacao.<br>B) fornecer senha.<br>C) desativar antivirus.<br>D) apagar historico obrigatoriamente.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>Pre-visualizar evita desperdicio e erros.</p>
+<h2>29. Questoes integradoras do bloco</h2>
+<h3>Questao 31</h3>
+<p>No Word, orientacao horizontal e:</p>
+<p>A) paisagem.<br>B) retrato.<br>C) anexo.<br>D) planilha.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 32</h3>
+<p>No Excel, formatar <code>0,5</code> como percentual tende a exibir:</p>
+<p>A) 50%.<br>B) 0%.<br>C) 500%.<br>D) texto.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 33</h3>
+<p>Em PowerPoint, video:</p>
+<p>A) deve ser testado.<br>B) substitui todo conteudo.<br>C) e formula.<br>D) e campo oculto.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>30. Resumo do bloco</h2>
+<ul>
+<li>Word integra imagens, objetos e configuracao;</li>
+<li>Excel formata celulas e cria graficos;</li>
+<li>PowerPoint pode usar multimidia;</li>
+<li>e-mail organizado exige cuidado com anexos;</li>
+<li>impressao web deve ser conferida antes.</li>
+</ul>
+<h1>Bloco 4 - Roteiros praticos</h1>
+<h2>31. Word 2019: roteiro pratico de producao documental</h2>
+<h3>Introducao</h3>
+<p>Uma forma eficiente de estudar Word e acompanhar a producao de um documento do inicio ao fim.</p>
+<h3>Roteiro</h3>
+<ol>
+<li>criar documento;</li>
+<li>digitar;</li>
+<li>selecionar trechos;</li>
+<li>formatar fonte;</li>
+<li>formatar paragrafos;</li>
+<li>inserir tabela ou imagem;</li>
+<li>revisar;</li>
+<li>localizar termos;</li>
+<li>configurar pagina;</li>
+<li>salvar;</li>
+<li>visualizar impressao;</li>
+<li>imprimir ou gerar arquivo.</li>
+</ol>
+<h3>Exemplo aplicado</h3>
+<p>Comunicado escolar:</p>
+<ul>
+<li>titulo centralizado;</li>
+<li>data;</li>
+<li>texto justificado;</li>
+<li>lista numerada de orientacoes;</li>
+<li>imagem pequena quando pertinente;</li>
+<li>rodape com contato;</li>
+<li>revisao;</li>
+<li>salvamento.</li>
+</ul>
+<h3>Diferencas importantes</h3>
+<table>
+<thead>
+<tr>
+<th>Acao</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>salvar</td>
+<td>atualiza arquivo</td>
+</tr>
+<tr>
+<td>salvar como</td>
+<td>cria nova referencia de nome, local ou formato</td>
+</tr>
+<tr>
+<td>copiar</td>
+<td>duplica</td>
+</tr>
+<tr>
+<td>recortar</td>
+<td>move</td>
+</tr>
+<tr>
+<td>desfazer</td>
+<td>retorna</td>
+</tr>
+<tr>
+<td>refazer</td>
+<td>recupera acao desfeita</td>
+</tr>
+</tbody></table>
+<h3>Erros comuns</h3>
+<ul>
+<li>nao salvar;</li>
+<li>usar espacos para alinhamento;</li>
+<li>alterar formato sem selecionar;</li>
+<li>imprimir sem revisar;</li>
+<li>substituir tudo sem conferir.</li>
+</ul>
+<h3>Exercicio comentado</h3>
+<p><strong>Questao 34.</strong> Para manter original e criar versao com novo nome:</p>
+<p>A) Salvar como.<br>B) Recortar.<br>C) Localizar.<br>D) Desfazer.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>Word deve ser estudado como fluxo de producao.</p>
+<h2>32. Excel 2019: roteiro pratico de planilha</h2>
+<h3>Introducao</h3>
+<p>Em Excel, organize dados antes de calcular.</p>
+<h3>Roteiro</h3>
+<ol>
+<li>definir colunas;</li>
+<li>inserir cabecalhos;</li>
+<li>preencher registros;</li>
+<li>revisar dados;</li>
+<li>aplicar formatos;</li>
+<li>inserir formulas;</li>
+<li>copiar formulas quando adequado;</li>
+<li>filtrar;</li>
+<li>classificar;</li>
+<li>criar grafico;</li>
+<li>interpretar.</li>
+</ol>
+<h3>Exemplo</h3>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Estudante</td>
+<td>Nota 1</td>
+<td>Nota 2</td>
+</tr>
+<tr>
+<td>Ana</td>
+<td>70</td>
+<td>80</td>
+</tr>
+</tbody></table>
+<p>Media:</p>
+<pre><code class="language-text">=MEDIA(B2:C2)
+</code></pre>
+<p>Situacao:</p>
+<pre><code class="language-text">=SE(D2&gt;=60;&quot;Aprovado&quot;;&quot;Revisar&quot;)
+</code></pre>
+<h3>Referencias</h3>
+<p>Ao copiar a media para linha seguinte, referencias relativas mudam. Se taxa fixa estiver em F1:</p>
+<pre><code class="language-text">=D2*$F$1
+</code></pre>
+<h3>Erros comuns</h3>
+<ul>
+<li>intervalos errados;</li>
+<li>dados misturados;</li>
+<li>formula sem igualdade;</li>
+<li>referencia fixa ausente;</li>
+<li>grafico com intervalo incorreto.</li>
+</ul>
+<h3>Exercicios comentados</h3>
+<p><strong>Questao 35.</strong> Formula para somar A1 ate A5:</p>
+<p>A) =SOMA(A1:A5)<br>B) SOMA=A1-A5<br>C) =MEDIA(A1;A5)<br>D) =A1:A5</p>
+<p><strong>Resposta:</strong> A.</p>
+<p><strong>Questao 36.</strong> Para manter F1 fixa:</p>
+<p>A) F1<br>B) $F$1<br>C) F:F apenas<br>D) 1F</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>Resumo</h3>
+<p>Excel exige estrutura, formula correta e leitura do resultado.</p>
+<h2>33. PowerPoint 2019: roteiro pratico de apresentacao</h2>
+<h3>Introducao</h3>
+<p>Uma apresentacao deve comunicar com clareza.</p>
+<h3>Roteiro</h3>
+<ol>
+<li>definir objetivo;</li>
+<li>criar slides;</li>
+<li>escolher tema;</li>
+<li>selecionar layouts;</li>
+<li>inserir conteudo;</li>
+<li>inserir imagens;</li>
+<li>avaliar audio ou video;</li>
+<li>aplicar efeitos moderados;</li>
+<li>revisar;</li>
+<li>testar apresentacao.</li>
+</ol>
+<h3>Exemplo</h3>
+<p>Apresentacao de projeto:</p>
+<ul>
+<li>slide 1: titulo;</li>
+<li>slide 2: problema;</li>
+<li>slide 3: objetivo;</li>
+<li>slide 4: acoes;</li>
+<li>slide 5: resultados;</li>
+<li>slide 6: sintese.</li>
+</ul>
+<h3>Erros comuns</h3>
+<ul>
+<li>texto excessivo;</li>
+<li>falta de contraste;</li>
+<li>efeitos demais;</li>
+<li>video nao testado;</li>
+<li>slide sem hierarquia.</li>
+</ul>
+<h3>Exercicio comentado</h3>
+<p><strong>Questao 37.</strong> Para exibir efeito na passagem entre slides:</p>
+<p>A) transicao.<br>B) formula.<br>C) filtro.<br>D) rodape.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>PowerPoint combina planejamento visual e teste.</p>
+<h2>34. Internet e e-mail: roteiro pratico seguro</h2>
+<h3>Introducao</h3>
+<p>Internet e correio eletronico exigem produtividade e cautela.</p>
+<h3>Pesquisa</h3>
+<ol>
+<li>definir termo;</li>
+<li>usar mecanismo de busca;</li>
+<li>avaliar resultado;</li>
+<li>verificar fonte;</li>
+<li>abrir link confiavel;</li>
+<li>comparar informacoes;</li>
+<li>baixar somente quando necessario.</li>
+</ol>
+<h3>E-mail</h3>
+<ol>
+<li>conferir destinatario;</li>
+<li>escrever assunto;</li>
+<li>redigir;</li>
+<li>anexar;</li>
+<li>revisar;</li>
+<li>avaliar Cc ou Cco;</li>
+<li>enviar.</li>
+</ol>
+<h3>Cuidado</h3>
+<p>Mensagem urgente pedindo senha merece suspeita. Nao clique automaticamente.</p>
+<h3>Exercicios comentados</h3>
+<p><strong>Questao 38.</strong> Enviar arquivo a servico e:</p>
+<p>A) upload.<br>B) download.<br>C) transicao.<br>D) rodape.</p>
+<p><strong>Resposta:</strong> A.</p>
+<p><strong>Questao 39.</strong> Copia oculta:</p>
+<p>A) Cco.<br>B) Cc.<br>C) URL.<br>D) PDF.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>Pesquisar, navegar e enviar mensagens exigem verificacao.</p>
+<h2>35. Videoconferencia: procedimentos</h2>
+<h3>Introducao</h3>
+<p>Teams, Zoom e Meet compartilham recursos basicos.</p>
+<h3>Antes</h3>
+<ul>
+<li>confira convite;</li>
+<li>teste audio;</li>
+<li>verifique camera;</li>
+<li>organize ambiente;</li>
+<li>feche informacoes privadas.</li>
+</ul>
+<h3>Durante</h3>
+<ul>
+<li>controle microfone;</li>
+<li>use chat com criterio;</li>
+<li>compartilhe apenas necessario;</li>
+<li>acompanhe participantes;</li>
+<li>encerre compartilhamento.</li>
+</ul>
+<h3>Depois</h3>
+<ul>
+<li>saia da reuniao;</li>
+<li>verifique arquivos;</li>
+<li>registre encaminhamentos quando necessario.</li>
+</ul>
+<h3>Erros comuns</h3>
+<ul>
+<li>microfone aberto;</li>
+<li>compartilhar tela inteira indevidamente;</li>
+<li>abrir link suspeito;</li>
+<li>expor informacao;</li>
+<li>esquecer de interromper compartilhamento.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 40.</strong> Ao compartilhar tela:</p>
+<p>A) confira conteudo visivel.<br>B) abra dados pessoais.<br>C) envie senha.<br>D) ignore janela.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>Videoconferencia exige preparo e cuidado.</p>
+<h2>36. Bateria comentada de Informatica</h2>
+<h3>Questao 41</h3>
+<p>No Word, recurso adequado para corrigir termo repetido:</p>
+<p>A) substituir.<br>B) transicao.<br>C) SE.<br>D) filtro.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 42</h3>
+<p>No Excel, <code>=MAXIMO(B2:B8)</code>:</p>
+<p>A) retorna maior valor.<br>B) cria slide.<br>C) envia e-mail.<br>D) aplica antivirus.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 43</h3>
+<p>Tema no PowerPoint:</p>
+<p>A) padroniza visual.<br>B) calcula media.<br>C) envia anexo.<br>D) filtra registros.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 44</h3>
+<p>Antivirus:</p>
+<p>A) auxilia protecao, mas nao elimina cautela.<br>B) autoriza qualquer clique.<br>C) substitui backup.<br>D) dispensa atualizacao.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 45</h3>
+<p>Link:</p>
+<p>A) direciona a recurso.<br>B) e sempre malware.<br>C) e celula.<br>D) e transicao.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>37. Resumo do bloco</h2>
+<ul>
+<li>Word segue fluxo de producao e revisao;</li>
+<li>Excel organiza dados, formulas e resultados;</li>
+<li>PowerPoint exige hierarquia e teste;</li>
+<li>internet e e-mail pedem avaliacao de fonte;</li>
+<li>videoconferencia exige controle de compartilhamento.</li>
+</ul>
+<h1>Bloco 5 - Exercicios situacionais</h1>
+<h2>38. Exercicios situacionais de Word 2019</h2>
+<h3>Introducao</h3>
+<p>Questoes situacionais descrevem necessidade e pedem recurso adequado.</p>
+<h3>Situacao 1: mover paragrafo</h3>
+<p>Necessidade: retirar paragrafo da introducao e inseri-lo na conclusao.</p>
+<p>Solucao:</p>
+<ol>
+<li>selecionar;</li>
+<li>recortar;</li>
+<li>posicionar cursor;</li>
+<li>colar.</li>
+</ol>
+<p><strong>Questao 46.</strong> A combinacao adequada e:</p>
+<p>A) Ctrl+C e Ctrl+P.<br>B) Ctrl+X e Ctrl+V.<br>C) Ctrl+S e Ctrl+O.<br>D) Ctrl+Z e Ctrl+N.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>Situacao 2: nova pagina</h3>
+<p>Necessidade: iniciar capitulo em pagina seguinte sem varios Enters.</p>
+<p>Solucao: quebra de pagina.</p>
+<p><strong>Questao 47.</strong> Recurso adequado:</p>
+<p>A) quebra de pagina.<br>B) Cco.<br>C) filtro.<br>D) animacao.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Situacao 3: versao alternativa</h3>
+<p>Necessidade: criar copia com outro nome.</p>
+<p>Solucao: Salvar como.</p>
+<h3>Situacao 4: termo repetido</h3>
+<p>Necessidade: trocar &quot;aluno&quot; por &quot;estudante&quot; e revisar ocorrencias.</p>
+<p>Solucao: localizar e substituir com conferência.</p>
+<h3>Erros comuns</h3>
+<ul>
+<li>recortar quando desejava duplicar;</li>
+<li>usar Enter repetido;</li>
+<li>substituir tudo sem revisar;</li>
+<li>esquecer salvamento;</li>
+<li>imprimir destino errado.</li>
+</ul>
+<h3>Resumo</h3>
+<p>No Word, associe cada comando a uma necessidade.</p>
+<h2>39. Exercicios situacionais de Excel 2019</h2>
+<h3>Situacao 1: media</h3>
+<p>Notas em B2 ate B5:</p>
+<pre><code class="language-text">=MEDIA(B2:B5)
+</code></pre>
+<p><strong>Questao 48.</strong> A formula:</p>
+<p>A) calcula media do intervalo.<br>B) soma apenas B2 e B5.<br>C) fixa celula.<br>D) cria grafico.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Situacao 2: total</h3>
+<p>Despesas em C2:C10:</p>
+<pre><code class="language-text">=SOMA(C2:C10)
+</code></pre>
+<h3>Situacao 3: condicao</h3>
+<pre><code class="language-text">=SE(D2&gt;=75;&quot;Adequada&quot;;&quot;Atencao&quot;)
+</code></pre>
+<p>Se D2 = 80, resultado: Adequada.</p>
+<h3>Situacao 4: taxa fixa</h3>
+<p>Valor em B2 e taxa em F1:</p>
+<pre><code class="language-text">=B2*$F$1
+</code></pre>
+<p>Ao copiar, F1 permanece.</p>
+<h3>Situacao 5: filtro</h3>
+<p>Necessidade: visualizar estudantes com frequencia inferior a 75%.</p>
+<p>Solucao: aplicar filtro com criterio.</p>
+<h3>Erros comuns</h3>
+<ul>
+<li>esquecer igualdade;</li>
+<li>errar intervalo;</li>
+<li>confundir filtro e exclusao;</li>
+<li>nao fixar referencia;</li>
+<li>escolher grafico inadequado.</li>
+</ul>
+<h3>Questoes comentadas</h3>
+<p><strong>Questao 49.</strong> <code>$F$1</code> indica:</p>
+<p>A) referencia absoluta.<br>B) intervalo.<br>C) slide.<br>D) anexo.</p>
+<p><strong>Resposta:</strong> A.</p>
+<p><strong>Questao 50.</strong> Filtro:</p>
+<p>A) exibe registros conforme criterio.<br>B) sempre apaga dados.<br>C) imprime documento.<br>D) cria senha.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>Excel exige leitura de formula e efeito operacional.</p>
+<h2>40. Exercicios situacionais de PowerPoint</h2>
+<h3>Situacao 1: padrao visual</h3>
+<p>Necessidade: uniformizar cores e fontes.</p>
+<p>Solucao: tema.</p>
+<h3>Situacao 2: distribuicao</h3>
+<p>Necessidade: definir posicoes de titulo e conteudo.</p>
+<p>Solucao: layout.</p>
+<h3>Situacao 3: efeito de passagem</h3>
+<p>Solucao: transicao.</p>
+<h3>Situacao 4: elemento que aparece</h3>
+<p>Solucao: animacao.</p>
+<h3>Situacao 5: video</h3>
+<p>Necessidade: inserir video explicativo.</p>
+<p>Solucao: inserir, posicionar e testar reproducao.</p>
+<h3>Questao comentada</h3>
+<p><strong>Questao 51.</strong> Efeito aplicado a elemento interno:</p>
+<p>A) animacao.<br>B) transicao.<br>C) filtro.<br>D) backup.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>PowerPoint exige diferenciar recurso visual e funcao.</p>
+<h2>41. Exercicios situacionais de internet e e-mail</h2>
+<h3>Situacao 1: origem confiavel</h3>
+<p>Necessidade: consultar lei.</p>
+<p>Conduta: priorizar portal oficial.</p>
+<h3>Situacao 2: envio a muitos destinatarios</h3>
+<p>Necessidade: preservar enderecos.</p>
+<p>Solucao: Cco quando apropriado.</p>
+<h3>Situacao 3: anexo inesperado</h3>
+<p>Conduta: verificar remetente e contexto antes de abrir.</p>
+<h3>Situacao 4: baixar arquivo</h3>
+<p>Download transfere arquivo para dispositivo.</p>
+<h3>Situacao 5: enviar arquivo</h3>
+<p>Upload transfere arquivo para servico.</p>
+<h3>Questoes comentadas</h3>
+<p><strong>Questao 52.</strong> Para preservar destinatarios:</p>
+<p>A) Cco.<br>B) Cc.<br>C) URL.<br>D) Excel.</p>
+<p><strong>Resposta:</strong> A.</p>
+<p><strong>Questao 53.</strong> Transferir arquivo ao dispositivo:</p>
+<p>A) download.<br>B) upload.<br>C) layout.<br>D) rodape.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>Internet exige avaliar origem; e-mail exige verificar destinatarios e anexos.</p>
+<h2>42. Exercicios situacionais de seguranca</h2>
+<h3>Situacao 1: mensagem urgente</h3>
+<p>Mensagem pede senha por link. Conduta:</p>
+<ul>
+<li>nao clicar;</li>
+<li>verificar origem;</li>
+<li>acessar canal oficial;</li>
+<li>comunicar conforme fluxo.</li>
+</ul>
+<h3>Situacao 2: arquivo importante</h3>
+<p>Conduta:</p>
+<ul>
+<li>manter copia de seguranca;</li>
+<li>armazenar adequadamente;</li>
+<li>atualizar.</li>
+</ul>
+<h3>Situacao 3: senha</h3>
+<p>Conduta:</p>
+<ul>
+<li>usar senha longa;</li>
+<li>nao repetir;</li>
+<li>ativar verificacao em duas etapas quando disponivel;</li>
+<li>nao compartilhar.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 54.</strong> Antivirus:</p>
+<p>A) auxilia protecao, mas nao dispensa cautela.<br>B) elimina todo risco.<br>C) substitui backup.<br>D) autoriza clicar.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>43. Simulado situacional</h2>
+<h3>Questao 1</h3>
+<p>Para duplicar trecho no Word:</p>
+<p>A) copiar e colar.<br>B) recortar e excluir.<br>C) filtrar.<br>D) transicionar.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 2</h3>
+<p>No Excel, <code>A1:A4</code>:</p>
+<p>A) e intervalo.<br>B) e URL.<br>C) e Cco.<br>D) e tema.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 3</h3>
+<p>No PowerPoint, layout:</p>
+<p>A) organiza disposicao.<br>B) detecta virus.<br>C) envia e-mail.<br>D) calcula media.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 4</h3>
+<p>Teams, Zoom e Meet:</p>
+<p>A) permitem videoconferencia.<br>B) sao formulas.<br>C) sao extensoes de imagem.<br>D) sao filtros.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 5</h3>
+<p>Backup:</p>
+<p>A) e copia de seguranca.<br>B) e navegador.<br>C) e animacao.<br>D) e anexo obrigatorio.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>44. Resumo do bloco</h2>
+<ul>
+<li>questoes situacionais pedem recurso adequado;</li>
+<li>Word trabalha edicao e organizacao;</li>
+<li>Excel exige formulas e referencias;</li>
+<li>PowerPoint exige dominio de layout, tema e efeitos;</li>
+<li>internet, e-mail e seguranca pedem cautela.</li>
+</ul>
+<h1>Bloco 6 - Atalhos e banco de questoes</h1>
+<h2>45. Atalhos essenciais</h2>
+<h3>Introducao</h3>
+<p>Atalhos aceleram acoes. Em prova, associe combinacao e funcao.</p>
+<h3>Atalhos gerais recorrentes</h3>
+<table>
+<thead>
+<tr>
+<th>Atalho</th>
+<th>Acao</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Ctrl+C</td>
+<td>copiar</td>
+</tr>
+<tr>
+<td>Ctrl+X</td>
+<td>recortar</td>
+</tr>
+<tr>
+<td>Ctrl+V</td>
+<td>colar</td>
+</tr>
+<tr>
+<td>Ctrl+Z</td>
+<td>desfazer</td>
+</tr>
+<tr>
+<td>Ctrl+Y</td>
+<td>refazer</td>
+</tr>
+<tr>
+<td>Ctrl+A</td>
+<td>selecionar tudo em muitos aplicativos</td>
+</tr>
+<tr>
+<td>Ctrl+S</td>
+<td>salvar em muitos aplicativos</td>
+</tr>
+<tr>
+<td>Ctrl+O</td>
+<td>abrir em muitos aplicativos</td>
+</tr>
+<tr>
+<td>Ctrl+N</td>
+<td>novo em muitos aplicativos</td>
+</tr>
+<tr>
+<td>Ctrl+P</td>
+<td>imprimir</td>
+</tr>
+<tr>
+<td>Ctrl+F</td>
+<td>localizar</td>
+</tr>
+</tbody></table>
+<h3>Uso em contexto</h3>
+<p>Mover trecho:</p>
+<pre><code class="language-text">Ctrl+X -&gt; posicionar cursor -&gt; Ctrl+V
+</code></pre>
+<p>Duplicar:</p>
+<pre><code class="language-text">Ctrl+C -&gt; posicionar cursor -&gt; Ctrl+V
+</code></pre>
+<h3>Cuidados</h3>
+<p>Atalhos podem variar conforme idioma, sistema e aplicativo. Em prova, observe ambiente informado. Priorize atalhos amplamente reconhecidos.</p>
+<blockquote>
+<p><strong>Atencao:</strong> esta tabela apresenta atalhos recorrentes em muitos contextos. Para a interface em portugues do Word 2019, consulte o capitulo 69: nele estao explicitadas as diferencas relevantes, como <code>Ctrl + B</code> para salvar, <code>Ctrl + T</code> para selecionar todo o documento e <code>Ctrl + S</code> para sublinhar.</p>
+</blockquote>
+<h3>Erros comuns</h3>
+<ul>
+<li>confundir copiar e recortar;</li>
+<li>achar que salvar imprime;</li>
+<li>usar selecionar tudo quando queria trecho;</li>
+<li>ignorar contexto;</li>
+<li>decorar sem aplicar.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 55.</strong> Ctrl+P geralmente abre:</p>
+<p>A) impressao.<br>B) colagem.<br>C) recorte.<br>D) filtro.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Resumo</h3>
+<p>Atalho e comando rápido; associe a necessidade.</p>
+<h2>46. Banco de exercicios: Word</h2>
+<h3>Questao 56</h3>
+<p>Para localizar palavra em documento:</p>
+<p>A) Ctrl+F.<br>B) Ctrl+V.<br>C) Ctrl+P.<br>D) Ctrl+N.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 57</h3>
+<p>Para desfazer alteracao:</p>
+<p>A) Ctrl+Z.<br>B) Ctrl+Y.<br>C) Ctrl+C.<br>D) Ctrl+S.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 58</h3>
+<p>Cabecalho:</p>
+<p>A) aparece em area superior.<br>B) e formula.<br>C) e filtro.<br>D) envia copia.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 59</h3>
+<p>Paisagem:</p>
+<p>A) orientacao horizontal.<br>B) vertical.<br>C) animacao.<br>D) malware.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 60</h3>
+<p>Quebra de pagina:</p>
+<p>A) inicia nova pagina controladamente.<br>B) cria grafico.<br>C) oculta destinatario.<br>D) calcula media.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>47. Banco de exercicios: Excel</h2>
+<h3>Questao 61</h3>
+<p>Endereco C4:</p>
+<p>A) coluna C, linha 4.<br>B) linha C, coluna 4.<br>C) grafico.<br>D) arquivo.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 62</h3>
+<p>Formula inicia com:</p>
+<p>A) =<br>B) #<br>C) @ sempre<br>D) ?</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 63</h3>
+<p><code>=SOMA(A1:A3)</code>:</p>
+<p>A) soma intervalo.<br>B) calcula media.<br>C) cria video.<br>D) envia e-mail.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 64</h3>
+<p>Referencia absoluta:</p>
+<p>A) $A$1.<br>B) A1.<br>C) A:A apenas.<br>D) 1A.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 65</h3>
+<p>Grafico de linhas:</p>
+<p>A) ajuda observar evolucao.<br>B) oculta destinatarios.<br>C) revisa texto.<br>D) detecta virus.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>48. Banco de exercicios: PowerPoint</h2>
+<h3>Questao 66</h3>
+<p>Tema:</p>
+<p>A) padroniza visual.<br>B) calcula media.<br>C) filtra.<br>D) envia mensagem.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 67</h3>
+<p>Layout:</p>
+<p>A) organiza elementos.<br>B) e malware.<br>C) e anexo.<br>D) e navegador.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 68</h3>
+<p>Transicao:</p>
+<p>A) atua entre slides.<br>B) atua somente em celula.<br>C) cria senha.<br>D) substitui tema.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 69</h3>
+<p>Animacao:</p>
+<p>A) atua em elemento do slide.<br>B) envia arquivo.<br>C) imprime pagina web.<br>D) e antivírus.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>49. Banco de exercicios: internet, e-mail e seguranca</h2>
+<h3>Questao 70</h3>
+<p>Chrome e:</p>
+<p>A) navegador.<br>B) funcao.<br>C) slide.<br>D) backup.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 71</h3>
+<p>URL:</p>
+<p>A) endereco de recurso.<br>B) copia oculta.<br>C) planilha.<br>D) animacao.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 72</h3>
+<p>Upload:</p>
+<p>A) envia arquivo.<br>B) recebe arquivo.<br>C) imprime.<br>D) recorta.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 73</h3>
+<p>Cco:</p>
+<p>A) copia oculta.<br>B) soma.<br>C) transicao.<br>D) tema.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 74</h3>
+<p>Phishing:</p>
+<p>A) tenta enganar para obter dados.<br>B) cria grafico.<br>C) e cabecalho.<br>D) e formato de celula.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 75</h3>
+<p>Backup:</p>
+<p>A) copia de seguranca.<br>B) campo de e-mail.<br>C) filtro.<br>D) layout.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>50. Casos mistos comentados</h2>
+<h3>Caso 1</h3>
+<p>Usuario recebeu e-mail urgente com link para senha.</p>
+<p>Resposta:</p>
+<ul>
+<li>nao clicar;</li>
+<li>acessar canal oficial;</li>
+<li>verificar origem;</li>
+<li>comunicar quando aplicavel.</li>
+</ul>
+<h3>Caso 2</h3>
+<p>Usuario precisa mostrar apenas registros com frequencia baixa.</p>
+<p>Resposta: filtro no Excel.</p>
+<h3>Caso 3</h3>
+<p>Usuario precisa mover texto.</p>
+<p>Resposta: recortar e colar.</p>
+<h3>Caso 4</h3>
+<p>Apresentacao com video nao reproduz.</p>
+<p>Resposta: testar arquivo, compatibilidade e equipamento antes.</p>
+<h3>Caso 5</h3>
+<p>Documento possui tabela larga.</p>
+<p>Resposta: avaliar orientacao paisagem.</p>
+<h2>51. Resumo do bloco</h2>
+<ul>
+<li>atalhos associam combinacao e comando;</li>
+<li>banco de exercicios cobre Word, Excel, PowerPoint, internet e seguranca;</li>
+<li>casos mistos treinam escolha de ferramenta;</li>
+<li>contexto define resposta adequada.</li>
+</ul>
+<h1>Bloco 7 - Procedimentos praticos aprofundados</h1>
+<h2>52. Word 2019: revisao, impressao e organizacao do documento</h2>
+<h3>25.1 Introducao</h3>
+<p>Em uma prova, o Word pode aparecer por meio de problemas cotidianos: corrigir uma palavra repetida em muitas paginas, inserir numeracao, imprimir apenas parte do documento ou padronizar titulos. A resposta correta depende da finalidade do recurso.</p>
+<h3>25.2 Revisao ortografica</h3>
+<p>O Word possui ferramentas de revisao que ajudam a localizar possiveis erros. Essas ferramentas sao auxiliares: o usuario continua responsavel pela leitura.</p>
+<p>Exemplo:</p>
+<p>A palavra &quot;publico&quot; pode estar correta ou precisar de acento, conforme sentido:</p>
+<ul>
+<li>O <strong>publico</strong> participou. Substantivo.</li>
+<li>Eu <strong>publico</strong> o resultado. Verbo.</li>
+<li>O evento e <strong>publico</strong>. Adjetivo.</li>
+</ul>
+<p>O corretor pode auxiliar, mas a decisao depende do contexto.</p>
+<h3>25.3 Localizar e substituir com seguranca</h3>
+<p>Passo a passo:</p>
+<ol>
+<li>abra o recurso de localizacao;</li>
+<li>informe o termo procurado;</li>
+<li>verifique ocorrencias;</li>
+<li>informe substituicao;</li>
+<li>escolha substituir uma ocorrencia ou todas;</li>
+<li>revise o documento.</li>
+</ol>
+<blockquote>
+<p><strong>Pegadinha:</strong> &quot;Substituir tudo&quot; e rapido, mas pode alterar trechos inadequados. Automatizar nao elimina revisao.</p>
+</blockquote>
+<h3>25.4 Listas</h3>
+<p>Marcadores organizam itens sem ordem obrigatoria. Numeracao organiza etapas ou itens ordenados.</p>
+<p>Exemplo:</p>
+<p>Marcadores:</p>
+<ul>
+<li>caderno;</li>
+<li>lapis;</li>
+<li>livro.</li>
+</ul>
+<p>Numeracao:</p>
+<ol>
+<li>abrir documento;</li>
+<li>revisar texto;</li>
+<li>salvar arquivo.</li>
+</ol>
+<h3>25.5 Configuracao de pagina</h3>
+<p>Antes de imprimir, verifique:</p>
+<ul>
+<li>margens;</li>
+<li>orientacao retrato ou paisagem;</li>
+<li>tamanho de papel;</li>
+<li>intervalo de paginas;</li>
+<li>quantidade de copias;</li>
+<li>impressora selecionada.</li>
+</ul>
+<p>Paisagem pode ser util para tabelas largas. Retrato e comum em textos corridos.</p>
+<h3>25.6 Impressao parcial</h3>
+<p>Nem sempre e necessario imprimir todo o arquivo. O usuario pode selecionar paginas especificas conforme as opcoes disponiveis.</p>
+<p>Exemplo:</p>
+<p>Para imprimir apenas paginas 2 a 4, informe o intervalo correspondente na area de impressao.</p>
+<h3>25.7 Principais erros</h3>
+<ul>
+<li>confiar cegamente no corretor;</li>
+<li>substituir todas as ocorrencias sem revisar;</li>
+<li>confundir marcador e numeracao;</li>
+<li>imprimir sem verificar intervalo;</li>
+<li>escolher orientacao inadequada.</li>
+</ul>
+<h3>25.8 Questao comentada</h3>
+<p><strong>Questao 9.</strong> Uma tabela muito larga sera impressa. Uma medida util pode ser:</p>
+<p>A) escolher orientacao paisagem.<br>B) excluir cabecalho obrigatoriamente.<br>C) usar Cco.<br>D) aplicar filtro.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>53. Excel 2019: calculos, funcoes e leitura de resultados</h2>
+<h3>26.1 Introducao</h3>
+<p>O Excel exige atencao a estrutura. A banca pode fornecer uma formula e perguntar qual resultado sera produzido ou qual funcao resolve uma necessidade.</p>
+<h3>26.2 Ordem de calculo</h3>
+<p>Como na Matematica, parenteses ajudam a definir prioridade.</p>
+<p>Compare:</p>
+<pre><code class="language-text">=A1+B1/2
+</code></pre>
+<p>e:</p>
+<pre><code class="language-text">=(A1+B1)/2
+</code></pre>
+<p>Na primeira, a divisao ocorre antes da soma. Na segunda, a soma ocorre primeiro.</p>
+<h3>26.3 Funcao SE</h3>
+<p>A funcao SE testa uma condicao.</p>
+<pre><code class="language-text">=SE(B2&gt;=60;&quot;Aprovado&quot;;&quot;Em recuperacao&quot;)
+</code></pre>
+<p>Leitura:</p>
+<ol>
+<li>verifique se B2 e maior ou igual a 60;</li>
+<li>se verdadeiro, retorne &quot;Aprovado&quot;;</li>
+<li>se falso, retorne &quot;Em recuperacao&quot;.</li>
+</ol>
+<h3>26.4 Preenchimento e copia</h3>
+<p>Ao copiar formula, referencias relativas podem mudar. Isso permite repetir calculos em varias linhas.</p>
+<p>Exemplo:</p>
+<p>Na celula C2:</p>
+<pre><code class="language-text">=A2+B2
+</code></pre>
+<p>Ao copiar para C3:</p>
+<pre><code class="language-text">=A3+B3
+</code></pre>
+<p>Se parte da formula deve ficar fixa, use referencia absoluta:</p>
+<pre><code class="language-text">=B2*$F$1
+</code></pre>
+<h3>26.5 Classificar e filtrar</h3>
+<p>Classificacao muda a ordem dos registros. Filtro limita temporariamente a exibicao.</p>
+<p>Exemplo:</p>
+<p>Uma planilha de frequencia pode:</p>
+<ul>
+<li>ser classificada por nome;</li>
+<li>ser filtrada para mostrar frequencia inferior a 75%;</li>
+<li>manter os demais registros armazenados.</li>
+</ul>
+<h3>26.6 Erros de interpretacao</h3>
+<ul>
+<li>filtro nao exclui automaticamente dados;</li>
+<li>classificacao nao cria media;</li>
+<li>referencia absoluta nao muda ao copiar;</li>
+<li>formula precisa iniciar com igualdade;</li>
+<li>intervalo <code>A1:A5</code> inclui A1, A2, A3, A4 e A5.</li>
+</ul>
+<h3>26.7 Questoes comentadas</h3>
+<p><strong>Questao 10.</strong> A formula <code>=SE(C2&gt;=75;&quot;Adequada&quot;;&quot;Atencao&quot;)</code> retorna &quot;Adequada&quot; quando:</p>
+<p>A) C2 e menor que 75.<br>B) C2 e maior ou igual a 75.<br>C) C2 esta vazia obrigatoriamente.<br>D) C2 e texto.</p>
+<p><strong>Resposta:</strong> B.</p>
+<p><strong>Questao 11.</strong> Ao aplicar filtro:</p>
+<p>A) os registros nao exibidos sao necessariamente apagados.<br>B) a pasta de trabalho vira apresentacao.<br>C) apenas registros segundo criterio ficam visiveis.<br>D) toda formula vira texto.</p>
+<p><strong>Resposta:</strong> C.</p>
+<h2>54. PowerPoint 2019: construcao e exibicao</h2>
+<h3>27.1 Introducao</h3>
+<p>O PowerPoint organiza apresentacoes em slides. Em prova, atente para finalidade de layout, tema, transicao, animacao e modo de apresentacao.</p>
+<h3>27.2 Insercao de elementos</h3>
+<p>Um slide pode conter:</p>
+<ul>
+<li>titulo;</li>
+<li>caixa de texto;</li>
+<li>imagem;</li>
+<li>tabela;</li>
+<li>grafico;</li>
+<li>forma.</li>
+</ul>
+<p>O layout facilita a distribuicao. O tema padroniza elementos visuais.</p>
+<h3>27.3 Uso adequado de efeitos</h3>
+<p>Transicoes e animacoes devem ser usadas com moderacao. Em contexto educacional, o recurso visual apoia a comunicacao; nao deve prejudicar legibilidade.</p>
+<h3>27.4 Questao comentada</h3>
+<p><strong>Questao 12.</strong> Assinale a alternativa correta:</p>
+<p>A) layout define disposicao de elementos.<br>B) tema e sinonimo de assunto da aula no software.<br>C) animacao atua apenas entre slides.<br>D) transicao cria formulas.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>55. Navegacao, links, downloads e impressao de paginas</h2>
+<h3>28.1 Introducao</h3>
+<p>Navegar envolve acessar enderecos, abrir links, usar abas, pesquisar, baixar arquivos e imprimir paginas.</p>
+<h3>28.2 URL e link</h3>
+<p>URL e endereco. Link e elemento clicavel que direciona a um recurso.</p>
+<p>Uma pagina pode conter varios links. Um link pode direcionar para outra pagina, um arquivo ou outra parte do mesmo site.</p>
+<h3>28.3 Download seguro</h3>
+<p>Antes de baixar:</p>
+<ul>
+<li>verifique origem;</li>
+<li>confirme se o site e confiavel;</li>
+<li>observe tipo do arquivo;</li>
+<li>mantenha protecao atualizada;</li>
+<li>evite executar arquivo inesperado.</li>
+</ul>
+<h3>28.4 Impressao de pagina</h3>
+<p>A visualizacao de impressao permite conferir:</p>
+<ul>
+<li>paginas;</li>
+<li>escala;</li>
+<li>orientacao;</li>
+<li>destino;</li>
+<li>salvamento em PDF quando disponivel.</li>
+</ul>
+<h3>28.5 Questao comentada</h3>
+<p><strong>Questao 13.</strong> Assinale a alternativa correta:</p>
+<p>A) URL e o endereco de um recurso.<br>B) link e sempre um arquivo malicioso.<br>C) download envia arquivo para servidor.<br>D) navegador e sempre um antivirus.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>56. E-mail: organizacao e uso responsavel</h2>
+<h3>29.1 Introducao</h3>
+<p>Enviar e-mail exige mais do que preencher destinatario. Em ambiente profissional, assunto claro, revisao e cuidado com anexos evitam falhas.</p>
+<h3>29.2 Fluxo seguro</h3>
+<ol>
+<li>confira destinatarios;</li>
+<li>escreva assunto objetivo;</li>
+<li>revise mensagem;</li>
+<li>anexe arquivo correto;</li>
+<li>confira se anexo foi incluido;</li>
+<li>avalie uso de Cc ou Cco;</li>
+<li>envie.</li>
+</ol>
+<h3>29.3 Anexo inesperado</h3>
+<p>Ao receber anexo inesperado:</p>
+<ul>
+<li>nao abra imediatamente;</li>
+<li>verifique remetente;</li>
+<li>confirme contexto por canal confiavel;</li>
+<li>observe extensao;</li>
+<li>use ferramentas de seguranca disponiveis.</li>
+</ul>
+<h3>29.4 Questao comentada</h3>
+<p><strong>Questao 14.</strong> Ao encaminhar comunicado para muitos destinatarios que nao precisam visualizar os enderecos uns dos outros, pode ser adequado usar:</p>
+<p>A) Cco.<br>B) Formula SE.<br>C) Transicao.<br>D) Rodape.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>57. Seguranca: prevencao e resposta</h2>
+<h3>30.1 Introducao</h3>
+<p>Seguranca depende de tecnologia e comportamento. Antivirus atualizado e importante, mas nao autoriza abrir qualquer arquivo.</p>
+<h3>30.2 Phishing</h3>
+<p>Phishing usa mensagens enganosas para induzir clique, fornecimento de senha ou abertura de arquivo.</p>
+<p>Sinais:</p>
+<ul>
+<li>urgencia;</li>
+<li>ameaca;</li>
+<li>promessa improvavel;</li>
+<li>endereco estranho;</li>
+<li>erro grosseiro;</li>
+<li>pedido de senha;</li>
+<li>anexo inesperado.</li>
+</ul>
+<h3>30.3 Backup</h3>
+<p>Backup e copia de seguranca. Deve ser armazenado de forma adequada e atualizado conforme necessidade.</p>
+<h3>30.4 Resposta prudente</h3>
+<p>Diante de suspeita:</p>
+<ol>
+<li>nao clique;</li>
+<li>nao forneca credenciais;</li>
+<li>confirme origem;</li>
+<li>comunique setor responsavel quando aplicavel;</li>
+<li>altere senha se houver exposicao;</li>
+<li>siga orientacoes institucionais.</li>
+</ol>
+<h3>30.5 Questao comentada</h3>
+<p><strong>Questao 15.</strong> Uma mensagem pede senha com urgencia por link inesperado. A conduta adequada e:</p>
+<p>A) informar a senha rapidamente.<br>B) clicar para testar.<br>C) desconfiar, nao clicar e verificar origem.<br>D) encaminhar a todos.</p>
+<p><strong>Resposta:</strong> C.</p>
+<h2>58. Videoconferencia na pratica</h2>
+<h3>31.1 Participacao</h3>
+<p>Antes de reuniao:</p>
+<ul>
+<li>confira link;</li>
+<li>teste audio;</li>
+<li>avalie camera;</li>
+<li>verifique ambiente;</li>
+<li>entre com antecedencia quando necessario.</li>
+</ul>
+<p>Durante:</p>
+<ul>
+<li>mantenha microfone desligado quando nao fala;</li>
+<li>use chat adequadamente;</li>
+<li>evite expor informacoes privadas;</li>
+<li>compartilhe apenas janela ou tela necessaria.</li>
+</ul>
+<h3>31.2 Questao comentada</h3>
+<p><strong>Questao 16.</strong> Antes de compartilhar tela, e adequado:</p>
+<p>A) manter informacoes privadas abertas.<br>B) verificar o que sera exibido.<br>C) apagar a reuniao.<br>D) enviar senha no chat.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h2>59. Simulado comentado do bloco pratico</h2>
+<h3>Questao 1</h3>
+<p>No Word, &quot;Substituir tudo&quot;:</p>
+<p>A) dispensa revisao.<br>B) pode exigir revisao posterior.<br>C) serve apenas para imprimir.<br>D) cria planilha.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>Questao 2</h3>
+<p>No Excel, <code>$A$1</code> indica:</p>
+<p>A) referencia absoluta.<br>B) slide.<br>C) anexo.<br>D) link.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h3>Questao 3</h3>
+<p>Em e-mail, Cco:</p>
+<p>A) exibe destinatario a todos.<br>B) envia copia oculta.<br>C) remove anexo.<br>D) substitui antivirus.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>Questao 4</h3>
+<p>Phishing busca frequentemente:</p>
+<p>A) melhorar impressao.<br>B) enganar usuario para obter dados.<br>C) criar grafico.<br>D) alterar layout.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>Questao 5</h3>
+<p>Em PowerPoint, transicao:</p>
+<p>A) atua na passagem entre slides.<br>B) conta celulas.<br>C) organiza e-mails.<br>D) corrige ortografia.</p>
+<p><strong>Resposta:</strong> A.</p>
+<h2>60. Resumo do bloco pratico</h2>
+<ul>
+<li>Word exige revisao, configuracao de pagina e uso consciente de comandos;</li>
+<li>Excel exige leitura de formulas, referencias e filtros;</li>
+<li>PowerPoint diferencia layout, tema, transicao e animacao;</li>
+<li>URL e endereco; link direciona;</li>
+<li>Cco protege visualizacao de destinatarios;</li>
+<li>antivirus nao substitui cautela;</li>
+<li>videoconferencia exige cuidado com audio, camera e compartilhamento.</li>
+</ul>
+<h1>Bloco 8 - Revisao integradora dos conceitos essenciais</h1>
+<p>Este caderno aprofunda os recursos expressamente previstos no edital. A melhor forma de estudar Informatica para concurso e associar cada comando a uma finalidade concreta. Em vez de decorar nomes soltos, imagine a acao que voce realizaria diante da tela.</p>
+<h2>61. Microsoft Word 2019: producao e revisao de documentos</h2>
+<h3>17.1 Introducao</h3>
+<p>O Microsoft Word 2019 e um processador de textos. Ele permite criar, editar, revisar, formatar, salvar e imprimir documentos. No cotidiano escolar, pode ser usado para preparar planos, relatorios, comunicados, tabelas, avaliacoes e registros.</p>
+<p>Em prova, a banca pode perguntar qual recurso deve ser usado em uma situacao, qual atalho executa uma acao ou qual diferenca existe entre comandos parecidos.</p>
+<h3>17.2 Criar, abrir e salvar</h3>
+<p>Ao criar um documento novo, o Word inicia uma area de edicao em branco. Salvar significa gravar o estado atual do arquivo. &quot;Salvar como&quot; permite criar uma copia com outro nome, formato ou local.</p>
+<p>Passo a passo para salvar:</p>
+<ol>
+<li>acesse <strong>Arquivo</strong>;</li>
+<li>escolha <strong>Salvar</strong> ou <strong>Salvar como</strong>;</li>
+<li>selecione a pasta;</li>
+<li>informe o nome;</li>
+<li>confirme o formato desejado.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Acao</th>
+<th>Atalho</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>salvar</td>
+<td>Ctrl+S</td>
+<td>grava alteracoes</td>
+</tr>
+<tr>
+<td>abrir</td>
+<td>Ctrl+O</td>
+<td>abre documento existente</td>
+</tr>
+<tr>
+<td>novo documento</td>
+<td>Ctrl+N</td>
+<td>cria documento</td>
+</tr>
+<tr>
+<td>imprimir</td>
+<td>Ctrl+P</td>
+<td>abre opcoes de impressao</td>
+</tr>
+<tr>
+<td>desfazer</td>
+<td>Ctrl+Z</td>
+<td>desfaz ultima acao</td>
+</tr>
+<tr>
+<td>refazer</td>
+<td>Ctrl+Y</td>
+<td>refaz acao desfeita</td>
+</tr>
+</tbody></table>
+<h3>17.3 Selecionar, copiar, recortar e colar</h3>
+<p>Copiar mantem o conteudo original e cria uma copia temporaria na area de transferencia. Recortar remove o conteudo da posicao original e o envia para a area de transferencia. Colar insere o conteudo armazenado.</p>
+<table>
+<thead>
+<tr>
+<th>Acao</th>
+<th>Atalho</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>selecionar tudo</td>
+<td>Ctrl+A</td>
+</tr>
+<tr>
+<td>copiar</td>
+<td>Ctrl+C</td>
+</tr>
+<tr>
+<td>recortar</td>
+<td>Ctrl+X</td>
+</tr>
+<tr>
+<td>colar</td>
+<td>Ctrl+V</td>
+</tr>
+</tbody></table>
+<p>Exemplo: para mover um paragrafo da introducao para a conclusao, selecione, recorte e cole. Para repetir o paragrafo, copie e cole.</p>
+<h3>17.4 Formatacao de fonte e paragrafo</h3>
+<p>Formatacao de fonte altera a aparencia dos caracteres: tipo, tamanho, negrito, italico, sublinhado, cor e realce.</p>
+<p>Formatacao de paragrafo altera a organizacao do bloco: alinhamento, recuo, espacamento, marcadores, numeracao e bordas.</p>
+<blockquote>
+<p><strong>Pegadinha:</strong> centralizar um titulo e formatacao de paragrafo. Aplicar negrito e formatacao de fonte.</p>
+</blockquote>
+<h3>17.5 Quebra de pagina</h3>
+<p>Pressionar Enter varias vezes nao e a melhor forma de iniciar uma nova pagina. A quebra de pagina cria uma separacao controlada e evita deslocamentos desorganizados quando o texto anterior e editado.</p>
+<h3>17.6 Cabecalho, rodape e numeracao</h3>
+<p>Cabecalho e a area superior repetida nas paginas. Rodape e a area inferior. A numeracao pode ser inserida nessas regioes.</p>
+<h3>17.7 Localizar e substituir</h3>
+<p>Localizar procura ocorrencias. Substituir troca uma ocorrencia ou todas elas por outro conteudo. Revise o resultado: a mesma palavra pode exercer papeis diferentes conforme o contexto.</p>
+<h3>17.8 Principais erros</h3>
+<ul>
+<li>confundir formatacao de fonte e de paragrafo;</li>
+<li>confundir copiar com recortar;</li>
+<li>usar varios Enters em lugar de quebra de pagina;</li>
+<li>esquecer que &quot;Salvar como&quot; altera nome, formato ou local;</li>
+<li>imaginar que cabecalho aparece apenas na primeira pagina.</li>
+</ul>
+<h3>17.9 Questao comentada</h3>
+<p><strong>Questao 1.</strong> Para mover um trecho de um ponto para outro, a sequencia adequada e:</p>
+<p>A) copiar e desfazer.<br>B) recortar e colar.<br>C) salvar e imprimir.<br>D) localizar e fechar.</p>
+<p><strong>Resposta:</strong> B. Recortar remove da origem e colar insere no destino.</p>
+<h3>17.10 Resumo</h3>
+<p>No Word, estude a finalidade: produzir, formatar, localizar, revisar, organizar e imprimir.</p>
+<h2>62. Microsoft Excel 2019: planilhas, formulas e funcoes</h2>
+<h3>18.1 Introducao</h3>
+<p>O Excel 2019 e um editor de planilhas. Uma planilha e formada por linhas, colunas e celulas. Cada celula possui um endereco, como A1, B3 ou D10.</p>
+<p>Aplicacoes: controle de notas, frequencia, cronograma, inventario e calculo de medias.</p>
+<h3>18.2 Estrutura</h3>
+<table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th>Explicacao</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pasta de trabalho</td>
+<td>arquivo do Excel, normalmente .xlsx</td>
+</tr>
+<tr>
+<td>planilha</td>
+<td>aba dentro da pasta</td>
+</tr>
+<tr>
+<td>coluna</td>
+<td>organizacao vertical, por letras</td>
+</tr>
+<tr>
+<td>linha</td>
+<td>organizacao horizontal, por numeros</td>
+</tr>
+<tr>
+<td>celula</td>
+<td>encontro de linha e coluna</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Pegadinha:</strong> A1 e referencia de celula, nao linha nem coluna.</p>
+</blockquote>
+<h3>18.3 Formulas e operadores</h3>
+<p>Uma formula normalmente comeca com sinal de igualdade:</p>
+<pre><code class="language-text">=A1+B1
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Operacao</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td>adicao</td>
+<td>=A1+B1</td>
+</tr>
+<tr>
+<td>-</td>
+<td>subtracao</td>
+<td>=A1-B1</td>
+</tr>
+<tr>
+<td>*</td>
+<td>multiplicacao</td>
+<td>=A1*B1</td>
+</tr>
+<tr>
+<td>/</td>
+<td>divisao</td>
+<td>=A1/B1</td>
+</tr>
+<tr>
+<td>^</td>
+<td>potenciacao</td>
+<td>=A1^2</td>
+</tr>
+</tbody></table>
+<h3>18.4 Funcoes essenciais</h3>
+<table>
+<thead>
+<tr>
+<th>Funcao</th>
+<th>Finalidade</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SOMA</td>
+<td>somar valores</td>
+<td>=SOMA(B2:B10)</td>
+</tr>
+<tr>
+<td>MEDIA</td>
+<td>calcular media</td>
+<td>=MEDIA(B2:B10)</td>
+</tr>
+<tr>
+<td>MAXIMO</td>
+<td>maior valor</td>
+<td>=MAXIMO(B2:B10)</td>
+</tr>
+<tr>
+<td>MINIMO</td>
+<td>menor valor</td>
+<td>=MINIMO(B2:B10)</td>
+</tr>
+<tr>
+<td>SE</td>
+<td>testar condicao</td>
+<td>=SE(B2&gt;=60;&quot;Aprovado&quot;;&quot;Revisar&quot;)</td>
+</tr>
+</tbody></table>
+<p>Dois-pontos indicam intervalo continuo: <code>B2:B10</code> significa todas as celulas de B2 ate B10.</p>
+<h3>18.5 Referencia relativa e absoluta</h3>
+<p>Referencia relativa muda ao copiar: <code>=A2*B2</code> pode virar <code>=A3*B3</code>.</p>
+<p>Referencia absoluta usa cifroes e fica fixa: <code>=A2*$F$1</code>.</p>
+<h3>18.6 Classificacao, filtro e graficos</h3>
+<p>Classificar reorganiza os dados. Filtro exibe apenas registros que atendem a uma condicao, sem apagar os demais. Graficos representam dados visualmente: colunas comparam categorias; linhas mostram evolucao; setores representam participacao relativa.</p>
+<h3>18.7 Erros comuns</h3>
+<ul>
+<li>esquecer o sinal de igualdade;</li>
+<li>confundir pasta de trabalho com planilha;</li>
+<li>errar o intervalo;</li>
+<li>copiar formula sem perceber a mudanca da referencia relativa;</li>
+<li>achar que filtro apaga registros.</li>
+</ul>
+<h3>18.8 Questoes comentadas</h3>
+<p><strong>Questao 2.</strong> A formula <code>=MEDIA(B2:B6)</code> calcula:</p>
+<p>A) apenas B2 e B6.<br>B) a media de B2 ate B6.<br>C) celulas vazias.<br>D) referencia absoluta.</p>
+<p><strong>Resposta:</strong> B.</p>
+<p><strong>Questao 3.</strong> A referencia <code>$F$1</code> e:</p>
+<p>A) relativa.<br>B) absoluta.<br>C) um grafico.<br>D) um filtro.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h3>18.9 Resumo</h3>
+<p>Domine estrutura, formulas, operadores, funcoes, intervalos e referencias.</p>
+<h2>63. Microsoft PowerPoint 2019</h2>
+<h3>19.1 Introducao</h3>
+<p>O PowerPoint cria apresentacoes em slides. Cada slide pode conter texto, imagem, grafico, tabela e formas.</p>
+<h3>19.2 Layout, tema, transicao e animacao</h3>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Finalidade</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>layout</td>
+<td>disposicao dos elementos</td>
+</tr>
+<tr>
+<td>tema</td>
+<td>padronizacao visual</td>
+</tr>
+<tr>
+<td>transicao</td>
+<td>efeito na passagem entre slides</td>
+</tr>
+<tr>
+<td>animacao</td>
+<td>efeito em elemento dentro do slide</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Pegadinha:</strong> transicao atua entre slides; animacao atua dentro do slide.</p>
+</blockquote>
+<h3>19.3 Boas praticas</h3>
+<ul>
+<li>pouco texto por slide;</li>
+<li>contraste adequado;</li>
+<li>fonte legivel;</li>
+<li>imagens relacionadas ao objetivo;</li>
+<li>uso moderado de efeitos.</li>
+</ul>
+<h3>19.4 Questao comentada</h3>
+<p><strong>Questao 4.</strong> O efeito aplicado na passagem entre dois slides e:</p>
+<p>A) animacao.<br>B) transicao.<br>C) filtro.<br>D) formula.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h2>64. Internet, navegadores e pesquisa</h2>
+<h3>20.1 Conceitos essenciais</h3>
+<table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th>Explicacao</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>site</td>
+<td>conjunto de paginas relacionadas</td>
+</tr>
+<tr>
+<td>pagina</td>
+<td>documento acessado na web</td>
+</tr>
+<tr>
+<td>link</td>
+<td>elemento que leva a outro recurso</td>
+</tr>
+<tr>
+<td>URL</td>
+<td>endereco de recurso</td>
+</tr>
+<tr>
+<td>aba</td>
+<td>area que mantem pagina aberta</td>
+</tr>
+<tr>
+<td>historico</td>
+<td>registro de navegacao</td>
+</tr>
+<tr>
+<td>download</td>
+<td>transferencia para o dispositivo</td>
+</tr>
+<tr>
+<td>upload</td>
+<td>envio do dispositivo para um servico</td>
+</tr>
+</tbody></table>
+<p>Chrome, Firefox e Edge sao navegadores. Mecanismo de busca auxilia a localizar paginas.</p>
+<blockquote>
+<p><strong>Pegadinha:</strong> navegador e mecanismo de busca nao sao sinonimos.</p>
+</blockquote>
+<h3>20.2 Pesquisa e impressao</h3>
+<p>Ao pesquisar, avalie autoria, instituicao, data, endereco e coerencia com fontes oficiais. Antes de imprimir uma pagina, confira paginas, orientacao e escala.</p>
+<h3>20.3 Questao comentada</h3>
+<p><strong>Questao 5.</strong> Transferir arquivo do computador para um servico na internet e:</p>
+<p>A) download.<br>B) upload.<br>C) impressao.<br>D) historico.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h2>65. Correio eletronico</h2>
+<h3>21.1 Campos</h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Finalidade</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Para</td>
+<td>destinatario principal</td>
+</tr>
+<tr>
+<td>Cc</td>
+<td>copia visivel</td>
+</tr>
+<tr>
+<td>Cco</td>
+<td>copia oculta</td>
+</tr>
+<tr>
+<td>Assunto</td>
+<td>resumo do tema</td>
+</tr>
+<tr>
+<td>Anexo</td>
+<td>arquivo enviado</td>
+</tr>
+</tbody></table>
+<p>Em Cc, destinatarios veem os enderecos copiados. Em Cco, destinatarios ocultos nao aparecem aos demais.</p>
+<h3>21.2 Responder e encaminhar</h3>
+<ul>
+<li>responder: retorno ao remetente;</li>
+<li>responder a todos: retorno aos participantes;</li>
+<li>encaminhar: envio da mensagem recebida a outro destinatario.</li>
+</ul>
+<h3>21.3 Cuidados</h3>
+<ul>
+<li>confirme anexo;</li>
+<li>nao abra arquivo inesperado;</li>
+<li>confira remetente;</li>
+<li>desconfie de link estranho.</li>
+</ul>
+<h3>21.4 Questao comentada</h3>
+<p><strong>Questao 6.</strong> O campo que envia copia sem expor o endereco aos demais e:</p>
+<p>A) Para.<br>B) Cc.<br>C) Cco.<br>D) Assunto.</p>
+<p><strong>Resposta:</strong> C.</p>
+<h2>66. Seguranca da informacao</h2>
+<h3>22.1 Virus, antivirus e cuidados</h3>
+<p>Virus e um programa malicioso capaz de infectar arquivos ou sistemas. Phishing tenta enganar o usuario para obter dados. Antivirus auxilia a identificar, bloquear e remover ameacas conhecidas, mas nao substitui comportamento cuidadoso.</p>
+<p>Sinais de alerta:</p>
+<ul>
+<li>urgencia exagerada;</li>
+<li>pedido inesperado de senha;</li>
+<li>link suspeito;</li>
+<li>remetente desconhecido;</li>
+<li>anexo nao solicitado.</li>
+</ul>
+<h3>22.2 Senhas e backup</h3>
+<p>Use senhas longas, evite dados obvios, nao repita credenciais e ative verificacao em duas etapas quando disponivel. Backup e copia de seguranca para recuperacao de dados.</p>
+<blockquote>
+<p><strong>Atencao:</strong> antivirus reduz riscos; nao garante protecao absoluta.</p>
+</blockquote>
+<h3>22.3 Questao comentada</h3>
+<p><strong>Questao 7.</strong> Assinale a alternativa correta.</p>
+<p>A) Antivirus dispensa cuidado com anexos.<br>B) Backup e copia de seguranca.<br>C) Clicar rapidamente reduz riscos.<br>D) Senhas curtas sao mais seguras.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h2>67. Microsoft Teams, Zoom e Google Meet</h2>
+<h3>23.1 Recursos comuns</h3>
+<ul>
+<li>ingressar em reuniao;</li>
+<li>ativar ou desativar microfone;</li>
+<li>ativar ou desativar camera;</li>
+<li>usar chat;</li>
+<li>compartilhar tela;</li>
+<li>visualizar participantes;</li>
+<li>sair da reuniao.</li>
+</ul>
+<h3>23.2 Compartilhar tela</h3>
+<p>Compartilhar tela exibe conteudo aos participantes. Feche informacoes privadas, escolha se exibira tela inteira ou janela e encerre o compartilhamento ao concluir.</p>
+<h3>23.3 Questao comentada</h3>
+<p><strong>Questao 8.</strong> Compartilhar tela significa:</p>
+<p>A) apagar reuniao.<br>B) exibir conteudo aos participantes.<br>C) desligar microfone.<br>D) enviar copia oculta.</p>
+<p><strong>Resposta:</strong> B.</p>
+<h2>68. Checklist ampliado de Informatica</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Diferencio salvar e salvar como.</li>
+<li><input disabled="" type="checkbox"> Sei quando copiar, recortar e colar.</li>
+<li><input disabled="" type="checkbox"> Diferencio formatacao de fonte e paragrafo.</li>
+<li><input disabled="" type="checkbox"> Entendo cabecalho, rodape e quebra de pagina.</li>
+<li><input disabled="" type="checkbox"> Reconheco pasta de trabalho, planilha, linha, coluna e celula.</li>
+<li><input disabled="" type="checkbox"> Elaboro formulas simples e leio intervalos.</li>
+<li><input disabled="" type="checkbox"> Diferencio referencia relativa e absoluta.</li>
+<li><input disabled="" type="checkbox"> Reconheco classificacao, filtro e graficos.</li>
+<li><input disabled="" type="checkbox"> Diferencio tema, layout, transicao e animacao.</li>
+<li><input disabled="" type="checkbox"> Diferencio navegador e mecanismo de busca.</li>
+<li><input disabled="" type="checkbox"> Diferencio download e upload.</li>
+<li><input disabled="" type="checkbox"> Sei usar Para, Cc, Cco, responder e encaminhar.</li>
+<li><input disabled="" type="checkbox"> Reconheco riscos de anexos e links inesperados.</li>
+<li><input disabled="" type="checkbox"> Entendo funcao e limite do antivirus.</li>
+<li><input disabled="" type="checkbox"> Sei a finalidade do backup.</li>
+<li><input disabled="" type="checkbox"> Reconheco recursos de Teams, Zoom e Google Meet.</li>
+</ul>
+<h1>Bloco 9 - Curadoria final, atalhos e simulados</h1>
+<h2>69. Atalhos em contexto: rapidez com compreensao</h2>
+<h3>Introducao</h3>
+<p>Atalho de teclado e uma combinacao de teclas que executa um comando. Em prova, o candidato nao deve apenas decorar letras: precisa relacionar o atalho com a acao e com o programa em uso.</p>
+<p>Um mesmo atalho pode aparecer em diferentes aplicativos porque corresponde a uma operacao recorrente. Outros atalhos dependem do contexto. Por isso, sempre leia qual programa e qual situacao foram apresentados.</p>
+<h3>Atalhos gerais recorrentes</h3>
+<table>
+<thead>
+<tr>
+<th>Atalho</th>
+<th>Acao mais comum</th>
+<th>Exemplo pratico</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + C</code></td>
+<td>copiar</td>
+<td>copiar um trecho sem retirar o original</td>
+</tr>
+<tr>
+<td><code>Ctrl + X</code></td>
+<td>recortar</td>
+<td>mover um paragrafo para outra parte do texto</td>
+</tr>
+<tr>
+<td><code>Ctrl + V</code></td>
+<td>colar</td>
+<td>inserir o conteudo copiado ou recortado</td>
+</tr>
+<tr>
+<td><code>Ctrl + Z</code></td>
+<td>desfazer</td>
+<td>reverter uma alteracao acidental</td>
+</tr>
+<tr>
+<td><code>Ctrl + Y</code></td>
+<td>refazer</td>
+<td>restaurar uma acao que foi desfeita</td>
+</tr>
+<tr>
+<td><code>Ctrl + A</code></td>
+<td>selecionar tudo em muitos aplicativos</td>
+<td>selecionar toda a area ativa; no Word em portugues, confira a tabela especifica</td>
+</tr>
+<tr>
+<td><code>Ctrl + S</code></td>
+<td>salvar em muitos aplicativos</td>
+<td>registrar alteracoes; no Word em portugues, confira a tabela especifica</td>
+</tr>
+<tr>
+<td><code>Ctrl + P</code></td>
+<td>imprimir</td>
+<td>abrir opcoes de impressao</td>
+</tr>
+<tr>
+<td><code>Ctrl + F</code></td>
+<td>localizar</td>
+<td>procurar palavra em documento ou pagina</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Atencao:</strong> copiar preserva o conteudo na origem. Recortar prepara o conteudo para ser movido. Colar conclui a insercao.</p>
+</blockquote>
+<blockquote>
+<p><strong>Atencao ao contexto:</strong> os atalhos gerais nao anulam atalhos proprios dos aplicativos. Na interface em portugues do Word 2019, por exemplo, <code>Ctrl + B</code> salva, <code>Ctrl + T</code> seleciona todo o documento e <code>Ctrl + S</code> aplica sublinhado.</p>
+</blockquote>
+<h3>Atalhos frequentes no Word 2019</h3>
+<table>
+<thead>
+<tr>
+<th>Atalho</th>
+<th>Acao</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Ctrl + N</code></td>
+<td>aplicar ou remover negrito</td>
+</tr>
+<tr>
+<td><code>Ctrl + I</code></td>
+<td>aplicar ou remover italico</td>
+</tr>
+<tr>
+<td><code>Ctrl + S</code></td>
+<td>aplicar ou remover sublinhado na versao em portugues do Word</td>
+</tr>
+<tr>
+<td><code>Ctrl + B</code></td>
+<td>salvar documento</td>
+</tr>
+<tr>
+<td><code>Ctrl + T</code></td>
+<td>selecionar todo o documento</td>
+</tr>
+<tr>
+<td><code>Ctrl + E</code></td>
+<td>centralizar paragrafo</td>
+</tr>
+<tr>
+<td><code>Ctrl + J</code></td>
+<td>justificar paragrafo</td>
+</tr>
+<tr>
+<td><code>Ctrl + L</code></td>
+<td>localizar texto</td>
+</tr>
+<tr>
+<td><code>Ctrl + U</code></td>
+<td>substituir texto</td>
+</tr>
+<tr>
+<td><code>Ctrl + Enter</code></td>
+<td>inserir quebra de pagina</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Pegadinha de prova:</strong> o edital especifica a versao em portugues. Alguns atalhos variam em relacao a interfaces em ingles. A questao deve ser lida conforme a configuracao indicada.</p>
+</blockquote>
+<h3>Atalhos e comandos no Excel 2019</h3>
+<p>No Excel, o contexto da celula selecionada importa. Um atalho pode copiar uma formula, um valor ou uma formatacao conforme a operacao realizada.</p>
+<table>
+<thead>
+<tr>
+<th>Atalho</th>
+<th>Acao</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>F2</code></td>
+<td>editar o conteudo da celula ativa</td>
+</tr>
+<tr>
+<td><code>Ctrl + 1</code></td>
+<td>abrir a janela de formatacao de celulas</td>
+</tr>
+<tr>
+<td><code>Ctrl + C</code></td>
+<td>copiar celula ou intervalo</td>
+</tr>
+<tr>
+<td><code>Ctrl + V</code></td>
+<td>colar celula ou intervalo</td>
+</tr>
+<tr>
+<td><code>Ctrl + Z</code></td>
+<td>desfazer alteracao</td>
+</tr>
+</tbody></table>
+<h3>Erros comuns</h3>
+<ul>
+<li>decorar um atalho sem observar o aplicativo;</li>
+<li>confundir copiar com recortar;</li>
+<li>supor que salvar e imprimir sao a mesma operacao;</li>
+<li>ignorar a versao em portugues indicada no edital;</li>
+<li>achar que localizar altera automaticamente o conteudo encontrado.</li>
+</ul>
+<h3>O que mais cai</h3>
+<ul>
+<li>diferenca entre copiar, recortar e colar;</li>
+<li>desfazer e refazer;</li>
+<li>localizar e substituir;</li>
+<li>quebra de pagina;</li>
+<li>comandos basicos de formatacao;</li>
+<li>edicao de celulas.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 76.</strong> Uma servidora precisa mover um paragrafo para outra parte de um documento sem manter uma copia na posicao original. A sequencia adequada e:</p>
+<p>A) <code>Ctrl + C</code> e <code>Ctrl + V</code>.<br>B) <code>Ctrl + X</code> e <code>Ctrl + V</code>.<br>C) <code>Ctrl + F</code> e <code>Ctrl + P</code>.<br>D) <code>Ctrl + Z</code> e <code>Ctrl + S</code>.</p>
+<p><strong>Resposta:</strong> B.</p>
+<p><strong>Comentario:</strong> recortar retira o conteudo da origem e o disponibiliza para colagem. Copiar preservaria uma segunda versao no local inicial.</p>
+<h3>Resumo</h3>
+<p>Atalhos devem ser estudados pela funcao. A banca costuma criar situacoes simples e trocar comandos semelhantes para testar a leitura cuidadosa.</p>
+<h2>70. Word 2019: procedimento completo para produzir um documento</h2>
+<h3>Introducao</h3>
+<p>O Word pode ser cobrado por meio de uma tarefa concreta. Imagine a elaboracao de um comunicado escolar com titulo, paragrafo explicativo, tabela de horarios, imagem, cabecalho, rodape, numeracao e impressao final.</p>
+<h3>Etapa 1: criar e salvar</h3>
+<ol>
+<li>abra o Word;</li>
+<li>crie um documento em branco;</li>
+<li>digite o conteudo;</li>
+<li>salve o arquivo com nome claro;</li>
+<li>escolha a pasta correta;</li>
+<li>verifique a extensao <code>.docx</code>.</li>
+</ol>
+<p>Salvar registra as alteracoes no arquivo atual. Salvar como permite criar uma nova versao, escolher outro nome, local ou formato.</p>
+<h3>Etapa 2: formatar fonte e paragrafo</h3>
+<p>Fonte diz respeito aos caracteres: tipo, tamanho, cor, negrito, italico e sublinhado. Paragrafo diz respeito ao bloco textual: alinhamento, recuo e espacamento.</p>
+<table>
+<thead>
+<tr>
+<th>Necessidade</th>
+<th>Recurso adequado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>destacar o titulo</td>
+<td>negrito e tamanho de fonte</td>
+</tr>
+<tr>
+<td>organizar leitura do corpo</td>
+<td>alinhamento e espacamento</td>
+</tr>
+<tr>
+<td>deslocar inicio do texto</td>
+<td>recuo</td>
+</tr>
+<tr>
+<td>criar lista de materiais</td>
+<td>marcadores ou numeracao</td>
+</tr>
+</tbody></table>
+<h3>Etapa 3: configurar pagina</h3>
+<p>Margens definem a distancia entre o conteudo e as bordas. Orientacao retrato usa altura maior que largura; paisagem usa largura maior que altura.</p>
+<p>Uma tabela muito larga pode justificar paisagem. Um comunicado comum costuma permanecer em retrato.</p>
+<h3>Etapa 4: inserir tabela, imagem e objeto</h3>
+<p>Tabela organiza dados em linhas e colunas. Imagem ilustra. Objeto pode incorporar outro tipo de conteudo ao documento.</p>
+<p>Ao inserir imagem:</p>
+<ol>
+<li>escolha o arquivo;</li>
+<li>confira se e pertinente;</li>
+<li>redimensione sem distorcer;</li>
+<li>avalie a disposicao em relacao ao texto;</li>
+<li>revise se nenhum trecho ficou encoberto.</li>
+</ol>
+<h3>Etapa 5: cabecalho, rodape e numeracao</h3>
+<p>Cabecalho fica na parte superior. Rodape fica na parte inferior. A numeracao de paginas pode ser inserida nessas areas ou em posicoes predefinidas.</p>
+<h3>Etapa 6: revisar e imprimir</h3>
+<p>Antes de imprimir:</p>
+<ul>
+<li>revise ortografia;</li>
+<li>use localizar para encontrar termos;</li>
+<li>confira margens;</li>
+<li>verifique numero de paginas;</li>
+<li>escolha impressora;</li>
+<li>defina paginas desejadas;</li>
+<li>confira quantidade de copias.</li>
+</ul>
+<h3>Principais erros</h3>
+<ul>
+<li>pressionar varias vezes <code>Enter</code> para iniciar outra pagina, em vez de usar quebra de pagina;</li>
+<li>confundir alinhamento de paragrafo com formatacao de fonte;</li>
+<li>distorcer imagens;</li>
+<li>imprimir todas as paginas quando apenas uma era necessaria;</li>
+<li>substituir automaticamente palavras sem revisar o resultado.</li>
+</ul>
+<h3>Aplicacao em prova</h3>
+<p>Se a banca perguntar como iniciar uma nova pagina mantendo organizacao do documento, a melhor resposta e inserir uma quebra de pagina. O uso repetido de linhas vazias pode desorganizar o arquivo quando o texto anterior for editado.</p>
+<h3>Questao comentada</h3>
+<p><strong>Questao 77.</strong> Para iniciar de forma controlada uma nova pagina em um documento do Word, o recurso adequado e:</p>
+<p>A) inserir varios espacos.<br>B) pressionar <code>Enter</code> ate chegar a outra pagina.<br>C) inserir quebra de pagina.<br>D) alterar a cor da fonte.</p>
+<p><strong>Resposta:</strong> C.</p>
+<p><strong>Comentario:</strong> a quebra de pagina preserva a organizacao quando o conteudo anterior e alterado.</p>
+<h3>Resumo</h3>
+<p>No Word, organize a sequencia: criar, salvar, editar, formatar, inserir elementos, revisar e imprimir.</p>
+<h2>71. Excel 2019: caso completo de organizacao e calculo</h2>
+<h3>Introducao</h3>
+<p>Uma planilha e uma estrutura de dados organizada em linhas e colunas. O Excel permite inserir dados, aplicar formulas, usar funcoes basicas, formatar celulas, organizar registros e criar graficos.</p>
+<h3>Caso pratico</h3>
+<p>Considere uma planilha de acompanhamento:</p>
+<table>
+<thead>
+<tr>
+<th>Celula</th>
+<th>Conteudo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A1</td>
+<td>Estudante</td>
+</tr>
+<tr>
+<td>B1</td>
+<td>Nota 1</td>
+</tr>
+<tr>
+<td>C1</td>
+<td>Nota 2</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>Media</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>Ana</td>
+</tr>
+<tr>
+<td>B2</td>
+<td>70</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>90</td>
+</tr>
+</tbody></table>
+<p>Para calcular a media de Ana em <code>D2</code>, use:</p>
+<pre><code class="language-text">=MEDIA(B2:C2)
+</code></pre>
+<p>O sinal de igualdade informa ao Excel que existe uma formula. Os dois-pontos representam um intervalo continuo.</p>
+<h3>Funcoes basicas exigidas pelo edital</h3>
+<table>
+<thead>
+<tr>
+<th>Funcao</th>
+<th>Finalidade</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>SOMA</code></td>
+<td>somar valores</td>
+<td><code>=SOMA(B2:B10)</code></td>
+</tr>
+<tr>
+<td><code>MEDIA</code></td>
+<td>calcular media aritmetica</td>
+<td><code>=MEDIA(B2:B10)</code></td>
+</tr>
+<tr>
+<td><code>MAXIMO</code></td>
+<td>localizar maior valor</td>
+<td><code>=MAXIMO(B2:B10)</code></td>
+</tr>
+<tr>
+<td><code>MINIMO</code></td>
+<td>localizar menor valor</td>
+<td><code>=MINIMO(B2:B10)</code></td>
+</tr>
+</tbody></table>
+<h3>Formatacao de celulas</h3>
+<p>Formatar nao significa alterar necessariamente o valor. Uma celula pode exibir percentual, data, moeda ou numero com casas decimais conforme a configuracao aplicada.</p>
+<p>Exemplo: o valor numerico <code>0,25</code> pode ser exibido como <code>25%</code> quando recebe formato percentual.</p>
+<h3>Organizacao dos dados</h3>
+<p>Classificar reorganiza a ordem dos registros. Filtrar exibe temporariamente apenas registros que atendem a um criterio. Nenhuma dessas acoes deve ser confundida com exclusao.</p>
+<h3>Criacao de grafico</h3>
+<ol>
+<li>organize os dados;</li>
+<li>selecione o intervalo pertinente;</li>
+<li>escolha um tipo de grafico;</li>
+<li>confira titulo e categorias;</li>
+<li>avalie se a representacao ajuda a interpretar.</li>
+</ol>
+<p>Grafico de colunas facilita comparacao de categorias. Grafico de linhas e adequado para evolucao ao longo do tempo.</p>
+<h3>Erros comuns</h3>
+<ul>
+<li>esquecer <code>=</code> no inicio da formula;</li>
+<li>somar somente a primeira e a ultima celula de um intervalo;</li>
+<li>confundir filtro com exclusao;</li>
+<li>criar grafico sem selecionar dados adequados;</li>
+<li>considerar formatacao como mudanca obrigatoria do valor armazenado.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 78.</strong> Em uma planilha, a expressao <code>=SOMA(C2:C8)</code>:</p>
+<p>A) soma apenas <code>C2</code> e <code>C8</code>.<br>B) soma as celulas de <code>C2</code> ate <code>C8</code>.<br>C) cria automaticamente um grafico.<br>D) apaga valores repetidos.</p>
+<p><strong>Resposta:</strong> B.</p>
+<p><strong>Comentario:</strong> os dois-pontos delimitam intervalo continuo, incluindo as extremidades e as celulas intermediarias.</p>
+<h3>Resumo</h3>
+<p>Para resolver questoes de Excel, identifique a estrutura da planilha, a finalidade da formula e o efeito exato de cada comando.</p>
+<h2>72. PowerPoint 2019: apresentacao com multimidia</h2>
+<h3>Introducao</h3>
+<p>O PowerPoint organiza conteudo em slides. O edital inclui criacao, formatacao, insercao e edicao de slides, textos, imagens, graficos, audios, videos, layouts, transicoes e animacoes.</p>
+<h3>Fluxo de trabalho</h3>
+<ol>
+<li>crie a apresentacao;</li>
+<li>escolha layout adequado;</li>
+<li>insira e organize textos;</li>
+<li>adicione imagens ou graficos pertinentes;</li>
+<li>inclua audio ou video quando houver finalidade;</li>
+<li>aplique transicoes com moderacao;</li>
+<li>use animacoes apenas quando ajudarem a exposicao;</li>
+<li>revise a exibicao.</li>
+</ol>
+<h3>Comparativo essencial</h3>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Atua em</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>layout</td>
+<td>organizacao do slide</td>
+<td>titulo e conteudo</td>
+</tr>
+<tr>
+<td>transicao</td>
+<td>passagem entre slides</td>
+<td>efeito ao trocar de pagina</td>
+</tr>
+<tr>
+<td>animacao</td>
+<td>elemento dentro do slide</td>
+<td>texto que aparece gradualmente</td>
+</tr>
+<tr>
+<td>multimidia</td>
+<td>conteudo inserido</td>
+<td>audio ou video</td>
+</tr>
+</tbody></table>
+<h3>Erros comuns</h3>
+<ul>
+<li>confundir animacao e transicao;</li>
+<li>inserir video e nao testar a reproducao;</li>
+<li>exagerar em efeitos;</li>
+<li>preencher o slide com blocos extensos;</li>
+<li>usar imagem sem relacao com o objetivo.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 79.</strong> Um efeito aplicado a uma imagem dentro de um slide e classificado como:</p>
+<p>A) transicao.<br>B) animacao.<br>C) cabecalho.<br>D) filtro.</p>
+<p><strong>Resposta:</strong> B.</p>
+<p><strong>Comentario:</strong> transicao ocorre na passagem entre slides. Animacao atua em elementos internos.</p>
+<h3>Resumo</h3>
+<p>PowerPoint exige distinguir estrutura visual, efeitos de passagem, efeitos internos e recursos multimidia.</p>
+<h2>73. Internet, e-mail e videoconferencia: rotina segura</h2>
+<h3>Introducao</h3>
+<p>Internet, navegadores, correio eletronico e ferramentas de videoconferencia aparecem de forma articulada em tarefas profissionais. A banca pode propor uma rotina e perguntar qual acao e adequada.</p>
+<h3>Navegacao e pesquisa</h3>
+<p>Chrome, Firefox e Edge sao navegadores. Eles permitem acessar sites, abrir links, usar abas, pesquisar e imprimir paginas.</p>
+<p>Ao localizar informacao:</p>
+<ol>
+<li>formule termos de busca claros;</li>
+<li>examine o endereco;</li>
+<li>priorize fonte oficial;</li>
+<li>confira data e autoria;</li>
+<li>compare informacoes quando necessario;</li>
+<li>imprima apenas depois da verificacao.</li>
+</ol>
+<h3>E-mail</h3>
+<table>
+<thead>
+<tr>
+<th>Campo ou acao</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Para</code></td>
+<td>destinatario principal</td>
+</tr>
+<tr>
+<td><code>Cc</code></td>
+<td>copia visivel</td>
+</tr>
+<tr>
+<td><code>Cco</code></td>
+<td>copia oculta</td>
+</tr>
+<tr>
+<td>responder</td>
+<td>retornar ao remetente</td>
+</tr>
+<tr>
+<td>responder a todos</td>
+<td>retornar aos participantes</td>
+</tr>
+<tr>
+<td>encaminhar</td>
+<td>enviar a mensagem a outro destinatario</td>
+</tr>
+<tr>
+<td>anexo</td>
+<td>arquivo enviado com a mensagem</td>
+</tr>
+</tbody></table>
+<p>Para enviar comunicado a muitos destinatarios sem divulgar enderecos, o campo <code>Cco</code> e adequado.</p>
+<h3>Videoconferencia</h3>
+<p>Teams, Zoom e Meet permitem reunioes remotas. Recursos recorrentes:</p>
+<ul>
+<li>entrar na reuniao;</li>
+<li>ativar e desativar microfone;</li>
+<li>ativar e desativar camera;</li>
+<li>usar chat;</li>
+<li>visualizar participantes;</li>
+<li>compartilhar tela;</li>
+<li>sair da reuniao.</li>
+</ul>
+<p>Antes de compartilhar tela, feche arquivos e notificacoes privadas.</p>
+<h3>Questao comentada</h3>
+<p><strong>Questao 80.</strong> Para encaminhar a varias familias uma mensagem sem revelar os enderecos dos destinatarios entre si, o campo adequado e:</p>
+<p>A) <code>Cc</code>.<br>B) <code>Cco</code>.<br>C) Assunto.<br>D) Anexo.</p>
+<p><strong>Resposta:</strong> B.</p>
+<p><strong>Comentario:</strong> <code>Cco</code> envia copia oculta. Em <code>Cc</code>, os enderecos ficam visiveis.</p>
+<h3>Resumo</h3>
+<p>Em tarefas digitais, pense no objetivo, na privacidade e no efeito exato da acao escolhida.</p>
+<h2>74. Seguranca da informacao: analisar antes de clicar</h2>
+<h3>Introducao</h3>
+<p>Seguranca basica nao depende somente de antivirus. Ela envolve comportamento cuidadoso, verificacao de mensagens, protecao de credenciais e preservacao de arquivos.</p>
+<h3>Virus e antivirus</h3>
+<p>Virus e um tipo de programa malicioso capaz de comprometer arquivos ou sistemas. Antivirus auxilia a detectar, bloquear e remover ameacas conhecidas.</p>
+<p>Antivirus nao autoriza abrir qualquer anexo. Ameacas podem explorar engano, falhas ou arquivos ainda nao reconhecidos.</p>
+<h3>Roteiro diante de mensagem suspeita</h3>
+<ol>
+<li>nao clique imediatamente;</li>
+<li>confira remetente;</li>
+<li>desconfie de urgencia artificial;</li>
+<li>verifique o endereco do link;</li>
+<li>nao informe senha;</li>
+<li>confirme a solicitacao por canal confiavel;</li>
+<li>encaminhe o caso ao suporte responsavel, quando houver.</li>
+</ol>
+<h3>Backup</h3>
+<p>Backup e copia de seguranca. Sua finalidade e permitir recuperacao de dados em caso de perda, falha ou comprometimento.</p>
+<h3>Erros comuns</h3>
+<ul>
+<li>acreditar que antivirus elimina todos os riscos;</li>
+<li>reutilizar senha;</li>
+<li>clicar por impulso;</li>
+<li>ignorar remetente;</li>
+<li>manter apenas uma copia de arquivo importante.</li>
+</ul>
+<h3>Questao comentada</h3>
+<p><strong>Questao 81.</strong> Um usuario recebe mensagem inesperada solicitando senha com urgencia. A conduta adequada e:</p>
+<p>A) responder imediatamente.<br>B) clicar no link e preencher os dados.<br>C) verificar a origem e nao informar credenciais.<br>D) encaminhar a senha por anexo.</p>
+<p><strong>Resposta:</strong> C.</p>
+<p><strong>Comentario:</strong> urgencia e pedido de credenciais sao sinais de alerta. A verificacao deve ocorrer por canal confiavel.</p>
+<h3>Resumo</h3>
+<p>Seguranca combina ferramenta e comportamento. A melhor defesa inicial e interromper a acao impulsiva e verificar.</p>
+<h2>75. Simulado comentado complementar de Informatica</h2>
+<h3>Questao 82</h3>
+<p>No Word 2019, margens definem:</p>
+<p>A) distancia entre conteudo e bordas da pagina.<br>B) tipo de grafico.<br>C) ordem alfabetica de dados.<br>D) campo oculto de e-mail.</p>
+<p><strong>Resposta:</strong> A. Margens pertencem a configuracao da pagina.</p>
+<h3>Questao 83</h3>
+<p>Em Excel, a funcao adequada para identificar o maior valor de um intervalo e:</p>
+<p>A) <code>MEDIA</code>.<br>B) <code>MINIMO</code>.<br>C) <code>MAXIMO</code>.<br>D) <code>SOMA</code>.</p>
+<p><strong>Resposta:</strong> C. <code>MAXIMO</code> retorna o maior valor.</p>
+<h3>Questao 84</h3>
+<p>No PowerPoint, layout corresponde:</p>
+<p>A) a organizacao dos elementos de um slide.<br>B) ao envio oculto de mensagem.<br>C) ao bloqueio de virus.<br>D) a copia de seguranca.</p>
+<p><strong>Resposta:</strong> A. Layout organiza a estrutura do slide.</p>
+<h3>Questao 85</h3>
+<p>Transferir arquivo de um site para o computador e:</p>
+<p>A) upload.<br>B) download.<br>C) anexo.<br>D) backup obrigatoriamente.</p>
+<p><strong>Resposta:</strong> B. Download e a transferencia recebida pelo dispositivo.</p>
+<h3>Questao 86</h3>
+<p>Ao usar <code>Cc</code> em um e-mail:</p>
+<p>A) os copiados ficam ocultos.<br>B) os enderecos copiados ficam visiveis.<br>C) nenhum anexo pode ser enviado.<br>D) o assunto e apagado.</p>
+<p><strong>Resposta:</strong> B. Para ocultar destinatarios, use <code>Cco</code>.</p>
+<h3>Questao 87</h3>
+<p>Compartilhar tela em videoconferencia significa:</p>
+<p>A) exibir conteudo selecionado aos participantes.<br>B) desligar automaticamente a reuniao.<br>C) apagar o chat.<br>D) criar uma planilha.</p>
+<p><strong>Resposta:</strong> A. O usuario deve conferir previamente o que sera exibido.</p>
+<h3>Questao 88</h3>
+<p>Backup e:</p>
+<p>A) um navegador.<br>B) uma copia de seguranca.<br>C) uma transicao.<br>D) um campo de e-mail.</p>
+<p><strong>Resposta:</strong> B. Backup auxilia recuperacao de dados.</p>
+<h3>Questao 89</h3>
+<p>No Word, recurso adequado para repetir alteracao de um termo em diferentes pontos do documento:</p>
+<p>A) localizar e substituir.<br>B) animar.<br>C) filtrar.<br>D) compartilhar tela.</p>
+<p><strong>Resposta:</strong> A. A substituicao deve ser revisada para evitar alteracoes indevidas.</p>
+<h3>Questao 90</h3>
+<p>Em Excel, filtrar dados:</p>
+<p>A) apaga definitivamente linhas fora do criterio.<br>B) exibe registros conforme criterio sem exigir exclusao.<br>C) transforma dados em video.<br>D) cria rodape.</p>
+<p><strong>Resposta:</strong> B. Filtro altera a visualizacao dos registros.</p>
+<h3>Questao 91</h3>
+<p>Ao receber anexo inesperado, o usuario deve:</p>
+<p>A) abrir imediatamente.<br>B) verificar a origem antes de abrir.<br>C) encaminhar a senha.<br>D) desativar o antivirus.</p>
+<p><strong>Resposta:</strong> B. Verificacao reduz risco de engenharia social e arquivo malicioso.</p>
+<h2>76. Revisao orientada final</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Relaciono atalhos com a finalidade correta.</li>
+<li><input disabled="" type="checkbox"> Produzo documento no Word em uma sequencia organizada.</li>
+<li><input disabled="" type="checkbox"> Diferencio fonte, paragrafo, pagina e impressao.</li>
+<li><input disabled="" type="checkbox"> Leio intervalos e funcoes basicas no Excel.</li>
+<li><input disabled="" type="checkbox"> Diferencio classificacao, filtro e exclusao.</li>
+<li><input disabled="" type="checkbox"> Diferencio layout, transicao, animacao e multimidia.</li>
+<li><input disabled="" type="checkbox"> Uso pesquisa, e-mail e videoconferencia com atencao a privacidade.</li>
+<li><input disabled="" type="checkbox"> Reconheco sinais de mensagem suspeita.</li>
+<li><input disabled="" type="checkbox"> Entendo o papel e o limite do antivirus.</li>
+<li><input disabled="" type="checkbox"> Reconheco backup como copia de seguranca.</li>
+</ul>
+<h2>77. Referencias oficiais e tecnicas</h2>
+<p>As referencias abaixo foram usadas como base para conferir nomenclatura, recursos e cuidados praticos cobraveis em prova. A banca pode formular questoes com linguagem simples, mas o candidato deve estudar os recursos conforme o uso real dos programas.</p>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Referencia</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Microsoft Word 2019</td>
+<td>Documentacao oficial Microsoft Support sobre Word, formatacao, tabelas, imagens, revisao, impressao e atalhos de teclado.</td>
+</tr>
+<tr>
+<td>Microsoft Excel 2019</td>
+<td>Documentacao oficial Microsoft Support sobre celulas, formulas, funcoes, classificacao, filtro, graficos, impressao e organizacao de planilhas.</td>
+</tr>
+<tr>
+<td>Microsoft PowerPoint 2019</td>
+<td>Documentacao oficial Microsoft Support sobre slides, temas, transicoes, animacoes, imagens, audio, video, apresentacao e impressao.</td>
+</tr>
+<tr>
+<td>Navegadores</td>
+<td>Documentacao oficial de uso dos navegadores Google Chrome, Mozilla Firefox e Microsoft Edge.</td>
+</tr>
+<tr>
+<td>Correio eletronico</td>
+<td>Orientacoes tecnicas de provedores e manuais de boas praticas sobre destinatarios, anexos, organizacao, seguranca e privacidade.</td>
+</tr>
+<tr>
+<td>Videoconferencia</td>
+<td>Orientacoes oficiais de uso do Microsoft Teams, Zoom e Google Meet sobre participacao, microfone, camera, chat e compartilhamento de tela.</td>
+</tr>
+<tr>
+<td>Seguranca da informacao</td>
+<td>Boas praticas de seguranca digital adotadas por orgaos publicos e materiais de referencia sobre virus, antivirus, phishing, senhas, backup e cuidado com anexos.</td>
+</tr>
+</tbody></table>
+<h3>Observacao final</h3>
+<p>O edital cobra o uso pratico dos programas e servicos. Por isso, o estudo deve combinar leitura teorica, reconhecimento de menus e treino de situacoes: criar documento, revisar texto, montar planilha, configurar apresentacao, pesquisar com criterio, enviar e-mail corretamente e participar de reuniao virtual com seguranca.</p>
+<div class="footer-note">Material gerado a partir das apostilas editaveis em Markdown.</div></main></body></html>

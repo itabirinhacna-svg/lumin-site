@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="page-shell footer-row">
         <div className="footer-brand">
           <BrandMark />
-          <p>Plataforma digital para concursos e ENEM com foco em conversao, retencao e recorrencia.</p>
+          <p>Plataforma educacional para estudo guiado, biblioteca digital e acompanhamento de aprovacao.</p>
         </div>
         <div className="tag-row">
           <Link href="/termos" className="pill">

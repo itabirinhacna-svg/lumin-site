@@ -11,48 +11,48 @@
 
 export const plans: Plan[] = [
   {
-    id: "enem-base",
-    name: "Pacote Base ENEM",
-    price: "R$ 297",
-    installment: "ou 12x de R$ 29,70",
-    description: "Entrada premium para quem precisa de rotina, revisÃ£o e direÃ§Ã£o clara.",
-    audience: "Ideal para ENEM e vestibulares concorridos",
+    id: "agua-doce-operacionais",
+    name: "Aprova Agua Doce Operacionais",
+    price: "R$ 147",
+    installment: "ou 12x de R$ 14,70",
+    description: "Acesso guiado para Auxiliar de Servicos Gerais, Merendeira, Motorista e Operador de Maquinas.",
+    audience: "Ideal para quem quer foco total nos cargos operacionais do edital",
     features: [
-      "Plano semanal de estudos com revisÃ£o espaÃ§ada",
-      "Videoaulas essenciais e apostilas digitais",
-      "Simulados mensais com correÃ§Ã£o comentada",
-      "Acompanhamento de progresso por disciplina"
-    ]
+      "Trilhas por cargo com biblioteca em PDF e Markdown",
+      "Plano de estudo organizado por etapa",
+      "Area do aluno com acompanhamento e suporte",
+      "Aula demonstrativa integrada ao fluxo de estudo",
+    ],
   },
   {
-    id: "concursos-elite",
-    name: "Concursos Elite",
-    price: "R$ 697",
-    installment: "ou 12x de R$ 69,70",
-    description: "Trilha principal para carreiras administrativas, policiais e tribunais.",
-    audience: "Mais vendido para quem quer escalar performance",
+    id: "agua-doce-magisterio",
+    name: "Aprova Agua Doce Magisterio",
+    price: "R$ 197",
+    installment: "ou 12x de R$ 19,70",
+    description: "Curadoria para Conhecimentos Pedagogicos, Educacao Infantil, Series Iniciais e AEE.",
+    audience: "Mais indicado para professoras e especialistas do magisterio",
     featured: true,
     features: [
-      "Mapeamento por edital e cronograma adaptativo",
-      "Banco de questÃµes com filtros estratÃ©gicos",
-      "Mentorias de reta final e plano de revisÃ£o",
-      "Biblioteca de PDFs, mapas mentais e resumos"
-    ]
+      "Base pedagogica comum e cadernos especificos por trilha",
+      "Biblioteca real com materiais ja produzidos",
+      "Acompanhamento de estudo dentro do AVA",
+      "Suporte para organizar rotina e revisao",
+    ],
   },
   {
-    id: "residencia-aprovacao",
-    name: "ResidÃªncia AprovaÃ§Ã£o",
-    price: "R$ 1.497",
-    installment: "ou 12x de R$ 149,70",
-    description: "ExperiÃªncia completa com acompanhamento intensivo e foco em alta performance.",
-    audience: "Para alunos que querem operar em nÃ­vel profissional",
+    id: "agua-doce-completo",
+    name: "Aprova Agua Doce Completo",
+    price: "R$ 247",
+    installment: "ou 12x de R$ 24,70",
+    description: "Acesso completo ao pacote Aprova Agua Doce com operacionais, saude e magisterio.",
+    audience: "Para quem quer o acervo integral da plataforma neste edital",
     features: [
-      "Tudo do plano Elite",
-      "Sala estratÃ©gica com cronograma individual",
-      "CorreÃ§Ã£o orientada de redaÃ§Ã£o e discursivas",
-      "Suporte prioritÃ¡rio e encontros de performance"
-    ]
-  }
+      "Todas as trilhas do edital em uma unica assinatura",
+      "Biblioteca integrada com PDF e Markdown",
+      "Fluxo de estudo dentro do AVA com suporte",
+      "Estrutura pronta para expansao de simulados e questoes",
+    ],
+  },
 ];
 
 export function getPlanById(planId: string) {
@@ -63,43 +63,43 @@ export const stats = [
   { label: "Alunos ativos", value: "+12 mil" },
   { label: "Horas assistidas", value: "420 mil" },
   { label: "Taxa de retomada", value: "87%" },
-  { label: "SatisfaÃ§Ã£o pÃ³s-compra", value: "4.9/5" }
+  { label: "Satisfação pós-compra", value: "4.9/5" }
 ];
 
 export const disciplines = [
-  "MatemÃ¡tica e RaciocÃ­nio LÃ³gico",
-  "PortuguÃªs e RedaÃ§Ã£o",
+  "Matemática e Raciocínio Lógico",
+  "Português e Redação",
   "Direito Constitucional",
   "Direito Administrativo",
-  "InformÃ¡tica",
-  "Atualidades e EstratÃ©gia de Prova"
+  "Informática",
+  "Atualidades e Estratégia de Prova"
 ];
 
 export const timeline = [
-  { week: "Semana 1", focus: "Fundamentos, diagnÃ³stico e montagem da rotina", status: "ConcluÃ­do" },
-  { week: "Semana 2", focus: "QuestÃµes guiadas e revisÃ£o 24h/7d", status: "Em andamento" },
-  { week: "Semana 3", focus: "Simulado parcial e reforÃ§o de lacunas", status: "PrÃ³xima" },
-  { week: "Semana 4", focus: "Sprint de conteÃºdo de maior incidÃªncia", status: "PrÃ³xima" }
+  { week: "Semana 1", focus: "Fundamentos, diagnóstico e montagem da rotina", status: "Concluído" },
+  { week: "Semana 2", focus: "Questões guiadas e revisão 24h/7d", status: "Em andamento" },
+  { week: "Semana 3", focus: "Simulado parcial e reforço de lacunas", status: "Próxima" },
+  { week: "Semana 4", focus: "Sprint de conteúdo de maior incidência", status: "Próxima" }
 ];
 
 export const lessons = [
   {
-    title: "Como montar ciclo de estudos de alta retenÃ§Ã£o",
-    meta: "46 min â€¢ EstratÃ©gia"
+    title: "Como montar ciclo de estudos de alta retenção",
+    meta: "46 min • Estratégia"
   },
   {
-    title: "QuestÃµes inteligentes para concursos policiais",
-    meta: "62 min â€¢ QuestÃµes comentadas"
+    title: "Questões inteligentes para concursos policiais",
+    meta: "62 min • Questões comentadas"
   },
   {
-    title: "RedaÃ§Ã£o ENEM: repertÃ³rio, estrutura e nota alta",
-    meta: "58 min â€¢ RedaÃ§Ã£o"
+    title: "Redação ENEM: repertório, estrutura e nota alta",
+    meta: "58 min • Redação"
   }
 ];
 
 export const securityPillars = [
-  "AutenticaÃ§Ã£o com sessÃµes seguras e controle de acesso por compra",
-  "ValidaÃ§Ã£o server-side para checkout, matrÃ­cula e progresso",
+  "Autenticação com sessões seguras e controle de acesso por compra",
+  "Validação server-side para checkout, matrícula e progresso",
   "Camada pronta para logs, rate limiting e auditoria"
 ];
 

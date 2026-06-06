@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "BENTHEC",
   description:
-    "Plataforma premium para concursos e ENEM com pacotes, trilhas de estudo, compra online e Ã¡rea do aluno."
+    "Plataforma premium para concursos e ENEM com trilhas de estudo, acompanhamento e área do aluno."
 };
 
 export default function RootLayout({

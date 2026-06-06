@@ -4,6 +4,8 @@ import { consumeRateLimit, getClientKey, isSameOriginRequest } from "@/lib/reque
 import { applySessionCookie } from "@/lib/session";
 import { normalizeEmail, validateLoginPayload } from "@/lib/validators";
 
+const DEMO_EMAIL = "demo@benthec.com";
+
 export async function POST(request: Request) {
   if (!isSameOriginRequest(request)) {
     return NextResponse.json({ ok: false, error: "forbidden" }, { status: 403 });
@@ -32,7 +34,7 @@ export async function POST(request: Request) {
     return NextResponse.redirect(new URL("/login", request.url), 303);
   }
 
-  const destination = user.role === "admin" ? "/admin" : "/aluno";
+  const destination = email === DEMO_EMAIL ? "/area" : user.role === "admin" ? "/admin" : "/aluno";
   const response = NextResponse.redirect(new URL(destination, request.url), 303);
   applySessionCookie(response, user.id, user.role);
   return response;

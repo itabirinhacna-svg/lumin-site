@@ -1,6 +1,6 @@
-# Atlas Aprova Premium
+# BenThec Premium
 
-Base em Next.js para um produto educacional com:
+Base em Next.js para uma plataforma educacional com:
 
 - landing page premium para concursos e ENEM
 - checkout com criação de conta
@@ -46,7 +46,7 @@ O endpoint espera `POST /api/payments/webhook` com corpo JSON:
 }
 ```
 
-A assinatura deve ser enviada no header `x-atlas-signature` com `HMAC-SHA256` do corpo usando `PAYMENT_WEBHOOK_SECRET`.
+A assinatura deve ser enviada no header configurado para webhook usando `HMAC-SHA256` do corpo com `PAYMENT_WEBHOOK_SECRET`.
 
 ## Observação importante
 

@@ -22,7 +22,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
           <div className="checkout-grid">
             <section className="plan-card featured">
               <span className="plan-badge">Plano selecionado</span>
-              <div className="kicker">Checkout com criacao de conta</div>
+              <div className="kicker">Aprova Agua Doce</div>
               <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 4rem)" }}>{featured.name}</h1>
               <p>{featured.description}</p>
               <div className="price">
@@ -36,7 +36,7 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
               </ul>
               <div className="tag-row" style={{ marginTop: 18 }}>
                 <span className="pill">Conta e matricula no mesmo fluxo</span>
-                <span className="pill">Sessao segura em cookie httpOnly</span>
+                <span className="pill">Biblioteca real do edital</span>
                 <span className="pill">Acesso liberado por status da compra</span>
               </div>
             </section>
@@ -104,6 +104,14 @@ export default async function CheckoutPage({ searchParams }: CheckoutPageProps) 
                     Li e aceito os <a href="/termos">termos</a> e a <a href="/privacidade">politica de privacidade</a>.
                   </span>
                 </label>
+
+                <div className="glass-card" style={{ padding: 18, marginBottom: 18 }}>
+                  <strong>O que o aluno recebe</strong>
+                  <p style={{ marginTop: 8 }}>
+                    A compra libera a area do aluno, trilhas organizadas, biblioteca com apostilas em PDF e Markdown e
+                    o fluxo guiado do Aprova Agua Doce.
+                  </p>
+                </div>
 
                 <div className="glass-card" style={{ padding: 18, marginBottom: 18 }}>
                   <strong>Seguranca do fluxo</strong>

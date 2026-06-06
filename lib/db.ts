@@ -38,6 +38,8 @@ type DatabaseShape = {
 };
 
 const dbPath = path.join(process.cwd(), "data", "app-db.json");
+const DEMO_EMAIL = "demo@benthec.com";
+const DEMO_PASSWORD = "123456";
 
 async function ensureDbFile() {
   await mkdir(path.dirname(dbPath), { recursive: true });
@@ -63,20 +65,52 @@ async function writeDb(db: DatabaseShape) {
 export async function ensureSeedData() {
   const db = await readDb();
   const existingAdmin = db.users.find((user) => user.role === "admin");
+  const demoUser = db.users.find((user) => user.email === DEMO_EMAIL);
 
-  if (existingAdmin) {
-    return;
+  if (!existingAdmin) {
+    db.users.push({
+      id: randomUUID(),
+      name: "Administrador BenThec",
+      email: env.adminEmail.toLowerCase(),
+      document: "00000000000",
+      passwordHash: hashPassword(env.adminPassword),
+      role: "admin",
+      createdAt: new Date().toISOString()
+    });
   }
 
-  db.users.push({
-    id: randomUUID(),
-    name: "Administrador BenThec",
-    email: env.adminEmail.toLowerCase(),
-    document: "00000000000",
-    passwordHash: hashPassword(env.adminPassword),
-    role: "admin",
-    createdAt: new Date().toISOString()
-  });
+  if (!demoUser) {
+    const userId = randomUUID();
+
+    db.users.push({
+      id: userId,
+      name: "Aluno Demo BenThec",
+      email: DEMO_EMAIL,
+      document: "11111111111",
+      passwordHash: hashPassword(DEMO_PASSWORD),
+      role: "student",
+      createdAt: new Date().toISOString()
+    });
+
+    db.purchases.push({
+      id: randomUUID(),
+      userId,
+      planId: "agua-doce-completo",
+      planName: "Aprova Agua Doce Completo - Demo",
+      paymentMethod: "mock",
+      status: "paid",
+      provider: "mock",
+      createdAt: new Date().toISOString(),
+      paidAt: new Date().toISOString()
+    });
+  } else {
+    const demoPurchase = db.purchases.find((purchase) => purchase.userId === demoUser.id && purchase.status === "paid");
+
+    if (demoPurchase) {
+      demoPurchase.planId = "agua-doce-completo";
+      demoPurchase.planName = "Aprova Agua Doce Completo - Demo";
+    }
+  }
 
   await writeDb(db);
 }
