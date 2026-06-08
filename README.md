@@ -2,21 +2,34 @@
 
 Base em Next.js para uma plataforma educacional com:
 
-- landing page premium para concursos e ENEM
-- checkout com criação de conta
-- autenticação com cookie `httpOnly`
-- área do aluno protegida por compra confirmada
-- painel admin protegido por perfil
-- endpoint de healthcheck
+- landing page comercial para concursos e ENEM
+- login com sessao segura
+- checkout em modo demonstracao ou pronto para gateway real
+- area do aluno protegida por compra aprovada
+- painel operacional simples para compras e redacoes
 - webhook de pagamento com assinatura HMAC
+- persistencia local em `data/app-db.json`
 
-## Variáveis de ambiente
+## Variaveis de ambiente
 
-Use `.env.example` como referência.
+Use o arquivo `.env.example` como referencia.
+
+Campos principais:
+
+- `NEXT_PUBLIC_APP_URL`
+- `SESSION_SECRET`
+- `PAYMENT_PROVIDER`
+- `MERCADO_PAGO_TOKEN`
+- `STRIPE_SECRET_KEY`
+- `ASAAS_API_KEY`
+- `PAYMENT_WEBHOOK_SECRET`
+- `WEBHOOK_SECRET`
+- `ADMIN_EMAIL`
+- `ADMIN_PASSWORD`
 
 ## Fluxo local
 
-1. Instale dependências:
+1. Instale dependencias:
 
 ```powershell
 npm.cmd install
@@ -28,7 +41,13 @@ npm.cmd install
 npm.cmd run dev
 ```
 
-3. Valide saúde da aplicação:
+3. Rode o build de validacao:
+
+```powershell
+npm.cmd run build
+```
+
+4. Valide saude da aplicacao:
 
 ```powershell
 Invoke-RestMethod http://localhost:3000/api/health
@@ -41,13 +60,45 @@ O endpoint espera `POST /api/payments/webhook` com corpo JSON:
 ```json
 {
   "purchaseId": "id-da-compra",
-  "status": "paid",
+  "status": "approved",
   "gatewayReference": "ref-externa"
 }
 ```
 
-A assinatura deve ser enviada no header configurado para webhook usando `HMAC-SHA256` do corpo com `PAYMENT_WEBHOOK_SECRET`.
+O header `x-BenThec-signature` deve receber o `HMAC-SHA256` do corpo usando `WEBHOOK_SECRET`.
 
-## Observação importante
+Status aceitos:
 
-O adaptador atual usa `data/app-db.json` para persistência local. Isso é suficiente para validação e desenvolvimento, mas a próxima etapa para produção é trocar essa camada por PostgreSQL ou outro banco gerenciado.
+- `approved`
+- `paid`
+- `pending`
+- `cancelled`
+- `expired`
+- `refunded`
+- `failed`
+
+## Persistencia
+
+O adaptador atual usa `data/app-db.json`. Ele ja salva:
+
+- usuarios
+- compras
+- redacoes
+- anexos de redacao
+
+Essa camada foi organizada para troca futura por Supabase ou Postgres sem reescrever a interface.
+
+## Checklist de deploy
+
+1. Subir o projeto para o GitHub.
+2. Conectar o repositorio na Vercel.
+3. Configurar variaveis de ambiente com base em `.env.example`.
+4. Apontar dominio e validar `NEXT_PUBLIC_APP_URL`.
+5. Inserir as chaves reais do gateway escolhido.
+6. Configurar o webhook no provedor de pagamento.
+7. Testar checkout, login, area do aluno, redacao, questoes e simulados.
+8. Validar upload de JPG, PNG, PDF e HEIC no fluxo de redacao.
+
+## Observacao honesta
+
+Sem chaves reais de pagamento e sem operacao humana de correcao, a plataforma continua pronta para demonstracao e deploy tecnico, mas nao para venda plena.

@@ -1,4 +1,47 @@
 {
-  "users": [],
-  "purchases": []
+  "users": [
+    {
+      "id": "ef818401-d3c0-40e8-87ad-4dfd7a9de3a6",
+      "name": "Administrador BenThec",
+      "email": "admin@benthecaprova.local",
+      "document": "00000000000",
+      "passwordHash": "86ea119ad18925b010f89f2d471e586c:7ddda3fef4d7a46e359bc318461fdd17feb8042557246f1cec24a2f6c7f848a61e9e7085f8cfd55d15ce598f6ad670c70513ca3f29301fb6242c7d21bea24a46",
+      "role": "admin",
+      "createdAt": "2026-06-06T19:05:46.687Z"
+    },
+    {
+      "id": "2c0e06af-d049-4aa0-9419-465879b9bca4",
+      "name": "Aluno Demo BenThec",
+      "email": "demo@benthec.com",
+      "document": "11111111111",
+      "passwordHash": "40156857b6f9a8f23197df87372448c0:721db4478186a926086591324ff987e9702bbd57f98964d3dbc004128a6cecb01de16b83aa84ec9708417636a23cc20ceeddc3417896163c074b9d64d0646a41",
+      "role": "student",
+      "createdAt": "2026-06-06T19:05:46.740Z",
+      "lastLoginAt": "2026-06-08T02:51:23.450Z"
+    },
+    {
+      "id": "4aa1ca56-b598-493c-9e68-522a5f1bb6a7",
+      "name": "Corretor BenThec",
+      "email": "corretor@benthec.local",
+      "document": "22222222222",
+      "passwordHash": "86f0af5b47fe1cbaa4699a8c52f4030a:60b047a0e3cdcb0c0f014c4e697a94f8ac5c07bb8a3cbbe0a0fc5edb2b0ca866d36bd2dc6580144c21faf7d0dac274d7302471ad7447b422c800802d9ebef576",
+      "role": "corrector",
+      "createdAt": "2026-06-08T02:51:23.349Z"
+    }
+  ],
+  "purchases": [
+    {
+      "id": "b48f9ad8-3ea3-4c75-bd6b-d59c7ea804d4",
+      "userId": "2c0e06af-d049-4aa0-9419-465879b9bca4",
+      "planId": "agua-doce-completo",
+      "planName": "Aprova Agua Doce Completo - Demo",
+      "paymentMethod": "mock",
+      "status": "paid",
+      "provider": "mock",
+      "createdAt": "2026-06-06T19:05:46.740Z",
+      "paidAt": "2026-06-06T19:05:46.740Z"
+    }
+  ],
+  "essays": [],
+  "supportRequests": []
 }

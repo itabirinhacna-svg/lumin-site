@@ -7,10 +7,7 @@ type SiteHeaderProps = {
   ctaHref?: string;
 };
 
-export async function SiteHeader({
-  ctaLabel = "Começar",
-  ctaHref = "/checkout"
-}: SiteHeaderProps) {
+export async function SiteHeader({ ctaLabel = "Comecar", ctaHref = "/checkout" }: SiteHeaderProps) {
   const currentUser = await getCurrentUser();
 
   return (
@@ -21,17 +18,18 @@ export async function SiteHeader({
         </Link>
 
         <nav className="nav-links">
-          <Link href="/#trilhas">Trilhas</Link>
-          <Link href="/#agua-doce">Aprova Água Doce</Link>
-          <Link href="/#metodo">Método</Link>
+          <Link href="/#catalogo">Catalogo</Link>
+          <Link href="/produtos/aprova-agua-doce">Aprova Agua Doce</Link>
+          <Link href="/redacao">Redacao</Link>
+          <Link href="/pmes">PMES</Link>
           {!currentUser ? <Link href="/login">Entrar</Link> : null}
         </nav>
 
         <div className="actions">
           {currentUser ? (
             <>
-              <Link href={currentUser.role === "admin" ? "/admin" : "/aluno"} className="btn-ghost">
-                {currentUser.role === "admin" ? "Painel" : "Minha área"}
+              <Link href={currentUser.role === "admin" ? "/admin" : "/area"} className="btn-ghost">
+                {currentUser.role === "admin" ? "Painel" : "Minha area"}
               </Link>
               <form action="/api/auth/logout" method="post">
                 <button type="submit" className="btn-secondary">

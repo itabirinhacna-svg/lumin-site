@@ -26,6 +26,16 @@ export async function requireUser(role?: UserRole) {
   return user as UserRecord;
 }
 
+export async function requireStaffAccess() {
+  const user = await requireUser();
+
+  if (user.role !== "admin" && user.role !== "corrector") {
+    redirect("/area");
+  }
+
+  return user as UserRecord;
+}
+
 export async function requireStudentAccess() {
   const user = await requireUser("student");
   const purchase = await getActivePurchaseForUser(user.id);

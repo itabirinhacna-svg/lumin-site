@@ -2,6 +2,7 @@
 import { createEnrollment } from "@/lib/db";
 import { getPlanById } from "@/lib/data";
 import { env } from "@/lib/env";
+import { createMercadoPagoPreference, getNumericPlanAmount, isMercadoPagoReady } from "@/lib/mercado-pago";
 import { isMockProvider } from "@/lib/payments";
 import { consumeRateLimit, getClientKey, isSameOriginRequest } from "@/lib/request-security";
 import { applySessionCookie } from "@/lib/session";
@@ -48,7 +49,7 @@ export async function POST(request: Request) {
   }
 
   try {
-    const { user } = await createEnrollment({
+    const { user, purchase } = await createEnrollment({
       name,
       email,
       document,
@@ -60,6 +61,26 @@ export async function POST(request: Request) {
       provider: env.paymentProvider,
       autoApprove: isMockProvider()
     });
+
+    if (env.paymentProvider === "mercado-pago" && isMercadoPagoReady()) {
+      const preference = await createMercadoPagoPreference({
+        purchaseId: purchase.id,
+        planId: plan.id,
+        planName: plan.name,
+        amount: getNumericPlanAmount(plan.price),
+        payer: {
+          name,
+          email,
+          document,
+        },
+      });
+
+      if (preference?.init_point) {
+        const response = NextResponse.redirect(preference.init_point, 303);
+        applySessionCookie(response, user.id, user.role);
+        return response;
+      }
+    }
 
     const destination = isMockProvider() ? "/checkout/sucesso" : "/checkout/pendente";
     const response = NextResponse.redirect(new URL(destination, request.url), 303);

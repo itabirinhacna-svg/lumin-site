@@ -8,21 +8,21 @@ export default async function CheckoutSuccessPage() {
 
   return (
     <>
-      <SiteHeader ctaLabel="Ir para meus estudos" ctaHref="/aluno" />
+      <SiteHeader ctaLabel="Ir para meus estudos" ctaHref="/area" />
       <main className="section">
         <div className="page-shell glass-card">
-          <div className="kicker">Compra concluÃ­da</div>
+          <div className="kicker">Compra concluida</div>
           <h1 style={{ fontSize: "clamp(2.3rem, 5vw, 4rem)" }}>Acesso liberado para {user.name}.</h1>
           <p>
-            Seu pedido do plano <strong>{purchase.planName}</strong> foi registrado e a Ã¡rea do aluno jÃ¡ estÃ¡ liberada.
+            Seu pedido do plano <strong>{purchase.planName}</strong> foi registrado e a area do aluno ja esta liberada.
           </p>
           <div className="tag-row" style={{ margin: "18px 0 24px" }}>
             <span className="pill">Status: {purchase.status}</span>
             <span className="pill">Pagamento: {purchase.paymentMethod.toUpperCase()}</span>
           </div>
           <div className="actions">
-            <Link href="/aluno" className="btn">
-              ComeÃ§ar a estudar
+            <Link href="/area" className="btn">
+              Comecar a estudar
             </Link>
             <Link href="/" className="btn-ghost">
               Voltar para o site

@@ -1,5 +1,9 @@
+import { curadoriaVideos, type CuradoriaProduto, type CuradoriaVideoValidada } from "@/lib/curadoria-videos";
+
 export type QuestaoNivel = "facil" | "medio" | "dificil";
-export type QuestaoArea = "operacionais" | "saude" | "magisterio";
+export type QuestaoArea = "operacionais" | "saude" | "magisterio" | "pmes" | "enem";
+export type QuestaoBanca = "IDESG" | "IDECAN" | "IBADE" | "FGV" | "VUNESP" | "Cebraspe" | "INEP";
+export type QuestaoTipo = "autoral" | "prova_publica_referenciada" | "inspirada";
 
 export type QuestaoAlternativa = {
   letra: "A" | "B" | "C" | "D" | "E";
@@ -8,25 +12,44 @@ export type QuestaoAlternativa = {
 
 export type QuestaoAutoral = {
   id: string;
-  bancaEstilo: "IDESG";
+  bancaEstilo: QuestaoBanca;
   area: QuestaoArea;
+  produto?: "agua-doce" | "pmes" | "enem";
   cargoSlug: string;
   cargo: string;
+  cargoRelacionados?: string[];
   disciplina: string;
   assunto: string;
+  subassunto?: string;
+  microassunto?: string;
+  topicoEdital?: string;
+  fonte?: string;
+  ano?: number;
   enunciado: string;
   alternativas: QuestaoAlternativa[];
   gabarito: QuestaoAlternativa["letra"];
   comentario: string;
   nivel: QuestaoNivel;
   fonteReferencia: string;
+  referenciaUrl?: string;
+  tipo?: QuestaoTipo;
+};
+
+export type QuestaoFiltro = {
+  disciplina?: string;
+  assunto?: string;
+  subassunto?: string;
+  banca?: QuestaoBanca;
+  cargoSlug?: string;
+  area?: QuestaoArea;
+  nivel?: QuestaoNivel;
 };
 
 function criarQuestao(questao: QuestaoAutoral) {
   return questao;
 }
 
-export const questoes: QuestaoAutoral[] = [
+const questoesBase: QuestaoAutoral[] = [
   criarQuestao({
     id: "asg-portugues-01",
     bancaEstilo: "IDESG",
@@ -1011,24 +1034,603 @@ export const questoes: QuestaoAutoral[] = [
     nivel: "medio",
     fonteReferencia: "Edital 001/2026 - conteudo programatico especifico de Sala de Recursos.",
   }),
+  criarQuestao({
+    id: "pmes-portugues-01",
+    bancaEstilo: "IDECAN",
+    area: "pmes",
+    cargoSlug: "pmes",
+    cargo: "PMES",
+    disciplina: "Lingua Portuguesa",
+    assunto: "Interpretacao de texto",
+    enunciado:
+      "Em um texto sobre seguranca publica, o autor afirma que a confianca entre comunidade e instituicoes se fortalece quando ha presenca preventiva, escuta e resposta rapida. A ideia central do trecho e:",
+    alternativas: [
+      { letra: "A", texto: "a seguranca depende apenas do aumento do numero de viaturas." },
+      { letra: "B", texto: "a relacao entre policia e comunidade se fortalece com presenca, dialogo e eficiencia." },
+      { letra: "C", texto: "a resposta rapida substitui a necessidade de planejamento preventivo." },
+      { letra: "D", texto: "a escuta da comunidade tem valor secundario nas acoes policiais." },
+      { letra: "E", texto: "a confianca social independe da qualidade do atendimento." },
+    ],
+    gabarito: "B",
+    comentario:
+      "A questao cobra leitura global. O trecho associa seguranca a confianca social construida por presenca preventiva, escuta e resposta eficaz.",
+    nivel: "medio",
+    fonteReferencia: "Conteudo programatico PMES - Lingua Portuguesa: interpretacao e compreensao textual.",
+  }),
+  criarQuestao({
+    id: "pmes-portugues-02",
+    bancaEstilo: "IDECAN",
+    area: "pmes",
+    cargoSlug: "pmes",
+    cargo: "PMES",
+    disciplina: "Lingua Portuguesa",
+    assunto: "Pontuacao",
+    enunciado: "Assinale a alternativa em que a virgula foi empregada corretamente.",
+    alternativas: [
+      { letra: "A", texto: "Os policiais que atuam no patrulhamento ostensivo, precisam manter atencao constante." },
+      { letra: "B", texto: "Em dias de operacao, o planejamento, define prioridades de deslocamento." },
+      { letra: "C", texto: "A equipe avaliou o risco, organizou a rota e iniciou o patrulhamento." },
+      { letra: "D", texto: "A comunidade espera, respostas rapidas e atendimento respeitoso." },
+      { letra: "E", texto: "Sempre que necessario os agentes, reforcam a vigilancia no entorno." },
+    ],
+    gabarito: "C",
+    comentario:
+      "A alternativa C usa a virgula para separar itens coordenados. Nas demais, a pontuacao separa indevidamente sujeito, verbo ou adjunto.",
+    nivel: "medio",
+    fonteReferencia: "Conteudo programatico PMES - Lingua Portuguesa: pontuacao e sintaxe.",
+  }),
+  criarQuestao({
+    id: "pmes-mrl-01",
+    bancaEstilo: "IDECAN",
+    area: "pmes",
+    cargoSlug: "pmes",
+    cargo: "PMES",
+    disciplina: "Raciocinio Logico e Matematico",
+    assunto: "Porcentagem",
+    enunciado:
+      "Em uma turma preparatoria com 80 candidatos, 30% ainda nao iniciaram o bloco de geografia. Quantos candidatos ja iniciaram esse bloco?",
+    alternativas: [
+      { letra: "A", texto: "24" },
+      { letra: "B", texto: "32" },
+      { letra: "C", texto: "48" },
+      { letra: "D", texto: "56" },
+      { letra: "E", texto: "60" },
+    ],
+    gabarito: "D",
+    comentario: "Se 30% ainda nao iniciaram, entao 70% ja iniciaram. 70% de 80 e 56.",
+    nivel: "facil",
+    fonteReferencia: "Conteudo programatico PMES - Raciocinio Logico e Matematico: porcentagem e problemas.",
+  }),
+  criarQuestao({
+    id: "pmes-mrl-02",
+    bancaEstilo: "IDECAN",
+    area: "pmes",
+    cargoSlug: "pmes",
+    cargo: "PMES",
+    disciplina: "Raciocinio Logico e Matematico",
+    assunto: "Sequencias logicas",
+    enunciado: "Observe a sequencia 3, 6, 12, 24, ... Mantido o mesmo padrao, o proximo termo sera:",
+    alternativas: [
+      { letra: "A", texto: "30" },
+      { letra: "B", texto: "36" },
+      { letra: "C", texto: "42" },
+      { letra: "D", texto: "46" },
+      { letra: "E", texto: "48" },
+    ],
+    gabarito: "E",
+    comentario: "A sequencia dobra a cada passo. Depois de 24, vem 48.",
+    nivel: "facil",
+    fonteReferencia: "Conteudo programatico PMES - Raciocinio Logico e Matematico: sequencias e padroes.",
+  }),
+  criarQuestao({
+    id: "pmes-historia-01",
+    bancaEstilo: "IDECAN",
+    area: "pmes",
+    cargoSlug: "pmes",
+    cargo: "PMES",
+    disciplina: "Historia do Brasil e do Espirito Santo",
+    assunto: "Republica no Brasil",
+    enunciado: "A Proclamacao da Republica, em 1889, alterou o regime politico brasileiro ao:",
+    alternativas: [
+      { letra: "A", texto: "instalar um regime parlamentar monarquico." },
+      { letra: "B", texto: "substituir a monarquia por um regime republicano." },
+      { letra: "C", texto: "encerrar o federalismo e concentrar todo poder nos municipios." },
+      { letra: "D", texto: "abolir a Constituicao e o voto em todo o territorio." },
+      { letra: "E", texto: "eliminar a participacao militar na vida politica." },
+    ],
+    gabarito: "B",
+    comentario:
+      "A banca costuma cobrar marcos historicos basicos. A Proclamacao da Republica encerra o periodo monarquico e inaugura o republicano.",
+    nivel: "facil",
+    fonteReferencia: "Conteudo programatico PMES - Historia do Brasil e do Espirito Santo.",
+  }),
+  criarQuestao({
+    id: "pmes-historia-02",
+    bancaEstilo: "IDECAN",
+    area: "pmes",
+    cargoSlug: "pmes",
+    cargo: "PMES",
+    disciplina: "Historia do Brasil e do Espirito Santo",
+    assunto: "Historia do Espirito Santo",
+    enunciado:
+      "Na formacao historica do Espirito Santo, a ocupacao do territorio esteve relacionada, entre outros fatores, a:",
+    alternativas: [
+      { letra: "A", texto: "expansao de frentes coloniais e organizacao de nucleos de povoamento." },
+      { letra: "B", texto: "isolamento completo em relacao ao restante da colonia." },
+      { letra: "C", texto: "ausencia de atividade economica durante o periodo colonial." },
+      { letra: "D", texto: "proibicao de qualquer organizacao administrativa local." },
+      { letra: "E", texto: "independencia politica anterior ao restante do Brasil." },
+    ],
+    gabarito: "A",
+    comentario:
+      "A questao pede leitura historica ampla do processo de ocupacao e organizacao do territorio capixaba.",
+    nivel: "medio",
+    fonteReferencia: "Conteudo programatico PMES - Historia do Espirito Santo.",
+  }),
+  criarQuestao({
+    id: "pmes-geografia-01",
+    bancaEstilo: "IDECAN",
+    area: "pmes",
+    cargoSlug: "pmes",
+    cargo: "PMES",
+    disciplina: "Geografia Geral, do Brasil e do Espirito Santo",
+    assunto: "Urbanizacao",
+    enunciado:
+      "O crescimento urbano acelerado, quando ocorre sem planejamento, pode favorecer:",
+    alternativas: [
+      { letra: "A", texto: "melhoria automatica de todos os indicadores sociais." },
+      { letra: "B", texto: "reducao espontanea dos problemas de mobilidade." },
+      { letra: "C", texto: "expansao de areas com carencia de infraestrutura e servicos." },
+      { letra: "D", texto: "equilibrio natural entre moradia, trabalho e transporte." },
+      { letra: "E", texto: "desaparecimento das desigualdades territoriais." },
+    ],
+    gabarito: "C",
+    comentario:
+      "Urbanizacao sem planejamento tende a ampliar problemas de mobilidade, infraestrutura e acesso a servicos.",
+    nivel: "medio",
+    fonteReferencia: "Conteudo programatico PMES - Geografia Geral, Brasil e Espirito Santo.",
+  }),
+  criarQuestao({
+    id: "pmes-geografia-02",
+    bancaEstilo: "IDECAN",
+    area: "pmes",
+    cargoSlug: "pmes",
+    cargo: "PMES",
+    disciplina: "Geografia Geral, do Brasil e do Espirito Santo",
+    assunto: "Territorio e regionalizacao",
+    enunciado:
+      "Na Geografia, o conceito de territorio se relaciona principalmente a:",
+    alternativas: [
+      { letra: "A", texto: "uma paisagem observada sem relacao com poder ou uso." },
+      { letra: "B", texto: "um espaco apropriado, controlado ou usado por grupos sociais." },
+      { letra: "C", texto: "uma divisao puramente natural sem dimensao politica." },
+      { letra: "D", texto: "uma area definida apenas por coordenadas climaticas." },
+      { letra: "E", texto: "um espaco sem dinamica historica." },
+    ],
+    gabarito: "B",
+    comentario:
+      "Territorio envolve uso, controle, poder e relacao social sobre o espaco.",
+    nivel: "medio",
+    fonteReferencia: "Conteudo programatico PMES - Geografia Geral, Brasil e Espirito Santo.",
+  }),
+  criarQuestao({
+    id: "pmes-redacao-01",
+    bancaEstilo: "IDECAN",
+    area: "pmes",
+    cargoSlug: "pmes",
+    cargo: "PMES",
+    disciplina: "Redacao",
+    assunto: "Leitura do comando",
+    enunciado:
+      "Em uma proposta de redacao discursiva para concurso policial, a primeira atitude mais segura do candidato e:",
+    alternativas: [
+      { letra: "A", texto: "comecar a escrever imediatamente para ganhar tempo." },
+      { letra: "B", texto: "substituir o tema cobrado por outro mais facil de desenvolver." },
+      { letra: "C", texto: "identificar tema, recorte, objetivo e limite do comando antes de planejar." },
+      { letra: "D", texto: "decorar um texto pronto e encaixar no assunto." },
+      { letra: "E", texto: "fazer uma introducao longa sem definir tese." },
+    ],
+    gabarito: "C",
+    comentario:
+      "A leitura do comando e decisiva em discursivas. Antes de escrever, o candidato precisa saber exatamente o que a banca pediu.",
+    nivel: "medio",
+    fonteReferencia: "Conteudo programatico PMES - Redacao.",
+  }),
+  criarQuestao({
+    id: "pmes-redacao-02",
+    bancaEstilo: "IDECAN",
+    area: "pmes",
+    cargoSlug: "pmes",
+    cargo: "PMES",
+    disciplina: "Redacao",
+    assunto: "Objetividade",
+    enunciado:
+      "Entre as alternativas abaixo, a que melhor representa uma qualidade importante na redacao de concurso policial e:",
+    alternativas: [
+      { letra: "A", texto: "uso de linguagem vaga para parecer mais sofisticado." },
+      { letra: "B", texto: "excesso de frases longas para demonstrar repertorio." },
+      { letra: "C", texto: "objetividade, argumento direto e fechamento coerente com o tema." },
+      { letra: "D", texto: "repeticao da mesma ideia ao longo do texto." },
+      { letra: "E", texto: "uso de exemplos sem relacao com o comando." },
+    ],
+    gabarito: "C",
+    comentario:
+      "Em discursivas de concurso, a banca valoriza resposta aderente ao tema, com objetividade e organizacao logica.",
+    nivel: "medio",
+    fonteReferencia: "Conteudo programatico PMES - Redacao.",
+  }),
 ];
 
 const areaLabels: Record<QuestaoArea, string> = {
   operacionais: "Operacionais",
   saude: "Saude",
   magisterio: "Magisterio",
+  pmes: "PMES",
+  enem: "ENEM",
 };
+
+const aguaTrackNames: Record<string, { cargo: string; area: QuestaoArea }> = {
+  "auxiliar-servicos-gerais": { cargo: "Auxiliar de Servicos Gerais", area: "operacionais" },
+  merendeira: { cargo: "Merendeira", area: "operacionais" },
+  motorista: { cargo: "Motorista", area: "operacionais" },
+  "operador-maquinas": { cargo: "Operador de Maquinas", area: "operacionais" },
+  vigia: { cargo: "Vigia", area: "operacionais" },
+  "auxiliar-de-cuidador": { cargo: "Auxiliar de Cuidador", area: "saude" },
+  cuidador: { cargo: "Cuidador Infantil", area: "saude" },
+  "tecnico-enfermagem": { cargo: "Tecnico em Enfermagem", area: "saude" },
+  "conhecimentos-pedagogicos": { cargo: "Conhecimentos Pedagogicos", area: "magisterio" },
+  pedagogo: { cargo: "Pedagogo", area: "magisterio" },
+  "educacao-infantil": { cargo: "Educacao Infantil", area: "magisterio" },
+  "series-iniciais": { cargo: "Series Iniciais", area: "magisterio" },
+  "aee-visual": { cargo: "AEE Deficiencia Visual", area: "magisterio" },
+  "aee-auditiva": { cargo: "AEE Deficiencia Auditiva", area: "magisterio" },
+  "sala-recursos": { cargo: "Sala de Recursos", area: "magisterio" },
+};
+
+const aguaTrackGroups = {
+  all: Object.keys(aguaTrackNames),
+  educacao: [
+    "conhecimentos-pedagogicos",
+    "pedagogo",
+    "educacao-infantil",
+    "series-iniciais",
+    "aee-visual",
+    "aee-auditiva",
+    "sala-recursos",
+  ],
+  saude: ["auxiliar-de-cuidador", "cuidador", "tecnico-enfermagem"],
+} as const;
+
+function normalize(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
+function titleCase(value: string) {
+  return value
+    .split(/[\s-]+/)
+    .filter(Boolean)
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+function hashText(value: string) {
+  return normalize(value)
+    .split("")
+    .reduce((total, char) => total + char.charCodeAt(0), 0);
+}
+
+function rotateAlternatives(correct: string, distractors: string[], seed: string) {
+  const letters = ["A", "B", "C", "D", "E"] as const;
+  const pool = [correct, ...distractors.slice(0, 4)];
+  const offset = hashText(seed) % letters.length;
+  const rotated = pool.map((_, index) => pool[(index + offset) % pool.length]);
+  const gabarito = letters[rotated.findIndex((item) => item === correct)];
+
+  return {
+    alternativas: rotated.map((texto, index) => ({ letra: letters[index], texto })),
+    gabarito,
+  };
+}
+
+function getAguaRelacionados(video: CuradoriaVideoValidada) {
+  const micro = normalize(video.microassunto);
+  const disciplina = normalize(video.disciplina);
+
+  if (disciplina.includes("portugues") || disciplina.includes("matematica") || disciplina.includes("informatica")) {
+    return [...aguaTrackGroups.all];
+  }
+
+  if (disciplina.includes("educacao")) {
+    return [...aguaTrackGroups.educacao];
+  }
+
+  if (disciplina.includes("saude")) {
+    return [...aguaTrackGroups.saude];
+  }
+
+  if (micro.includes("servicos gerais")) return ["auxiliar-servicos-gerais"];
+  if (micro.includes("merendeira")) return ["merendeira"];
+  if (micro.includes("motorista")) return ["motorista"];
+  if (micro.includes("operador de maquinas")) return ["operador-maquinas"];
+  if (micro.includes("vigia")) return ["vigia"];
+  if (micro.includes("cuidador")) return ["auxiliar-de-cuidador", "cuidador"];
+
+  return ["auxiliar-servicos-gerais"];
+}
+
+function getAguaDisciplina(video: CuradoriaVideoValidada) {
+  const disciplina = normalize(video.disciplina);
+  if (disciplina.includes("portugues")) return "Lingua Portuguesa";
+  if (disciplina.includes("matematica")) return "Matematica Basica";
+  if (disciplina.includes("informatica")) return "Informatica Basica";
+  if (disciplina.includes("educacao")) return "Conhecimentos Pedagogicos";
+  return "Conhecimentos Especificos";
+}
+
+function getQuestaoAreaByTrackSlug(slug: string): QuestaoArea {
+  return aguaTrackNames[slug]?.area ?? "operacionais";
+}
+
+function getQuestaoCargoByTrackSlug(slug: string) {
+  return aguaTrackNames[slug]?.cargo ?? "Trilha municipal";
+}
+
+function getQuestionMetadata(video: CuradoriaVideoValidada, variantIndex: number) {
+  if (video.produto === "pmes") {
+    return {
+      produto: "pmes" as const,
+      bancaEstilo: "IDECAN" as const,
+      area: "pmes" as const,
+      cargoSlug: "pmes",
+      cargo: "PMES",
+      cargoRelacionados: ["pmes"],
+      disciplina: video.disciplina === "Redacao PMES" ? "Redacao" : video.disciplina,
+      assunto: video.assunto,
+      topicoEdital: video.microassunto,
+      fonte: "Curadoria oficial PMES",
+      ano: 2026,
+    };
+  }
+
+  if (video.produto === "enem" || video.produto === "redacao-enem") {
+    return {
+      produto: "enem" as const,
+      bancaEstilo: "INEP" as const,
+      area: "enem" as const,
+      cargoSlug: video.produto === "redacao-enem" ? "redacao-enem" : "enem",
+      cargo: video.produto === "redacao-enem" ? "Redacao ENEM" : "ENEM",
+      cargoRelacionados: [video.produto === "redacao-enem" ? "redacao-enem" : "enem"],
+      disciplina: video.disciplina,
+      assunto: video.assunto,
+      topicoEdital: video.microassunto,
+      fonte: "Curadoria oficial ENEM",
+      ano: 2026,
+    };
+  }
+
+  if (video.produto === "redacao-concursos") {
+    return {
+      produto: "agua-doce" as const,
+      bancaEstilo: "IDECAN" as const,
+      area: "pmes" as const,
+      cargoSlug: "pmes",
+      cargo: "PMES / Concursos",
+      cargoRelacionados: ["pmes"],
+      disciplina: "Redacao",
+      assunto: video.assunto,
+      topicoEdital: video.microassunto,
+      fonte: "Curadoria oficial redacao concursos",
+      ano: 2026,
+    };
+  }
+
+  const relacionados = getAguaRelacionados(video);
+  const cargoSlug = relacionados[variantIndex % relacionados.length] ?? relacionados[0];
+
+  return {
+    produto: "agua-doce" as const,
+    bancaEstilo: "IDESG" as const,
+    area: getQuestaoAreaByTrackSlug(cargoSlug),
+    cargoSlug,
+    cargo: getQuestaoCargoByTrackSlug(cargoSlug),
+    cargoRelacionados: relacionados,
+    disciplina: getAguaDisciplina(video),
+    assunto: video.assunto,
+    topicoEdital: video.microassunto,
+    fonte: "Curadoria oficial Agua Doce",
+    ano: 2026,
+  };
+}
+
+function buildQuestaoEnunciado(video: CuradoriaVideoValidada, variantIndex: number, cargo: string) {
+  const micro = titleCase(video.microassunto);
+
+  if (variantIndex === 0) {
+    return `No estudo de ${micro} para ${cargo}, assinale a alternativa que melhor resume a ideia central desse microassunto.`;
+  }
+
+  return `Durante a revisao de ${micro}, qual atitude mostra que o aluno entendeu o que a banca costuma cobrar nesse ponto?`;
+}
+
+function buildCorrectOption(video: CuradoriaVideoValidada, variantIndex: number) {
+  const micro = video.microassunto;
+  const conceito = video.observacaoPedagogica;
+  if (variantIndex === 0) {
+    return `Relacionar ${micro} ao contexto da prova, entendendo a ideia central antes de partir para as alternativas.`;
+  }
+
+  if (video.usoRecomendado === "questoes") {
+    return `Depois da teoria curta, resolver questoes comentadas de ${micro} para transformar conteudo em resposta objetiva.`;
+  }
+
+  if (video.usoRecomendado === "revisao") {
+    return `Usar ${micro} como bloco de revisao, retomando palavras-chave e erros mais comuns antes do treino maior.`;
+  }
+
+  return `Estudar ${micro} com video curto, resumo guiado e pratica logo em seguida, sem separar teoria e aplicacao.`;
+}
+
+function buildDistractors(video: CuradoriaVideoValidada) {
+  const micro = video.microassunto;
+  return [
+    `Memorizar ${micro} isoladamente e escolher a alternativa mais parecida com o que ficou da leitura superficial.`,
+    `Ignorar o comando da questao, porque em ${micro} o importante e decorar termos soltos e nao interpretar contexto.`,
+    `Tratar ${micro} como detalhe sem relacao com edital, rotina do cargo ou estrategia de prova.`,
+    `Pular leitura e pratica, porque ${micro} se resolve apenas por intuicao quando a alternativa parece convincente.`,
+  ];
+}
+
+function buildComentario(video: CuradoriaVideoValidada, variantIndex: number) {
+  const micro = titleCase(video.microassunto);
+
+  if (variantIndex === 0) {
+    return `${micro} precisa aparecer com contexto, leitura do comando e aplicacao pratica. A curadoria BenThec usa esse microassunto como passo curto, nao como bloco solto.`;
+  }
+
+  return `A melhor resposta em ${micro} e a que junta video, resumo e pratica. O erro mais comum e estudar sem converter o conteudo em decisao de prova.`;
+}
+
+function inferDifficulty(video: CuradoriaVideoValidada, variantIndex: number): QuestaoNivel {
+  if (video.nivel === "avancado") return "dificil";
+  if (video.nivel === "intermediario") return variantIndex === 0 ? "medio" : "dificil";
+  if (video.nivel === "revisao") return "medio";
+  return variantIndex === 0 ? "facil" : "medio";
+}
+
+function createGeneratedQuestion(video: CuradoriaVideoValidada, variantIndex: number): QuestaoAutoral {
+  const meta = getQuestionMetadata(video, variantIndex);
+  const correct = buildCorrectOption(video, variantIndex);
+  const { alternativas, gabarito } = rotateAlternatives(correct, buildDistractors(video), `${video.id}-${variantIndex}`);
+
+  return criarQuestao({
+    id: `${video.id}-q${variantIndex + 1}`,
+    bancaEstilo: meta.bancaEstilo,
+    area: meta.area,
+    produto: meta.produto,
+    cargoSlug: meta.cargoSlug,
+    cargo: meta.cargo,
+    cargoRelacionados: meta.cargoRelacionados,
+    disciplina: meta.disciplina,
+    assunto: meta.assunto,
+    subassunto: titleCase(video.microassunto),
+    microassunto: video.microassunto,
+    topicoEdital: meta.topicoEdital,
+    fonte: meta.fonte,
+    ano: meta.ano,
+    enunciado: buildQuestaoEnunciado(video, variantIndex, meta.cargo),
+    alternativas,
+    gabarito,
+    comentario: buildComentario(video, variantIndex),
+    nivel: inferDifficulty(video, variantIndex),
+    fonteReferencia: video.linkDescricao,
+    referenciaUrl: video.playlistVideoEspecifico ?? undefined,
+    tipo: "inspirada",
+  });
+}
+
+function getVariantCount(video: CuradoriaVideoValidada) {
+  if (video.produto === "agua-doce" || video.produto === "enem" || video.produto === "redacao-enem") {
+    return 2;
+  }
+
+  if (video.produto === "redacao-concursos") {
+    return 1;
+  }
+
+  return 1;
+}
+
+function dedupeQuestions(base: QuestaoAutoral[]) {
+  const map = new Map<string, QuestaoAutoral>();
+  base.forEach((questao) => {
+    map.set(questao.id, questao);
+  });
+  return [...map.values()];
+}
+
+const generatedQuestions = curadoriaVideos
+  .filter((video) => video.produto !== "canais-coringa")
+  .flatMap((video) =>
+    Array.from({ length: getVariantCount(video) }, (_, index) => createGeneratedQuestion(video, index)),
+  );
+
+export const questoes: QuestaoAutoral[] = dedupeQuestions([...questoesBase, ...generatedQuestions]);
 
 export function getQuestaoById(id: string) {
   return questoes.find((questao) => questao.id === id);
 }
 
 export function getQuestoesByCargoSlug(cargoSlug: string) {
-  return questoes.filter((questao) => questao.cargoSlug === cargoSlug);
+  return questoes.filter((questao) => questao.cargoSlug === cargoSlug || questao.cargoRelacionados?.includes(cargoSlug));
 }
 
 export function getQuestoesByArea(area: QuestaoArea) {
   return questoes.filter((questao) => questao.area === area);
+}
+
+export function getQuestoesByProduto(produto: "agua-doce" | "pmes" | "enem") {
+  if (produto === "pmes") return getQuestoesByArea("pmes");
+  if (produto === "enem") return getQuestoesByArea("enem");
+  return questoes.filter((questao) => questao.area !== "pmes" && questao.area !== "enem");
+}
+
+export function getQuestoesDisponiveisParaCargo(cargoSlug: string, area: QuestaoArea) {
+  const proprias = getQuestoesByCargoSlug(cargoSlug);
+
+  if (proprias.length >= 12) {
+    return {
+      tipo: "proprias" as const,
+      questoes: proprias,
+    };
+  }
+
+  const complementares = getQuestoesByArea(area).filter(
+    (questao) => questao.cargoSlug !== cargoSlug && !questao.cargoRelacionados?.includes(cargoSlug),
+  );
+
+  return {
+    tipo: proprias.length > 0 ? "proprias" as const : "base-da-area" as const,
+    questoes: [...proprias, ...complementares].slice(0, Math.max(12, proprias.length + 6)),
+  };
+}
+
+export function getQuestoesFiltradas(filtro: QuestaoFiltro) {
+  return questoes.filter((questao) => {
+    if (filtro.disciplina && questao.disciplina !== filtro.disciplina) return false;
+    if (filtro.assunto && questao.assunto !== filtro.assunto) return false;
+    if (filtro.subassunto && (questao.subassunto ?? questao.microassunto ?? questao.assunto) !== filtro.subassunto) return false;
+    if (filtro.banca && questao.bancaEstilo !== filtro.banca) return false;
+    if (filtro.cargoSlug && questao.cargoSlug !== filtro.cargoSlug && !questao.cargoRelacionados?.includes(filtro.cargoSlug)) return false;
+    if (filtro.area && questao.area !== filtro.area) return false;
+    if (filtro.nivel && questao.nivel !== filtro.nivel) return false;
+    return true;
+  });
+}
+
+export function getQuestionFilterOptions(baseQuestoes = questoes) {
+  return {
+    disciplinas: [...new Set(baseQuestoes.map((questao) => questao.disciplina))].sort(),
+    assuntos: [...new Set(baseQuestoes.map((questao) => questao.assunto))].sort(),
+    subassuntos: [...new Set(baseQuestoes.map((questao) => questao.subassunto ?? questao.microassunto ?? questao.assunto))].sort(),
+    bancas: [...new Set(baseQuestoes.map((questao) => questao.bancaEstilo))].sort(),
+    cargos: [...new Set(baseQuestoes.map((questao) => questao.cargoSlug))].sort(),
+    niveis: [...new Set(baseQuestoes.map((questao) => questao.nivel))].sort(),
+  };
+}
+
+export function getQuestionBankCoverage() {
+  const structure = ["IDECAN", "IDESG", "IBADE", "FGV", "VUNESP", "Cebraspe", "INEP"] as const;
+
+  return {
+    total: questoes.length,
+    porBanca: Object.fromEntries(
+      structure.map((banca) => [banca, questoes.filter((questao) => questao.bancaEstilo === banca).length]),
+    ) as Record<typeof structure[number], number>,
+    estruturaPreparada: [...structure],
+  };
 }
 
 export function getQuestoesOverview() {

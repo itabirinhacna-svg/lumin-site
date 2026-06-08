@@ -6,13 +6,27 @@ Estrutura de preparacao futura da BenThec para PMES, sem misturar esta frente ao
 
 ## Disciplinas foco
 
+- Lingua Portuguesa
+- Raciocinio Logico e Matematico
 - Geografia
 - Historia
-- Raciocinio Logico
-- Matematica
 - Redacao
 
 ## Topicos principais
+
+### Lingua Portuguesa
+
+- Interpretacao e compreensao de texto
+- Pontuacao
+- Concordancia
+- Leitura de comando de prova
+
+### Raciocinio Logico e Matematico
+
+- Sequencias logicas
+- Proposicoes e conectivos
+- Razao, proporcao e porcentagem
+- Regra de tres e problemas
 
 ### Geografia
 
@@ -28,21 +42,6 @@ Estrutura de preparacao futura da BenThec para PMES, sem misturar esta frente ao
 - Formacao politica e social brasileira
 - Ditadura militar, redemocratizacao e cidadania
 - Historia contemporanea com enfoque em instituicoes e sociedade
-
-### Raciocinio Logico
-
-- Sequencias logicas
-- Proposicoes e conectivos
-- Equivalencias e negacao
-- Problemas com tabelas, diagramas e organizacao de informacoes
-
-### Matematica
-
-- Razao, proporcao e porcentagem
-- Regra de tres
-- Equacoes do 1 grau
-- Interpretacao de graficos e tabelas
-- Probabilidade e estatistica basica quando previstas no edital
 
 ### Redacao
 
@@ -72,10 +71,10 @@ Observacao: esta leitura e inferencial, baseada em editais e cadernos publicos r
 
 ## Plano de curadoria de videos
 
+- Lingua Portuguesa: leitura, pontuacao e sintaxe
+- Raciocinio Logico e Matematico: sequencias, proporcao, porcentagem e problemas
 - Geografia: aulas de territorio, urbanizacao, ambiente e regiao
 - Historia: linha do tempo do Brasil e republica contemporanea
-- Raciocinio Logico: sequencias, proposicoes e diagramas
-- Matematica: porcentagem, regra de tres, equacoes e graficos
 - Redacao: tese, repertorio, paragrafos e conclusao
 
 Status atual:
@@ -85,10 +84,10 @@ Status atual:
 
 ## Plano de questoes autorais
 
-- Bloco 1: Geografia
-- Bloco 2: Historia
-- Bloco 3: Raciocinio Logico
-- Bloco 4: Matematica
+- Bloco 1: Lingua Portuguesa
+- Bloco 2: Raciocinio Logico e Matematico
+- Bloco 3: Historia
+- Bloco 4: Geografia
 - Bloco 5: Redacao orientada
 
 Diretriz:

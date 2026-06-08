@@ -9,10 +9,8 @@ export default function CheckoutPendingPage() {
       <main className="section">
         <div className="page-shell glass-card">
           <div className="kicker">Pagamento pendente</div>
-          <h1 style={{ fontSize: "clamp(2.3rem, 5vw, 4rem)" }}>Seu pedido foi criado e estÃ¡ aguardando confirmaÃ§Ã£o.</h1>
-          <p>
-            Quando o gateway confirmar o pagamento via webhook, o acesso ao conteÃºdo serÃ¡ liberado automaticamente.
-          </p>
+          <h1 style={{ fontSize: "clamp(2.3rem, 5vw, 4rem)" }}>Seu pedido foi criado e esta aguardando confirmacao.</h1>
+          <p>Assim que o pagamento for confirmado, o acesso sera liberado automaticamente na sua area do aluno.</p>
           <div className="actions">
             <Link href="/login" className="btn">
               Acompanhar conta

@@ -1,4 +1,4 @@
-﻿import { SiteFooter } from "@/components/site-footer";
+import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export default function TermsPage() {
@@ -8,10 +8,9 @@ export default function TermsPage() {
       <main className="section">
         <div className="page-shell glass-card">
           <div className="kicker">Termos de uso</div>
-          <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 4rem)" }}>Base legal da plataforma.</h1>
-          <p>
-            Esta pÃ¡gina existe para consolidar regras de acesso, uso do conteÃºdo, proteÃ§Ã£o de propriedade intelectual e
-            polÃ­tica de cancelamento. Em produÃ§Ã£o, vale complementar com jurÃ­dico e polÃ­tica de privacidade alinhada Ã  LGPD.
+          <h1 style={{ fontSize: "clamp(2.2rem, 5vw, 4rem)" }}>Compra, acesso, uso do conteudo e suporte descritos sem promessa falsa.</h1>
+          <p style={{ marginTop: 10 }}>
+            Ao comprar, o aluno recebe acesso ao produto contratado, biblioteca, trilha, questoes, simulados e, quando houver, redacao com correcao humana. Conteudos de terceiros seguem com autoria preservada e uso como referencia/curadoria, nunca como material proprio copiado.
           </p>
         </div>
       </main>
@@ -19,4 +18,3 @@ export default function TermsPage() {
     </>
   );
 }
-
